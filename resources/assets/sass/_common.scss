@@ -464,7 +464,7 @@ textarea:-ms-input-placeholder {
 -----------------------------------------*/
 
 .RYPP {
-    padding: 5px 5px 350px 5px;
+    padding: 18px 18px 350px 18px;
     @media #{$large-mobile} {
         padding-bottom: 18px;
     }
@@ -472,10 +472,10 @@ textarea:-ms-input-placeholder {
         & .RYPP-video-player {}
     }
     & .RYPP-playlist {
-        bottom: 5px;
-        height: 340px;
-        left: 5px;
-        right: 5px;
+        bottom: 18px;
+        height: 314px;
+        left: 18px;
+        right: 18px;
         top: auto;
         overflow: hidden;
         width: auto;
@@ -496,7 +496,7 @@ textarea:-ms-input-placeholder {
                 padding: 0;
                 width: 100%;
                 & li {
-                    // width: 50%;
+                    width: 50%;
                     float: left;
                     border-right: 1px solid $black;
                     border-bottom: 1px solid $black;
