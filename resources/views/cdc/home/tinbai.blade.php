@@ -72,6 +72,8 @@
                             $Tins = $MainMenuLink->webmasterSection->topics->where('status',1)->sortbyDesc('date')->take(6);
                             
                         @endphp
+
+                        @if (!empty($Tin))
                     
                         <div class="row">
 
@@ -184,6 +186,8 @@
                             
 
                         </div>
+                        @endif
+                        
 
 
                         @endif
