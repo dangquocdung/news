@@ -102,7 +102,7 @@
     <div class="row">
         <div class="Head pos-rel clearfix">
             <h2 class="ParentCate left">
-                <a href="#">Phát thanh</a>
+                <a href="#">Âm nhạc</a>
             </h2>
             <span class="line-red">.</span>
         </div>
