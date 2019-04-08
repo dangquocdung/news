@@ -57,10 +57,10 @@
                                 <div class="title">Liên hệ với chúng tôi</div>
                                 <nav class="foot-menu">
                                     <ul>
-                                        <li>Giám đốc: TS.BS. Nguyễn Lương Tâm</li>
-                                        <li>229 Nguyễn Huy Tự - Thành phố Hà Tĩnh</li>
-                                        <li>Email: cdchatinh@gmail.com</li>
-                                        <li>Điện thoại: (0239) 3891183</li>
+                                        <li>Công ty TNHH Phần mềm Dũng Thịnh</li>
+                                        <li>34 Hàm Nghi - Thành phố Hà Tĩnh</li>
+                                        <li>Email: dungdang@dungthinh.com</li>
+                                        <li>Điện thoại: 0986242487</li>
                                     </ul>
                                 </nav>
                                 
@@ -70,9 +70,9 @@
                             <div class="foot-col">
                                 <div class="title">Kết nối với chúng tôi</div>
                                 <div class="foot-social"> 
-                                    <a href="https://www.facebook.com/cdchatinh/" target="blank"><em class="fa fa-facebook" aria-hidden="true"></em> </a>
+                                    <a href="https://www.facebook.com/" target="blank"><em class="fa fa-facebook" aria-hidden="true"></em> </a>
                                     <a href="#" target="blank"><em class="fa fa-google-plus" aria-hidden="true"></em> </a>
-                                    <a href="https://www.youtube.com/user/cdchatinh" target="blank"><em class="fa fa-youtube" aria-hidden="true"></em> </a>
+                                    <a href="https://www.youtube.com/" target="blank"><em class="fa fa-youtube" aria-hidden="true"></em> </a>
                                 </div>
                             </div>
                         </div>
