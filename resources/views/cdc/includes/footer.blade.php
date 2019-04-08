@@ -24,7 +24,7 @@
                                 <nav class="foot-menu">
                                     <ul>
 
-                                        @foreach($MenuLinks->where('father_id',1)->sortby('row_no') as $HeaderMenuLink)
+                                        @foreach($MenuLinks->where('father_id',2)->sortby('row_no') as $HeaderMenuLink)
 
                                             <?php
                                                 if ($HeaderMenuLink->webmasterSection[$slug_var] != "" && Helper::GeneralWebmasterSettings("links_status")) {
