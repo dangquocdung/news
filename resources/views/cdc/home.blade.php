@@ -197,7 +197,7 @@
 
                     <div class="clearfix"></div>
 
-                    @include('cdc.home.whycdc')
+                    @include('cdc.home.video')
 
                     @include('cdc.home.tinbai')
                 </div>
