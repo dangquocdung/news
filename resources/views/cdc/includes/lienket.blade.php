@@ -153,7 +153,7 @@
     </div> --}}
 
     <div class="row">
-        <div class="RYPP r16-9" data-playlist="ICtAZ-XPb4A&list=PLh_HV-iv7X8PHVkqrcy9qegZKJu-nMbbL">
+        <div class="RYPP r16-9" data-playlist="PLh_HV-iv7X8PHVkqrcy9qegZKJu-nMbbL">
             <div class="RYPP-video">
                 <div class="RYPP-video-player">
                 <!-- Will be replaced -->
