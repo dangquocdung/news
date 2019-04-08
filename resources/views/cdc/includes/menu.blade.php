@@ -105,7 +105,7 @@
                                             ?>
 
                                             <li>
-                                                <a href="{{ (trim($HeaderMenuLink->link) !="") ? $HeaderMenuLink->link:$mmnnuu_link }}">{{ $HeaderMenuLink->$title_vi }}</a>
+                                                <a href="{{ (trim($HeaderMenuLink->link) !="") ? $HeaderMenuLink->link:$mmnnuu_link }}">{{ $HeaderMenuLink->$title }}</a>
                                             </li>
 
                                         @endif
