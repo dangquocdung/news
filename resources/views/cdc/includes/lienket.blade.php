@@ -135,42 +135,6 @@
     <div class="row">
         <div class="Head pos-rel clearfix">
             <h2 class="ParentCate left">
-                <a href="#">Video clips</a>
-            </h2>
-            <span class="line-red">.</span>
-        </div>
-    </div>
-            
-    <!-- Video Popup -->
-    {{-- <div class="row post post-overlay">
-        <div class="post-wrap">
-            <a href="https://www.youtube.com/watch?v=LMyZeiVGZ_w" class="image video-popup">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGhx0T5d7TTYZv3CJOs-E6z1ap5fB3Z8CVn7lB_7eSQWRApYQb" alt="post">
-                <span class="video-btn"><i class="fa fa-play"></i></span>
-            </a>
-
-        </div>
-    </div> --}}
-
-    <div class="row">
-        <div class="RYPP r16-9" data-playlist="PLh_HV-iv7X8PHVkqrcy9qegZKJu-nMbbL">
-            <div class="RYPP-video">
-                <div class="RYPP-video-player">
-                <!-- Will be replaced -->
-                </div>
-            </div>
-            <div class="RYPP-playlist">
-                <div class="RYPP-items customScroll"></div>
-            </div>
-        </div>
-    </div>
-            
-</div>
-
-<div class="col-md-12 mt-15 clearfix">
-    <div class="row">
-        <div class="Head pos-rel clearfix">
-            <h2 class="ParentCate left">
                 <a href="#">Liên kết</a>
             </h2>
             <span class="line-red">.</span>
