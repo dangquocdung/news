@@ -19,7 +19,7 @@
 
                                     @foreach($MenuLinks->where('father_id',1)->sortby('row_no') as $HeaderMenuLink)
 
-                                        @if($HeaderMenuLink->type >= 2)
+                                        @if($HeaderMenuLink->type > 2)
 
                                             <li class="@if (!empty($WebmasterSection)) @if ($HeaderMenuLink->cat_id == $WebmasterSection->id) active  @endif @endif @if ($HeaderMenuLink->type==3) has-dropdown @endif">
                                                 
