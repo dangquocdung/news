@@ -65,7 +65,7 @@
                             </div>
                         </div>
 
-                        @if(count($MainMenuLink->webmasterSection->topics)>0)
+                        @if(count($MainMenuLink->webmasterSection->topics->where('status',1))>0)
 
                         @php
                             
