@@ -49181,8 +49181,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\project\cdchatinh\resources\assets\js\app.js */"./resources/assets/js/app.js");
-module.exports = __webpack_require__(/*! D:\project\cdchatinh\resources\assets\sass\style.scss */"./resources/assets/sass/style.scss");
+__webpack_require__(/*! D:\project\news\resources\assets\js\app.js */"./resources/assets/js/app.js");
+module.exports = __webpack_require__(/*! D:\project\news\resources\assets\sass\style.scss */"./resources/assets/sass/style.scss");
 
 
 /***/ })
