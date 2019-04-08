@@ -73,7 +73,7 @@
                             
                         @endphp
 
-                        @if (!empty($Tins))
+                        @if (!empty($Tin))
                     
                         <div class="row">
 
