@@ -78,7 +78,20 @@ class FrontendHomeController extends Controller
         $MenuLinks = Menu::where('status',1)->orderby('row_no','asc')->get();
 
          // Get Latest News
-        $HotTopics = Topic::where([
+        $LatestNews = Topic::where([
+            ['status', 1], 
+            ['expire_date', '>=', date("Y-m-d")], 
+            ['expire_date', '<>', null]])
+            ->orwhere([
+                ['status', 1], 
+                ['expire_date', null]])
+                ->orderby('date', 'desc')
+                ->orderby('id', 'desc')
+                ->limit(10)
+                ->get();
+
+         // Get Hot topics
+         $HotTopics = Topic::where([
             ['status', 1], 
             ['hot', 1], 
             ['expire_date', '>=', date("Y-m-d")], 
@@ -163,6 +176,7 @@ class FrontendHomeController extends Controller
         view()->share('WebsiteSettings',$WebsiteSettings);
         view()->share('WebmasterSections',$WebmasterSections);
         view()->share('MenuLinks',$MenuLinks);
+        view()->share('LatestNews',$LatestNews);
         view()->share('HotTopics',$HotTopics);
         view()->share('ThongBao',$ThongBao);
         view()->share('DichVu',$DichVu);

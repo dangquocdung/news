@@ -2,7 +2,7 @@
     <div class="row">
         <div class="Head pos-rel clearfix">
             <h2 class="ParentCate left">
-                <a href="#">Tin nổi bật</a>
+                <a href="#">Tin mới đăng</a>
             </h2>
             <span class="line-red">.</span>
         </div>
@@ -10,7 +10,7 @@
             
     <div class="row sidebar">
         <ul class="title">
-            @foreach ($HotTopics as $Topic )
+            @foreach ($LatestNews as $Topic )
     
                 @php
                     if ($Topic->$slug_var != "" && Helper::GeneralWebmasterSettings("links_status")) {
