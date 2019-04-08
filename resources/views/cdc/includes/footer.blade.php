@@ -12,7 +12,7 @@
                             <div class="foot-col">
                                 <div class="foot-logo">
                                     <div class="Module Module-141"><div class="ModuleContent">
-                                        <a href="/"><img alt="" src="/img/logo-footer.png"></a></div>
+                                        <a href="/"><img alt="" src="/img/logo-footer.png" style="width:100%"></a></div>
                                     </div>
                                 </div>
                             </div>
