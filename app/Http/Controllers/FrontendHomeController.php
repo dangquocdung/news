@@ -88,6 +88,7 @@ class FrontendHomeController extends Controller
                 ['hot', 1], 
                 ['expire_date', null]])
                 ->orderby('date', 'desc')
+                ->orderby('id', 'desc')
                 ->limit(6)
                 ->get();
 
@@ -101,6 +102,7 @@ class FrontendHomeController extends Controller
                 ['thongbao', 1], 
                 ['expire_date', null]])
                 ->orderby('date', 'desc')
+                ->orderby('id', 'desc')
                 ->limit(10)
                 ->get();
 
@@ -129,6 +131,7 @@ class FrontendHomeController extends Controller
             ['audio_file','<>',null],
             ['expire_date', null]])
             ->orderby('date', 'desc')
+            ->orderby('id', 'desc')
             ->limit(10)
             ->get();
 
@@ -143,6 +146,7 @@ class FrontendHomeController extends Controller
                 ['webmaster_id',25],
                 ['expire_date', null]])
                 ->orderby('date', 'desc')
+                ->orderby('id', 'desc')
                 ->limit(10)
                 ->get();
 
