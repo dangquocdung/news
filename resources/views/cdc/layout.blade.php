@@ -19,7 +19,7 @@
             <div class="post-section section mt-10 box-mobile">
                 <div class="marbox">
                     <marquee direction="left" scrollamount="2" scrolldelay="60" onmouseover="this.stop()" onmouseout="this.start()">
-                            Chào mừng quý vị đã đến với Cổng thông tin điện tử Trung tâm Kiểm soát bệnh tật Hà Tĩnh
+                            Chào mừng các bạn đến với chuyên trang tin tức của Dũng Thịnh Software
                     </marquee>
                     
                 </div>
