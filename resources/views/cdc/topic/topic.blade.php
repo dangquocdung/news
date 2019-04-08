@@ -22,7 +22,7 @@
                 @endif
             </a>
             {{--  <a href="javascript:void(0)" class="meta-item author"><img src="/img/post/post-author-1.jpg" alt="post author">{{ $Topic->user->name }}</a>  --}}
-            <span class="meta-item date"><i class="fa fa-clock-o"></i>{{ \Carbon\Carbon::parse($Topic->created_at)->format('d/m/Y H:i') }}</span>
+            <span class="meta-item date"><i class="fa fa-clock-o"></i>{{ \Carbon\Carbon::parse($Topic->created_at)->format('d/m/Y') }}</span>
             <a href="javascript:void(0)" class="meta-item comments"><i class="fa fa-comments"></i>({{ count($Topic->comments) }})</a>
             <span class="meta-item view"><i class="fa fa-eye"></i>({{ $Topic->visits }})</span>
         </div>
