@@ -1,6 +1,4 @@
-<div class="clearfix"></div>
-
-<div class="col-md-12 mt-15">
+<div class="col-md-12">
     <div class="row">
         <div class="Head pos-rel clearfix">
             <h2 class="ParentCate left">
