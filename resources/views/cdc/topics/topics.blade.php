@@ -108,9 +108,7 @@
             <!-- Sidebar Start -->
             <div class="col-md-3">
 
-                @include('cdc.includes.dichvu')
                 @include('cdc.includes.thongbao')
-                @include('cdc.includes.tienich')
                 @include('cdc.includes.lienket')
                     
             </div><!-- Sidebar End -->
