@@ -65,7 +65,7 @@
                             </div>
                         </div>
 
-                        @if(!empty($MainMenuLink->webmasterSection->topics))
+                        @if(count($MainMenuLink->webmasterSection->topics)>0)
 
                         @php
                             
@@ -73,7 +73,7 @@
                             
                         @endphp
 
-                        @if (!empty($Tin))
+                        
                     
                         <div class="row">
 
@@ -186,8 +186,7 @@
                             
 
                         </div>
-                        @endif
-
+                        
 
 
                         @endif
