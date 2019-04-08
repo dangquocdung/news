@@ -11,7 +11,9 @@
                         <div class="col-xs-12 col-md-12 col-lg-3">
                             <div class="foot-col">
                                 <div class="foot-logo">
-                                    <div class="Module Module-141"><div class="ModuleContent"><a href="/"><img alt="" src="/img/logo-footer.png"></a></div></div>
+                                    <div class="Module Module-141"><div class="ModuleContent">
+                                        <a href="/"><img alt="" src="/img/logo-footer.png"></a></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
