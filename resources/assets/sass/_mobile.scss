@@ -1,0 +1,14 @@
+@media #{$small-mobile, $large-mobile} {
+    #mainbox-r {
+        padding-left: 0;
+        margin-top: 10px;
+    }
+    .mini-menu {
+        top: auto !important;
+        margin-bottom: 5px;
+    }
+    .single-blog {
+        border: none;
+        padding: 0;
+    }
+}
