@@ -691,12 +691,6 @@ class FrontendHomeController extends Controller
                 $SideBanners = Banner::where('section_id', $WebmasterSettings->side_banners_section_id)->where('status',
                     1)->orderby('row_no', 'asc')->get();
 
-                // Get Latest News
-                $LatestNews = Topic::where([['status', 1], ['webmaster_id', $Topic->webmaster_id], ['expire_date', '>=', date("Y-m-d")], ['expire_date', '<>', null]])
-                                ->orwhere([['status', 1], ['webmaster_id', $Topic->webmaster_id], ['expire_date', null]])
-                                ->orderby('date', 'desc')
-                                ->limit(10)
-                                ->get();
 
                 // Page Title, Description, Keywords
                 $seo_title_var = "seo_title_" . trans('backLang.boxCode');
@@ -733,7 +727,6 @@ class FrontendHomeController extends Controller
                         "preTopic",
                         "nexTopic",
                         "ReadTopic",
-                        "LatestNews",
                         "SideBanners",
                         "WebmasterSection",
                         "Categories",
@@ -832,9 +825,6 @@ class FrontendHomeController extends Controller
             $SideBanners = Banner::where('section_id', $WebmasterSettings->side_banners_section_id)->where('status',
                 1)->orderby('row_no', 'asc')->get();
 
-            // Get Latest News
-            $LatestNews = Topic::where([['status', 1], ['webmaster_id', $WebmasterSettings->latest_news_section_id], ['expire_date', '>=', date("Y-m-d")], ['expire_date', '<>', null]])->orwhere([['status', 1], ['webmaster_id', $WebmasterSettings->latest_news_section_id], ['expire_date', null]])->orderby('row_no', 'asc')->limit(3)->get();
-
             // Page Title, Description, Keywords
             $site_desc_var = "site_desc_" . trans('backLang.boxCode');
             $site_keywords_var = "site_keywords_" . trans('backLang.boxCode');
@@ -853,7 +843,6 @@ class FrontendHomeController extends Controller
                     "FooterMenuLinks",
                     "FooterMenuLinks_name_vi",
                     "FooterMenuLinks_name_en",
-                    "LatestNews",
                     "User",
                     "SideBanners",
                     "WebmasterSection",
@@ -942,8 +931,6 @@ class FrontendHomeController extends Controller
             $SideBanners = Banner::where('section_id', $WebmasterSettings->side_banners_section_id)->where('status',
                 1)->orderby('row_no', 'asc')->get();
 
-            // Get Latest News
-            $LatestNews = Topic::where([['status', 1], ['webmaster_id', $WebmasterSettings->latest_news_section_id], ['expire_date', '>=', date("Y-m-d")], ['expire_date', '<>', null]])->orwhere([['status', 1], ['webmaster_id', $WebmasterSettings->latest_news_section_id], ['expire_date', null]])->orderby('row_no', 'asc')->limit(3)->get();
 
             // Page Title, Description, Keywords
             $site_desc_var = "site_desc_" . trans('backLang.boxCode');
@@ -963,7 +950,6 @@ class FrontendHomeController extends Controller
                     "FooterMenuLinks",
                     "FooterMenuLinks_name_vi",
                     "FooterMenuLinks_name_en",
-                    "LatestNews",
                     "search_word",
                     "SideBanners",
                     "WebmasterSection",
