@@ -331,7 +331,7 @@ class TopicsController extends Controller
             $e_section = $item->category[1];
             $e_sapo = strip_tags($item->description);
             $e_content = $item->children("content", true);
-            $e_details = preg_replace('#(<[a-z ]*)(style=("|\')(.*?)("|\'))([a-z ]*>)#', '\\1\\6', $e_content->encoded)."<hr><a href=".$item->link.">nguồn</a>";
+            $e_details = preg_replace('#(<[a-z ]*)(style=("|\')(.*?)("|\'))([a-z ]*>)#', '\\1\\6', $e_content->encoded)."<br><br><a href=".$item->link."><em>Nguồn bài viết</em></a>";
             $e_date = $item->pubDate;
 
             $exist = Topic::where('title_vi',$e_title)->first();
