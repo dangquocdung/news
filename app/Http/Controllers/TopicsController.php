@@ -332,9 +332,9 @@ class TopicsController extends Controller
 
             // $partern = '#(<style>.*</style>)|(<div>.*</div>)#';
 
-            $partern = '#(<[a-z ]*)(style=("|\')(.*?)("|\'))([a-z ]*>)#';
+            $pattern = '/(<img.*)width="(\d+)" height="(\d+)"(.*style=")(.*)" \/(>)/';
 
-            $replacement = '\\1\\6';
+            $replacement = '';
 
             $e_details =  preg_replace($partern,$replacement,$e_content->encoded);
 
