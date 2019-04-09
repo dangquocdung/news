@@ -353,7 +353,7 @@ class TopicsController extends Controller
                 // Save topic details
                 $Topic->row_no = $next_nor_no;
                 $Topic->title_vi = $e_title;
-                $Topic->sapo = $e_sapo;
+                // $Topic->sapo = $e_sapo;
                 $Topic->details_vi = $e_details;
                 $Topic->date = Carbon::parse($e_date)->format('Y-m-d');
                 $Topic->webmaster_id = $webmaster->id;
@@ -371,7 +371,7 @@ class TopicsController extends Controller
                 $Topic->seo_url_slug_en = $slugs['slug_en'];
 
                 // Meta Description
-                $Topic->seo_description_vi = mb_substr(strip_tags(stripslashes($e_sapo)), 0, 165, 'UTF-8');
+                $Topic->seo_description_vi = mb_substr(strip_tags(stripslashes($e_title)), 0, 165, 'UTF-8');
         
                 $Topic->save();
 
