@@ -332,7 +332,7 @@ class TopicsController extends Controller
 
             // $partern = '#(<style>.*</style>)|(<div>.*</div>)#';
 
-            $partern = '/(<img.*)width="(\d+)" height="(\d+)"(.*style=")(.*)" \/(>)/';
+            $partern = '#<img.+?((/>)|(</img>))#';
 
             $replacement = '';
 
