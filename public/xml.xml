@@ -1,0 +1,11 @@
+<api>
+    <user followers="5">
+        <id>1</id>
+        <email>crynobone@gmail.com</email>
+    </user>
+    <user followers="5">
+        <id>2</id>
+        <email>crynobone@gmail.com</email>
+    </user>
+</api>
+

@@ -365,7 +365,7 @@ class PclZip
         }
 
         // ----- Reformat the string list
-        if (count($v_string_list) != 0) {
+        if (count((array)$v_string_list) != 0) {
             foreach ($v_string_list as $v_string) {
                 if ($v_string != '') {
                     $v_att_list[][PCLZIP_ATT_FILE_NAME] = $v_string;
@@ -725,10 +725,10 @@ class PclZip
                     // ----- Check the format of each item
                     $v_sort_flag = false;
                     $v_sort_value = 0;
-                    for ($jndex = 0; $jndex < count($v_work_list); $jndex++) {
+                    for ($jndex = 0; $jndex < count((array)$v_work_list); $jndex++) {
                         // ----- Explode the item
                         $v_item_list = explode('-', $v_work_list[$jndex]);
-                        $v_size_item_list = count($v_item_list);
+                        $v_size_item_list = count((array)$v_item_list);
 
                         // ----- TBC : Here we might check that each item is a
                         // real integer ...
@@ -1167,7 +1167,7 @@ class PclZip
         $v_result_list = array();
 
         // ----- Look each entry
-        for ($index = 0; $index < count($p_filedescr_list); $index++) {
+        for ($index = 0; $index < count((array)$p_filedescr_list); $index++) {
 
             // ----- Get filedescr
             $v_descr = $p_filedescr_list[$index];
@@ -1207,7 +1207,7 @@ class PclZip
             $this->privCalculateStoredFilename($v_descr, $p_options);
 
             // ----- Add the descriptor in result list
-            $v_result_list[count($v_result_list)] = $v_descr;
+            $v_result_list[count((array)$v_result_list)] = $v_descr;
 
             // ----- Look for folder
             if ($v_descr['type'] == 'folder') {
@@ -1483,7 +1483,7 @@ class PclZip
         $v_offset = @ftell($this->zip_fd);
 
         // ----- Create the Central Dir files header
-        for ($index = 0, $v_count = 0; $index < count($v_header_list); $index++) {
+        for ($index = 0, $v_count = 0; $index < count((array)$v_header_list); $index++) {
             // ----- Create the file header
             if ($v_header_list[$index]['status'] == 'ok') {
                 if (($v_result = $this->privWriteCentralFileHeader($v_header_list[$index])) != 1) {
@@ -1547,10 +1547,10 @@ class PclZip
         $v_header = array();
 
         // ----- Recuperate the current number of elt in list
-        $v_nb = count($p_result_list);
+        $v_nb = count((array)$p_result_list);
 
         // ----- Loop on the files
-        for ($jndex = 0; ($jndex < count($p_filedescr_list)) && ($v_result == 1); $jndex++) {
+        for ($jndex = 0; ($jndex < count((array)$p_filedescr_list)) && ($v_result == 1); $jndex++) {
             // ----- Format the filename
             $p_filedescr_list[$jndex]['filename'] = PclZipUtilTranslateWinPath($p_filedescr_list[$jndex]['filename'], false);
 
@@ -2268,7 +2268,7 @@ class PclZip
         }
 
         // ----- Reformat the string list
-        if (count($v_string_list) != 0) {
+        if (count((array)$v_string_list) != 0) {
             foreach ($v_string_list as $v_string) {
                 $v_att_list[][PCLZIP_ATT_FILE_NAME] = $v_string;
             }
@@ -2408,7 +2408,7 @@ class PclZip
         }
 
         // ----- Create the Central Dir files header
-        for ($index = 0, $v_count = 0; $index < count($v_header_list); $index++) {
+        for ($index = 0, $v_count = 0; $index < count((array)$v_header_list); $index++) {
             // ----- Create the file header
             if ($v_header_list[$index]['status'] == 'ok') {
                 if (($v_result = $this->privWriteCentralFileHeader($v_header_list[$index])) != 1) {
@@ -3103,7 +3103,7 @@ class PclZip
             if ((isset($p_options[PCLZIP_OPT_BY_NAME])) && ($p_options[PCLZIP_OPT_BY_NAME] != 0)) {
 
                 // ----- Look if the filename is in the list
-                for ($jndex = 0; ($jndex < count($p_options[PCLZIP_OPT_BY_NAME])) && (!$v_extract); $jndex++) {
+                for ($jndex = 0; ($jndex < count((array)$p_options[PCLZIP_OPT_BY_NAME])) && (!$v_extract); $jndex++) {
 
                     // ----- Look for a directory
                     if (substr($p_options[PCLZIP_OPT_BY_NAME][$jndex], -1) == '/') {
@@ -3140,7 +3140,7 @@ class PclZip
             } elseif ((isset($p_options[PCLZIP_OPT_BY_INDEX])) && ($p_options[PCLZIP_OPT_BY_INDEX] != 0)) {
 
                 // ----- Look if the index is in the list
-                for ($jndex = $jndex_start; ($jndex < count($p_options[PCLZIP_OPT_BY_INDEX])) && (!$v_extract); $jndex++) {
+                for ($jndex = $jndex_start; ($jndex < count((array)$p_options[PCLZIP_OPT_BY_INDEX])) && (!$v_extract); $jndex++) {
                     if (($index >= $p_options[PCLZIP_OPT_BY_INDEX][$jndex]['start']) && ($index <= $p_options[PCLZIP_OPT_BY_INDEX][$jndex]['end'])) {
                         $v_extract = true;
                     }
@@ -4182,7 +4182,7 @@ class PclZip
             $p_index
         );
         $v_options_trick = array();
-        $v_result = $this->privParseOptions($v_arg_trick, count($v_arg_trick), $v_options_trick, array(
+        $v_result = $this->privParseOptions($v_arg_trick, count((array)$v_arg_trick), $v_options_trick, array(
             PCLZIP_OPT_BY_INDEX => 'optional'
         ));
         if ($v_result != 1) {
@@ -4350,7 +4350,7 @@ class PclZip
             if ((isset($p_options[PCLZIP_OPT_BY_NAME])) && ($p_options[PCLZIP_OPT_BY_NAME] != 0)) {
 
                 // ----- Look if the filename is in the list
-                for ($jndex = 0; ($jndex < count($p_options[PCLZIP_OPT_BY_NAME])) && (!$v_found); $jndex++) {
+                for ($jndex = 0; ($jndex < count((array)$p_options[PCLZIP_OPT_BY_NAME])) && (!$v_found); $jndex++) {
 
                     // ----- Look for a directory
                     if (substr($p_options[PCLZIP_OPT_BY_NAME][$jndex], -1) == '/') {
@@ -4390,7 +4390,7 @@ class PclZip
             } elseif ((isset($p_options[PCLZIP_OPT_BY_INDEX])) && ($p_options[PCLZIP_OPT_BY_INDEX] != 0)) {
 
                 // ----- Look if the index is in the list
-                for ($jndexndex = $jndex_start; ($jndexndex < count($p_options[PCLZIP_OPT_BY_INDEX])) && (!$v_found); $jndexndex++) {
+                for ($jndexndex = $jndex_start; ($jndexndex < count((array)$p_options[PCLZIP_OPT_BY_INDEX])) && (!$v_found); $jndexndex++) {
                     if (($index >= $p_options[PCLZIP_OPT_BY_INDEX][$jndexndex]['start']) && ($index <= $p_options[PCLZIP_OPT_BY_INDEX][$jndexndex]['end'])) {
                         $v_found = true;
                     }
@@ -4429,7 +4429,7 @@ class PclZip
             }
 
             // ----- Look which file need to be kept
-            for ($index = 0; $index < count($v_header_list); $index++) {
+            for ($index = 0; $index < count((array)$v_header_list); $index++) {
 
                 // ----- Calculate the position of the header
                 @rewind($this->zip_fd);
@@ -4487,7 +4487,7 @@ class PclZip
             $v_offset = @ftell($v_temp_zip->zip_fd);
 
             // ----- Re-Create the Central Dir files header
-            for ($index = 0; $index < count($v_header_list); $index++) {
+            for ($index = 0; $index < count((array)$v_header_list); $index++) {
                 // ----- Create the file header
                 if (($v_result = $v_temp_zip->privWriteCentralFileHeader($v_header_list[$index])) != 1) {
                     $v_temp_zip->privCloseFd();
@@ -4512,7 +4512,7 @@ class PclZip
             $v_size = @ftell($v_temp_zip->zip_fd) - $v_offset;
 
             // ----- Create the central dir footer
-            if (($v_result = $v_temp_zip->privWriteCentralHeader(count($v_header_list), $v_size, $v_offset, $v_comment)) != 1) {
+            if (($v_result = $v_temp_zip->privWriteCentralHeader(count((array)$v_header_list), $v_size, $v_offset, $v_comment)) != 1) {
                 // ----- Reset the file list
                 unset($v_header_list);
                 $v_temp_zip->privCloseFd();
@@ -5067,7 +5067,7 @@ function PclZipUtilPathReduction($p_dir)
 
         // ----- Study directories from last to first
         $v_skip = 0;
-        for ($index = count($v_list) - 1; $index >= 0; $index--) {
+        for ($index = count((array)$v_list) - 1; $index >= 0; $index--) {
             // ----- Look for current path
             if ($v_list[$index] == '..') {
                 $v_skip++;
@@ -5083,7 +5083,7 @@ function PclZipUtilPathReduction($p_dir)
                     }
 
                     // ----- Last '/' i.e. indicates a directory
-                } elseif ($index == (count($v_list) - 1)) {
+                } elseif ($index == (count((array)$v_list) - 1)) {
                     $v_result = $v_list[$index];
 
                     // ----- Double '/' inside the path
@@ -5093,7 +5093,7 @@ function PclZipUtilPathReduction($p_dir)
                 if ($v_skip > 0) {
                     $v_skip--;
                 } else {
-                    $v_result = $v_list[$index] . ($index != (count($v_list) - 1) ? '/' . $v_result : '');
+                    $v_result = $v_list[$index] . ($index != (count((array)$v_list) - 1) ? '/' . $v_result : '');
                 }
             }
         }
@@ -5142,9 +5142,9 @@ function PclZipUtilPathInclusion($p_dir, $p_path)
 
     // ----- Explode dir and path by directory separator
     $v_list_dir = explode('/', $p_dir);
-    $v_list_dir_size = count($v_list_dir);
+    $v_list_dir_size = count((array)$v_list_dir);
     $v_list_path = explode('/', $p_path);
-    $v_list_path_size = count($v_list_path);
+    $v_list_path_size = count((array)$v_list_path);
 
     // ----- Study directories paths
     $index = 0;

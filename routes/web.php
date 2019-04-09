@@ -13,7 +13,6 @@
 
 Route::feeds();
 
-
 // Language Route
 Route::post('/lang', array(
     'Middleware' => 'LanguageSwitcher',
@@ -176,6 +175,9 @@ Route::Group(['prefix' => env('BACKEND_PATH', 'admin')], function () {
     });
 
     Route::middleware(['checklevel','managerlevel','userlevel'])->group(function () {
+
+        //xml
+        Route::get('/view_xml', 'TopicsController@storeXML')->name('storeXML');
 
         // Topics
         Route::get('/{webmasterId}/topics', 'TopicsController@index')->name('topics');

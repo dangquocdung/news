@@ -195,6 +195,7 @@ class FrontendHomeController extends Controller
      * @param  int /string $seo_url_slug
      * @return \Illuminate\Http\Response
      */
+
     public function SEO($seo_url_slug = 0)
     {
         return $this->SEOByLang("", $seo_url_slug);

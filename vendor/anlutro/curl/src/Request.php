@@ -67,7 +67,7 @@ class Request
 	/**
 	 * POST data sent with the request.
 	 *
-	 * @var array
+	 * @var mixed
 	 */
 	private $data = array();
 
@@ -337,13 +337,13 @@ class Request
 	 */
 	public function hasData()
 	{
-		return (bool) $this->data;
+		return static::$methods[$this->method] && (bool) $this->encodeData();
 	}
 
 	/**
 	 * Get the POST data to be sent with the request.
 	 *
-	 * @return array
+	 * @return mixed
 	 */
 	public function getData()
 	{
@@ -397,11 +397,12 @@ class Request
 			case static::ENCODING_JSON:
 				return json_encode($this->data);
 			case static::ENCODING_QUERY:
-				return http_build_query($this->data);
+				return (!is_null($this->data) ? http_build_query($this->data) : '');
 			case static::ENCODING_RAW:
 				return $this->data;
 			default:
-				throw new \UnexpectedValueException("Encoding [$encoding] not a known Request::ENCODING_* constant");
+				$msg = "Encoding [$this->encoding] not a known Request::ENCODING_* constant";
+				throw new \UnexpectedValueException($msg);
 		}
 	}
 

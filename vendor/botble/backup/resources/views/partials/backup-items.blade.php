@@ -1,4 +1,4 @@
-@if (count($backups) > 0)
+@if (count((array)$backups) > 0)
     @foreach ($backups as $key => $backup)
         <tr>
             <td><input name="id[]" type="checkbox" class="input-checkbox-minimal" value="{{ $key }}"></td>
