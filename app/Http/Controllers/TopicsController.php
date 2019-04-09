@@ -332,15 +332,11 @@ class TopicsController extends Controller
 
             // $partern = '#(<style>.*</style>)|(<div>.*</div>)#';
 
-            $patterns = array();
+            $pattern = '/(<img.*)width="(\d+)" height="(\d+)"(.*style=")(.*)" \/(>)/';
 
-            $parterns[0] = '#(<[a-z ]*)(style=("|\')(.*?)("|\'))([a-z ]*>)#';
+            $replacement = '';
 
-            $patterns[1] ='#(<[img ]*)(width=("|\')(.*?)("|\'))([img ]*>)#';
-
-            $replacement = '\\1\\6';
-
-            $e_details =  preg_replace($parterns,$replacement,$e_content->encoded);
+            $e_details =  preg_replace($partern,$replacement,$e_content->encoded);
 
             $e_details = $e_details."<br><br><a href='".$item->link."'><strong>Nguồn bài viết</strong></a>";
             $e_date = $item->pubDate;
