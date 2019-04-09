@@ -396,6 +396,8 @@ class TopicsController extends Controller
 
         echo $i."<br>";
 
+        return redirect()->route('adminHome');
+
         // return response()->json($array, 200);
     }
 
