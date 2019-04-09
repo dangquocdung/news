@@ -338,7 +338,7 @@ class TopicsController extends Controller
 
             // $e_details =  preg_replace($partern,$replacement,$e_content->encoded);
 
-            $e_details = strip_tags($e_content->encoded,'<p><a><img>');
+            $e_details = strip_tags($e_content->encoded,'<p><a><img><strong>');
 
             $e_details = preg_replace( '/(width|height)="\d*"\s/', "", $e_details );
 
