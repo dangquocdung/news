@@ -329,7 +329,12 @@ class TopicsController extends Controller
             $e_section = $item->category[1];
             $e_sapo = strip_tags($item->description);
             $e_content = $item->children("content", true);
-            $e_details = $e_content->encoded;
+
+            $partern = '/width=\"*\"/';
+            $replacement = '';
+
+            $e_details =  preg_replace($partern,$replacement,$e_content->encoded);
+
             $e_details = $e_details."<br><br><a href='".$item->link."'><strong>Nguồn bài viết</strong></a>";
             $e_date = $item->pubDate;
 
