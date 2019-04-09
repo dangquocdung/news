@@ -353,7 +353,7 @@ class TopicsController extends Controller
                 // Save topic details
                 $Topic->row_no = $next_nor_no;
                 $Topic->title_vi = $e_title;
-                $Topic->sapo = $e_sapo;
+                // $Topic->sapo = $e_sapo;
                 $Topic->details_vi = $e_details;
                 $Topic->date = Carbon::parse($e_date)->format('Y-m-d');
                 $Topic->webmaster_id = $webmaster->id;
