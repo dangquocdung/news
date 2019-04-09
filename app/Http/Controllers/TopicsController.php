@@ -331,7 +331,7 @@ class TopicsController extends Controller
             $e_section = $item->category[1];
             $e_sapo = strip_tags($item->description);
             $e_content = $item->children("content", true);
-            $e_details =  strip_tags($e_content->encoded);
+            $e_details =  strip_tags($e_content->encoded)."<br><a href=".$item->link.">nguồn</a>";
             $e_date = $item->pubDate;
 
             $exist = Topic::where('title_vi',$e_title)->first();
