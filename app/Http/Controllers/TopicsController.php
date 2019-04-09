@@ -332,11 +332,13 @@ class TopicsController extends Controller
 
             // $partern = '#(<style>.*</style>)|(<div>.*</div>)#';
 
-            $partern = '#<img.+?((/>)|(</img>))#';
+            // $partern = '#<img.+?((/>)|(</img>))#';
 
-            $replacement = '';
+            // $replacement = '';
 
-            $e_details =  preg_replace($partern,$replacement,$e_content->encoded);
+            // $e_details =  preg_replace($partern,$replacement,$e_content->encoded);
+
+            $e_details = strip_tags($e_content->encoded,'<p><a>');
 
             $e_details = $e_details."<br><br><a href='".$item->link."'><strong>Nguồn bài viết</strong></a>";
             $e_date = $item->pubDate;
