@@ -332,7 +332,7 @@ class TopicsController extends Controller
 
             // $partern = '#(<style>.*</style>)|(<div>.*</div>)#';
 
-            $partern = '#<div class=\".*\">.*<\/div>#';
+            $partern = '#<div id=\".*\">.*<\/div>#';
 
             $replacement = '';
 
