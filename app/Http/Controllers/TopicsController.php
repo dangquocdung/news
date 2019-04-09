@@ -336,9 +336,60 @@ class TopicsController extends Controller
 
             $exist = Topic::where('title_vi',$e_title)->first();
 
-            $webmaster = WebmasterSection::find('name', str_slug($e_webmaster))->first(); 
+            $webmaster = WebmasterSection::where('name', str_slug($e_webmaster))->first(); 
 
-            
+            if (empty($exist) && !empty($webmaster)){
+
+                $next_nor_no = Topic::where('webmaster_id', '=', $webmaster->id)->max('row_no');
+                if ($next_nor_no < 1) {
+                    $next_nor_no = 1;
+                } else {
+                    $next_nor_no++;
+                }
+
+                // create new topic
+                $Topic = new Topic;
+
+                // Save topic details
+                $Topic->row_no = $next_nor_no;
+                $Topic->title_vi = $e_title;
+                $Topic->sapo = $e_sapo;
+                $Topic->details_vi = $e_details;
+                $Topic->date = Carbon::parse($e_date)->format('Y-m-d');
+                $Topic->webmaster_id = $webmaster->id;
+                $Topic->created_by = Auth::user()->id;
+                $Topic->visits = 0;
+                $Topic->status = 0;
+
+
+                // Meta title
+                $Topic->seo_title_vi = $e_title;
+
+                // URL Slugs
+                $slugs = Helper::URLSlug($e_title, $e_title, "topic", 0);
+                $Topic->seo_url_slug_vi = $slugs['slug_vi'];
+                $Topic->seo_url_slug_en = $slugs['slug_en'];
+
+                // Meta Description
+                $Topic->seo_description_vi = mb_substr(strip_tags(stripslashes($e_sapo)), 0, 165, 'UTF-8');
+        
+                $Topic->save();
+
+
+                $category = Section::where('webmaster_id',$webmaster->id)->where('title_vi',$e_section)->first();
+
+                if (!empty($category)){
+
+                    $TopicCategory = new TopicCategory;
+                    $TopicCategory->topic_id = $Topic->id;
+                    $TopicCategory->topic_date = $Topic->date;
+                    $TopicCategory->section_id = $category->id;
+                    $TopicCategory->save();
+
+                }
+
+                $i++;
+            }
 
         }
 
