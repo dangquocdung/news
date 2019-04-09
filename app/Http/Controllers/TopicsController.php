@@ -336,7 +336,7 @@ class TopicsController extends Controller
 
             $exist = Topic::where('title_vi',$e_title)->first();
 
-            $webmaster = Webmaster::find('name', str_slug($e_webmaster))->first(); 
+            $webmaster = WebmasterSection::find('name', str_slug($e_webmaster))->first(); 
 
             if (empty($exist) && !empty($webmaster)){
 
