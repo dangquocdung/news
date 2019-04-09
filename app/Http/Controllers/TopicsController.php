@@ -338,9 +338,9 @@ class TopicsController extends Controller
 
             // $e_details =  preg_replace($partern,$replacement,$e_content->encoded);
 
-            $e_details = strip_tags($e_content->encoded,'<p><a><img>');
+            $e_details = strip_tags($e_content->encoded,'<p><a><img><strong>');
 
-            $e_details = preg_replace( '/(width|height|class|alt)="\d*"\s/', "", $e_details );
+            $e_details = preg_replace( '/(width|height)="\d*"\s/', "", $e_details );
 
             $e_details = $e_details."<br><br><a href='".$item->link."'><strong>Nguồn bài viết</strong></a>";
             $e_date = $item->pubDate;
