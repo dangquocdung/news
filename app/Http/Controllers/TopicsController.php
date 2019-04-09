@@ -99,6 +99,10 @@ class TopicsController extends Controller
         }
     }
 
+
+    
+
+
     /**
      * Store a newly created resource in storage.
      *
@@ -217,7 +221,7 @@ class TopicsController extends Controller
             $Topic->webmaster_id = $webmasterId;
             $Topic->created_by = Auth::user()->id;
             $Topic->visits = 0;
-            $Topic->status = 1;
+            $Topic->status = 0;
 
 
             // Meta title
@@ -230,8 +234,8 @@ class TopicsController extends Controller
             $Topic->seo_url_slug_en = $slugs['slug_en'];
 
             // Meta Description
-            $Topic->seo_description_vi = mb_substr(strip_tags(stripslashes($request->details_vi)), 0, 165, 'UTF-8');
-            $Topic->seo_description_en = mb_substr(strip_tags(stripslashes($request->details_en)), 0, 165, 'UTF-8');
+            $Topic->seo_description_vi = mb_substr(strip_tags(stripslashes($request->sapo)), 0, 165, 'UTF-8');
+            $Topic->seo_description_en = mb_substr(strip_tags(stripslashes($request->sapo)), 0, 165, 'UTF-8');
 
             //Hot & Marquee
             $Topic->hot = $request->hot;
@@ -288,6 +292,110 @@ class TopicsController extends Controller
         } else {
             return redirect()->route('NotFound');
         }
+    }
+
+    public function storeXML()
+    {
+
+        // Check Permissions
+        if (!@Auth::user()->permissionsGroup->add_status) {
+            return Redirect::to(route('NoPermission'))->send();
+        }
+
+        $ch = curl_init('https://www.dkn.tv/feed');
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+        // Identify the rquest User Agent as Chrome - any real browser, or perhaps any value may work
+        // depending on the resource you are trying to hit
+        curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2049.0 Safari/537.36');
+
+
+        $feed = curl_exec($ch);
+        
+        $invalid_characters = '/[^\x9\xa\x20-\xD7FF\xE000-\xFFFD]/';
+        $html = preg_replace($invalid_characters, '', $feed);
+
+        $xml = simplexml_load_string($html);
+
+        //test purpose part 
+        // $encode = json_encode($xml);
+        // $decode = json_decode($encode, true);
+        // print_r($decode);
+
+        $i = 0;
+
+        foreach($xml->channel->item as $item){
+
+            $e_title = $item->title;
+            $e_webmaster = $item->category[0];
+            $e_section = $item->category[1];
+            $e_sapo = strip_tags($item->description);
+            $e_content = $item->children("content", true);
+            $e_details = (string)$e_content->encoded;
+            $e_date = $item->pubDate;
+
+            $exist = Topic::where('title_vi',$e_title)->first();
+
+            $webmaster = Webmaster::find('name', str_slug($e_webmaster))->first(); 
+
+            if (empty($exist) && !empty($webmaster)){
+
+                $next_nor_no = Topic::where('webmaster_id', '=', $webmaster->id)->max('row_no');
+                if ($next_nor_no < 1) {
+                    $next_nor_no = 1;
+                } else {
+                    $next_nor_no++;
+                }
+
+                // create new topic
+                $Topic = new Topic;
+
+                // Save topic details
+                $Topic->row_no = $next_nor_no;
+                $Topic->title_vi = $e_title;
+                $Topic->sapo = $e_sapo;
+                $Topic->details_vi = $e_details;
+                $Topic->date = Carbon::parse($e_date)->format('Y-m-d');
+                $Topic->webmaster_id = $webmaster->id;
+                $Topic->created_by = Auth::user()->id;
+                $Topic->visits = 0;
+                $Topic->status = 0;
+
+
+                // Meta title
+                $Topic->seo_title_vi = $e_title;
+
+                // URL Slugs
+                $slugs = Helper::URLSlug($e_title, $e_title, "topic", 0);
+                $Topic->seo_url_slug_vi = $slugs['slug_vi'];
+                $Topic->seo_url_slug_en = $slugs['slug_en'];
+
+                // Meta Description
+                $Topic->seo_description_vi = mb_substr(strip_tags(stripslashes($e_sapo)), 0, 165, 'UTF-8');
+        
+                $Topic->save();
+
+
+                $category = Section::where('webmaster_id',$webmaster->id)->where('title_vi',$e_section)->first();
+
+                if (!empty($category)){
+
+                    $TopicCategory = new TopicCategory;
+                    $TopicCategory->topic_id = $Topic->id;
+                    $TopicCategory->topic_date = $Topic->date;
+                    $TopicCategory->section_id = $category->id;
+                    $TopicCategory->save();
+
+                }
+
+                $i++;
+            }
+
+        }
+
+        echo $i."<br>";
+
+        return response()->json($array, 200);
     }
 
     public function getUploadPath()

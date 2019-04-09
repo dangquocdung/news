@@ -167,6 +167,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        Orchestra\Parser\XmlServiceProvider::class,
 
     ],
 
@@ -222,6 +223,7 @@ return [
         'cURL' => 'anlutro\cURL\Laravel\cURL',
         'HTMLMin' => HTMLMin\HTMLMin\Facades\HTMLMin::class,
         'Image' => Intervention\Image\Facades\Image::class,
+        'XmlParser' => Orchestra\Parser\Xml\Facade::class,
 
     ],
 
