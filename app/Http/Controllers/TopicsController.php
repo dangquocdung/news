@@ -330,7 +330,7 @@ class TopicsController extends Controller
             $e_sapo = strip_tags($item->description);
             $e_content = $item->children("content", true);
 
-            $partern = '/(width="*")|(height="*")/';
+            $partern = '#<style>.*</style>#m';
             $replacement = '';
 
             $e_details =  preg_replace($partern,$replacement,$e_content->encoded);
