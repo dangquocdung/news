@@ -395,7 +395,7 @@ class TopicsController extends Controller
 
         echo $i."<br>";
 
-        return response()->json($array, 200);
+        // return response()->json($array, 200);
     }
 
     public function getUploadPath()
