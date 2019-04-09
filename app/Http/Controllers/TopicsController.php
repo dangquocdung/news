@@ -371,7 +371,7 @@ class TopicsController extends Controller
                 $Topic->seo_url_slug_en = $slugs['slug_en'];
 
                 // Meta Description
-                $Topic->seo_description_vi = mb_substr(strip_tags(stripslashes($e_sapo)), 0, 165, 'UTF-8');
+                $Topic->seo_description_vi = mb_substr(strip_tags(stripslashes($e_title)), 0, 165, 'UTF-8');
         
                 $Topic->save();
 
