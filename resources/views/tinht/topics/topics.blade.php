@@ -107,7 +107,7 @@
             <div class="col-md-3">
 
                 @include('tinht.includes.thongbao')
-                @include('cdc.includes.lienket')
+                @include('tinht.includes.lienket')
                     
             </div><!-- Sidebar End -->
                 
