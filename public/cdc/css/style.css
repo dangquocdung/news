@@ -5056,12 +5056,6 @@ blockquote.blockquote.blockquote-bg p {
   float: left;
 }
 
-.single-blog .blog-wrap .content p span {
-  line-height: 32px;
-  color: #000000;
-  margin-bottom: 20px;
-}
-
 @media only screen and (max-width: 767px) {
   .single-blog .blog-wrap .content p img {
     width: 100%;
