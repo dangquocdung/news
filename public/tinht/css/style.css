@@ -6779,6 +6779,10 @@ figcaption {
   margin-top: 5px !important;
 }
 
+img .size-full {
+  width: 100% !important;
+}
+
 @media only screen and (max-width: 479px), only screen and (max-width: 767px) {
   #mainbox-r {
     padding-left: 0;
