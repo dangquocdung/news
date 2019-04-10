@@ -1074,9 +1074,12 @@
                             <div class="col-sm-offset-2 col-sm-10">
                                 <button type="submit" class="btn btn-primary m-t"><i class="material-icons">
                                         &#xe31b;</i> {!! trans('backLang.update') !!}</button>
+
+                                @if ($Topics->status == 1)
                                 
-                                <a href="{{ url($Topics->seo_url_slug_vi) }}" target="_blank"
-                                        class="btn btn-default m-t"><i class="material-icons">visibility</i> {!! trans('backLang.view') !!}</a>
+                                    <a href="{{ url($Topics->seo_url_slug_vi) }}" target="_blank"
+                                            class="btn btn-default m-t"><i class="material-icons">visibility</i> {!! trans('backLang.view') !!}</a>
+                                @endif
 
                                 <a href="{{ route('topics',$WebmasterSection->id) }}"
                                    class="btn btn-default m-t"><i class="material-icons">
