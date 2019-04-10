@@ -19,11 +19,27 @@
 
                                     @foreach($MenuLinks->where('father_id',1)->sortby('row_no') as $HeaderMenuLink)
 
+                                        <?php
+                                            if ($MainMenuLink->webmasterSection[$slug_var] != "" && Helper::GeneralWebmasterSettings("links_status")) {
+                                                if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
+                                                    $mmnnuu_link = url(trans('backLang.code')."/" .$MainMenuLink->webmasterSection[$slug_var]);
+                                                }else{
+                                                    $mmnnuu_link = url($MainMenuLink->webmasterSection[$slug_var]);
+                                                }
+                                            }else{
+                                                if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
+                                                    $mmnnuu_link =url(trans('backLang.code')."/" .$MainMenuLink->webmasterSection['name']);
+                                                }else{
+                                                    $mmnnuu_link =url($MainMenuLink->webmasterSection['name']);
+                                                }
+                                            }
+                                        ?>
+
                                         @if($HeaderMenuLink->type > 2)
 
                                             <li class="@if (!empty($WebmasterSection)) @if ($HeaderMenuLink->cat_id == $WebmasterSection->id) active  @endif @endif @if ($HeaderMenuLink->type==3) has-dropdown @endif">
                                                 
-                                                <a href="javascript:void(0)">{{ $HeaderMenuLink->title_vi }}</a>
+                                                <a href="{{ $mmnnuu_link }}">{{ $HeaderMenuLink->title_vi }}</a>
                                                 <!-- Submenu Start -->
                                                 @if(count($HeaderMenuLink->webmasterSection->sections) >0)
                                                     <ul class="sub-menu">
