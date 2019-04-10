@@ -80,7 +80,6 @@
 
                                     <!-- Meta -->
                                      <div class="meta fix">
-                                         {{ $Topic->categories->first()->section_id }}
                                         <small>{{ \Carbon\Carbon::parse($Topic->date)->format('d/m/Y')}}</small>
                                     </div> 
 
