@@ -400,6 +400,8 @@ class TopicsController extends Controller
             
                     $Topic->save();
 
+                    // $Topic->refresh();
+
 
                     $category = Section::where('webmaster_id',$webmaster->id)->where('title_vi',$e_section)->first();
 
