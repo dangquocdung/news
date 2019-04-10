@@ -359,7 +359,7 @@ class TopicsController extends Controller
                 $e_details = $e_details."<br><br><a href='".$item->link."'><strong>Nguồn bài viết</strong></a>";
                 $e_date = $item->pubDate;
 
-                $exist = Topic::where('seo_url_slug_vi',str_slug($e_title))->get();
+                $exist = Topic::where('seo_url_slug_vi',str_slug($e_title))->first();
 
                 $webmaster = WebmasterSection::where('name', str_slug($e_webmaster))->first(); 
 
@@ -400,7 +400,7 @@ class TopicsController extends Controller
             
                     $Topic->save();
 
-                    // $Topic->refresh();
+                    $Topic->refresh();
 
 
                     $category = Section::where('webmaster_id',$webmaster->id)->where('title_vi',$e_section)->first();
