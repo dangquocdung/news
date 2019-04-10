@@ -424,6 +424,96 @@ class TopicsController extends Controller
                 
             }
 
+            foreach($xml->channel->item as $item){
+
+                $e_title = $item->title;
+                $e_webmaster = $item->category[1];
+                $e_section = $item->category[0];
+                $e_sapo = strip_tags($item->description);
+                $e_content = $item->children("content", true);
+
+                // $partern = '#(<style>.*</style>)|(<div>.*</div>)#';
+
+                // $partern = '#<img.+?((/>)|(</img>))#';
+
+                // $replacement = '';
+
+                // $e_details =  preg_replace($partern,$replacement,$e_content->encoded);
+
+                $e_details = strip_tags($e_content->encoded,'<p><a><img><strong>');
+
+                $e_details = preg_replace( '/(width|height)="\d*"\s/', '', $e_details );
+
+                $e_details = preg_replace('/<span[^>]+\>/i', '', $e_details);
+
+                $e_details = $e_details."<br><br><a href='".$item->link."'><strong>--NGUỒN BÀI VIẾT--</strong></a>";
+                
+                $e_date = $item->pubDate;
+
+                $exist = Topic::where('title_vi','LIKE',$e_title)->first();
+
+                if ( empty($exist) ){
+
+                    $webmaster = WebmasterSection::where('name', str_slug($e_webmaster))->first(); 
+
+                    if (!empty($webmaster)){
+
+                        $next_nor_no = Topic::where('webmaster_id', '=', $webmaster->id)->max('row_no');
+    
+                        if ($next_nor_no < 1) {
+                            $next_nor_no = 1;
+                        } else {
+                            $next_nor_no++;
+                        }
+    
+                        // create new topic
+                        $Topic = new Topic;
+    
+                        // Save topic details
+                        $Topic->row_no = $next_nor_no;
+                        $Topic->title_vi = $e_title;
+                        // $Topic->sapo = $e_sapo;
+                        $Topic->details_vi = $e_details;
+                        $Topic->date = Carbon::parse($e_date)->format('Y-m-d');
+                        $Topic->webmaster_id = $webmaster->id;
+                        $Topic->created_by = Auth::user()->id;
+                        $Topic->visits = 0;
+                        $Topic->status = 0;
+    
+    
+                        // Meta title
+                        $Topic->seo_title_vi = $e_title;
+    
+                        // URL Slugs
+                        $Topic->seo_url_slug_vi = str_slug($e_title);
+                       
+    
+                        // Meta Description
+                        $Topic->seo_description_vi = mb_substr(strip_tags(stripslashes($e_title)), 0, 165, 'UTF-8');
+                
+                        $Topic->save();
+    
+                        $Topic->refresh();
+    
+    
+                        $category = Section::where('webmaster_id',$webmaster->id)->where('title_vi',$e_section)->first();
+    
+                        if (!empty($category)){
+    
+                            $TopicCategory = new TopicCategory;
+                            $TopicCategory->topic_id = $Topic->id;
+                            $TopicCategory->topic_date = $Topic->date;
+                            $TopicCategory->section_id = $category->id;
+                            $TopicCategory->save();
+    
+                        }
+    
+                    }
+
+                } 
+                
+            }
+
         }
 
         
