@@ -420,7 +420,7 @@ class FrontendHomeController extends Controller
                         $category_topics[] = $category->topic_id;
                     }
 
-                    $Topics = Topic::where([['webmaster_id', '=', $WebmasterSection->id], ['status', 1], ['expire_date', '>=', date("Y-m-d")], ['expire_date', '<>', null]])->orWhere([['webmaster_id', '=', $WebmasterSection->id], ['status', 1], ['expire_date', null]])->whereIn('id', $category_topics)->orderby('date', 'desc')->get();
+                    $Topics = Topic::where([['webmaster_id', '=', $WebmasterSection->id], ['status', 1], ['expire_date', '>=', date("Y-m-d")], ['expire_date', '<>', null]])->orWhere([['webmaster_id', '=', $WebmasterSection->id], ['status', 1], ['expire_date', null]])->whereIn('id', $category_topics)->orderby('date', 'desc')->orderby('id', 'desc')->get();
                     $category_and_topics_count[$AllSection->id] = count((array)$Topics);
                 }
             }
@@ -451,6 +451,7 @@ class FrontendHomeController extends Controller
                                                     ['expire_date', null]])
                                                     ->whereIn('id', $category_topics)
                                                     ->orderby('date', 'desc')
+                                                    ->orderby('id', 'desc')
                                                     ->paginate(env('FRONTEND_PAGINATION'));
             
             } else {
@@ -464,6 +465,7 @@ class FrontendHomeController extends Controller
                                                     ['status', 1], 
                                                     ['expire_date', null]])
                                                     ->orderby('date', 'desc')
+                                                    ->orderby('id', 'desc')
                                                     ->paginate(env('FRONTEND_PAGINATION'));
             }
                 
