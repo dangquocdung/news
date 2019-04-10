@@ -361,7 +361,7 @@ class TopicsController extends Controller
 
                 $exist = Topic::where('title_vi','LIKE',$e_title)->first();
 
-                if ( empty($exist)){
+                if ( count($exist) < 1 ){
 
                     $webmaster = WebmasterSection::where('name', str_slug($e_webmaster))->first(); 
 
