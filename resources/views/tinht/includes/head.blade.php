@@ -16,26 +16,26 @@
 <!-- CSS
 ============================================ -->
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="{{ URL::asset('cdc/css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ URL::asset('tinht/css/bootstrap.min.css') }}">
 <!-- Icon Font CSS -->
-<link rel="stylesheet" href="{{ URL::asset('cdc/css/font-awesome.min.css') }}">
+<link rel="stylesheet" href="{{ URL::asset('tinht/css/font-awesome.min.css') }}">
 <!-- Plugins CSS -->
-<link rel="stylesheet" href="{{ URL::asset('cdc/css/plugins.css') }}">
+<link rel="stylesheet" href="{{ URL::asset('tinht/css/plugins.css') }}">
 <!-- rypp -->
-<link rel="stylesheet" href="{{ URL::asset('cdc/css/rypp.css') }}">
+<link rel="stylesheet" href="{{ URL::asset('tinht/css/rypp.css') }}">
 <!-- rypp -->
-<link rel="stylesheet" href="{{ URL::asset('cdc/css/datatables.min.css') }}">
+<link rel="stylesheet" href="{{ URL::asset('tinht/css/datatables.min.css') }}">
 <!-- Style CSS -->
-<link rel="stylesheet" href="{{ mix('cdc/css/style.css') }}">
+<link rel="stylesheet" href="{{ mix('tinht/css/style.css') }}">
 
 
 <!-- Modernizer JS -->
-<script src="{{ URL::asset('cdc/js/vendor/modernizr-2.8.3.min.js') }}"></script>
+<script src="{{ URL::asset('tinht/js/vendor/modernizr-2.8.3.min.js') }}"></script>
 <!-- Jssor Slider JS -->
-<script src="{{ URL::asset('/cdc/js/vendor/jssor.slider-26.7.0.min.js') }}"></script>
+<script src="{{ URL::asset('/tinht/js/vendor/jssor.slider-26.7.0.min.js') }}"></script>
 
 <!-- jQuery JS -->
-<script src="{{ URL::asset('cdc/js/vendor/jquery-3.3.1.js') }}"></script>
+<script src="{{ URL::asset('tinht/js/vendor/jquery-3.3.1.js') }}"></script>
 
 
 

@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
 
 <head>
-    @include('cdc.includes.head')
+    @include('tinht.includes.head')
     @yield('css')
 </head>
 
@@ -11,8 +11,8 @@
     <!-- Main Wrapper -->
     <div id="main-wrapper">
 
-        @include('cdc.includes.header')
-        @include('cdc.includes.menu')
+        @include('tinht.includes.header')
+        @include('tinht.includes.menu')
 
         <div class="container nen-trang">
             
@@ -29,7 +29,7 @@
 
         </div>
         
-        @include('cdc.includes.footer')
+        @include('tinht.includes.footer')
         
     </div>
 
@@ -77,23 +77,23 @@
     </script>
 
     <!-- jQuery JS -->
-    {{-- <script src="{{ URL::asset('cdc/js/vendor/jquery-1.12.0.min.js') }}"></script> --}}
+    {{-- <script src="{{ URL::asset('tinht/js/vendor/jquery-1.12.0.min.js') }}"></script> --}}
     <!-- Popper JS -->
-    <script src="{{ URL::asset('cdc/js/popper.min.js') }}"></script>
+    <script src="{{ URL::asset('tinht/js/popper.min.js') }}"></script>
     <!-- Bootstrap JS -->
-    <script src="{{ URL::asset('cdc/js/bootstrap.min.js') }}"></script>
+    <script src="{{ URL::asset('tinht/js/bootstrap.min.js') }}"></script>
     <!-- Plugins JS -->
-    <script src="{{ URL::asset('cdc/js/plugins.js') }}"></script>
+    <script src="{{ URL::asset('tinht/js/plugins.js') }}"></script>
     <!-- rypp JS -->
-    <script src="{{ URL::asset('cdc/js/rypp.js') }}"></script>
+    <script src="{{ URL::asset('tinht/js/rypp.js') }}"></script>
     <!-- rypp JS -->
-    <script src="{{ URL::asset('cdc/js/ytp-playlist.js') }}"></script>
+    <script src="{{ URL::asset('tinht/js/ytp-playlist.js') }}"></script>
     <!-- Ajax Mail JS -->
-    <script src="{{ URL::asset('cdc/js/ajax-mail.js') }}"></script>
+    <script src="{{ URL::asset('tinht/js/ajax-mail.js') }}"></script>
     <!-- Datatables JS -->
-    <script src="{{ URL::asset('cdc/js/vendor/datatables.min.js') }}"></script>
+    <script src="{{ URL::asset('tinht/js/vendor/datatables.min.js') }}"></script>
     <!-- Main JS -->
-    <script src="{{ URL::asset('cdc/js/main.js') }}"></script>
+    <script src="{{ URL::asset('tinht/js/main.js') }}"></script>
     
     
 

@@ -115,7 +115,7 @@
                             </nav>
                         </div><!-- Main Menu Start -->
 
-                        <div class="mobile-logo d-none d-block d-md-none"><a href="/"><img src="cdc/img/logo-white.png" alt="Logo"></a></div>
+                        <div class="mobile-logo d-none d-block d-md-none"><a href="/"><img src="tinht/img/logo-white.png" alt="Logo"></a></div>
 
                         <!-- Header Search -->
                         <div class="header-search float-right">

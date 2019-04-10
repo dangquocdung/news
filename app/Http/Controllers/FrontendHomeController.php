@@ -345,7 +345,7 @@ class FrontendHomeController extends Controller
         //         "TopicsMostViewed",
         //         "HotTopics"));
 
-        return view('cdc.home',
+        return view('tinht.home',
             compact("PageTitle",
                     "PageDescription",
                     "PageKeywords"));
@@ -509,7 +509,7 @@ class FrontendHomeController extends Controller
 
             // return response()->json([$Categories]);
 
-            return view("cdc.topics",
+            return view("tinht.topics",
                 compact("WebmasterSection",
                     "Categories",
                     "Topics",
@@ -719,7 +719,7 @@ class FrontendHomeController extends Controller
                 }
                 // .. end of .. Page Title, Description, Keywords
 
-                return view("cdc.topic",
+                return view("tinht.topic",
                     compact("WebsiteSettings",
                         "WebmasterSettings",
                         "HeaderMenuLinks",
@@ -990,7 +990,7 @@ class FrontendHomeController extends Controller
 
         
 
-        return view("cdc.topic",
+        return view("tinht.topic",
             compact(
                     "PageTitle",
                     "PageDescription",
@@ -1018,7 +1018,7 @@ class FrontendHomeController extends Controller
 
         
 
-        return view("cdc.topic",
+        return view("tinht.topic",
             compact(
                     "PageTitle",
                     "PageDescription",
@@ -1046,7 +1046,7 @@ class FrontendHomeController extends Controller
 
         
 
-        return view("cdc.topic",
+        return view("tinht.topic",
             compact(
                     "PageTitle",
                     "PageDescription",

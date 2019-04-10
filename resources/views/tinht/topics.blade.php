@@ -1,4 +1,4 @@
-@extends('cdc.layout')
+@extends('tinht.layout')
 
 @section('meta')
 
@@ -11,5 +11,5 @@
 @endsection
 
 @section('content')
-    @include('cdc.topics.topics')
+    @include('tinht.topics.topics')
  @stop
