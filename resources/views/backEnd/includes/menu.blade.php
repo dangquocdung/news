@@ -215,7 +215,7 @@ $urlAfterRoot = substr($fullPagePath, strpos($fullPagePath, env('BACKEND_PATH'))
                     <li>
                         <a href="{{ route('storeXML') }}" onclick="location.href='{{ route('storeXML') }}'">
                             <span class="nav-icon">
-                                <i class="material-icons">&#xe5c3;</i>
+                                <i class="material-icons">&#xe09e;</i>
                             </span>
                             <span class="nav-text">{{ trans('backLang.storeXML') }}</span>
                         </a>
