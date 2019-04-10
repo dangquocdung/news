@@ -356,13 +356,13 @@ class TopicsController extends Controller
 
                 $e_details = preg_replace('/<span[^>]+\>/i', '', $e_details);
 
-                $e_details = $e_details."<br><br><a href='".$item->link."'><strong>Nguồn bài viết</strong></a>";
+                $e_details = $e_details."<br><br><a href='".$item->link."'><strong>--NGUỒN BÀI VIẾT--</strong></a>";
                 
                 $e_date = $item->pubDate;
 
                 $exist = Topic::where('title_vi','LIKE',$e_title)->first();
 
-                if ( isnull($exist) ){
+                if ( null($exist) ){
 
                     $webmaster = WebmasterSection::where('name', str_slug($e_webmaster))->first(); 
 
