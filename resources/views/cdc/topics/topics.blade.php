@@ -76,13 +76,13 @@
                                 <div class="content">
 
                                     <!-- Title -->
-                                    <h5 class="title">
-                                        <a href="{{ $topic_link_url }}">{{ $Topic->title_vi }}</a>
-                                        <span class="meta-item date" style="font-weight:500">({{ \Carbon\Carbon::parse($Topic->date)->format('d/m/Y')}})</span>
-                                    </h5>
+                                    <h5 class="title"><a href="{{ $topic_link_url }}">{{ $Topic->title_vi }}</a></h5>
 
                                     <!-- Meta -->
-                                    
+                                     <div class="meta fix">
+                                         {{ $Topic->categories->first()->section_id }}
+                                        <small>{{ \Carbon\Carbon::parse($Topic->date)->format('d/m/Y')}}</small>
+                                    </div> 
 
                                     <p class="sapo">{{ $Topic->sapo}}</p>
 
