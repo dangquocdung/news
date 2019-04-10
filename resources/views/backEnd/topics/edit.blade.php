@@ -1074,6 +1074,11 @@
                             <div class="col-sm-offset-2 col-sm-10">
                                 <button type="submit" class="btn btn-primary m-t"><i class="material-icons">
                                         &#xe31b;</i> {!! trans('backLang.update') !!}</button>
+                                
+                                <a href="{{ url($Topics->seo_url_slug_vi) }}" target="_blank"
+                                        class="btn btn-default m-t"><i class="material-icons">
+                                                &#xe5cd;</i> {!! trans('backLang.view') !!}</a>
+
                                 <a href="{{ route('topics',$WebmasterSection->id) }}"
                                    class="btn btn-default m-t"><i class="material-icons">
                                         &#xe5cd;</i> {!! trans('backLang.cancel') !!}</a>
@@ -2737,9 +2742,6 @@
                                         <div>
                                             <button type="submit" class="btn btn-primary m-t"><i class="material-icons">
                                                     &#xe31b;</i> {!! trans('backLang.update') !!}</button>
-                                            <a href="{{ url($Topics->seo_url_slug_vi) }}" target="_blank"
-                                                    class="btn btn-default m-t"><i class="material-icons">
-                                                            &#xe5cd;</i> {!! trans('backLang.view') !!}</a>
                                             <a href="{{ route('topics',$WebmasterSection->id) }}"
                                                class="btn btn-default m-t"><i class="material-icons">
                                                     &#xe5cd;</i> {!! trans('backLang.cancel') !!}</a>
