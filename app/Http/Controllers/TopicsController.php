@@ -362,9 +362,10 @@ class TopicsController extends Controller
 
                 $webmaster = WebmasterSection::where('name', str_slug($e_webmaster))->first(); 
 
-                if (empty($exist) && !empty($webmaster)){
+                if ( (count($exist) == 0)  && (!empty($webmaster)) ){
 
                     $next_nor_no = Topic::where('webmaster_id', '=', $webmaster->id)->max('row_no');
+
                     if ($next_nor_no < 1) {
                         $next_nor_no = 1;
                     } else {
@@ -445,7 +446,7 @@ class TopicsController extends Controller
 
                 $webmaster = WebmasterSection::where('name', str_slug($e_webmaster))->first(); 
 
-                if (empty($exist) && !empty($webmaster)){
+                if ( (count($exist) == 0)  && (!empty($webmaster)) ){
 
                     $next_nor_no = Topic::where('webmaster_id', '=', $webmaster->id)->max('row_no');
                     if ($next_nor_no < 1) {
