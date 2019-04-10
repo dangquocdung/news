@@ -1076,8 +1076,7 @@
                                         &#xe31b;</i> {!! trans('backLang.update') !!}</button>
                                 
                                 <a href="{{ url($Topics->seo_url_slug_vi) }}" target="_blank"
-                                        class="btn btn-default m-t"><i class="material-icons">
-                                                &#xe5cd;</i> {!! trans('backLang.view') !!}</a>
+                                        class="btn btn-default m-t"><i class="material-icons">visibility</i> {!! trans('backLang.view') !!}</a>
 
                                 <a href="{{ route('topics',$WebmasterSection->id) }}"
                                    class="btn btn-default m-t"><i class="material-icons">
