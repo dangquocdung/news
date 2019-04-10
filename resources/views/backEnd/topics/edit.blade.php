@@ -2737,6 +2737,9 @@
                                         <div>
                                             <button type="submit" class="btn btn-primary m-t"><i class="material-icons">
                                                     &#xe31b;</i> {!! trans('backLang.update') !!}</button>
+                                            <a href="{{ route('topic',$Topic->id) }}"
+                                                    class="btn btn-default m-t"><i class="material-icons">
+                                                            &#xe5cd;</i> {!! trans('backLang.view') !!}</a>
                                             <a href="{{ route('topics',$WebmasterSection->id) }}"
                                                class="btn btn-default m-t"><i class="material-icons">
                                                     &#xe5cd;</i> {!! trans('backLang.cancel') !!}</a>
