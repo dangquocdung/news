@@ -5052,8 +5052,8 @@ blockquote.blockquote.blockquote-bg p {
 }
 
 .single-blog .blog-wrap .content p {
+  margin-bottom: 5px;
   display: block;
-  float: left;
 }
 
 @media only screen and (max-width: 767px) {
