@@ -6748,10 +6748,6 @@ p.sapo {
   width: 100%;
 }
 
-.content img {
-  margin-bottom: 10px !important;
-}
-
 .content .table-bordered td,
 .content .table-bordered th {
   border: 1px solid #3d7e9a;
