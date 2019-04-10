@@ -301,7 +301,7 @@ class TopicsController extends Controller
         }
 
         $urls = array(
-                    "https://www.dkn.tv/feed",
+                    "https://www.dkn.tv/feed"
                     // "https://www.dkn.tv/cat/trong-nuoc/feed",
                     // "https://www.dkn.tv/cat/the-gioi/feed",
                     // "https://www.dkn.tv/cat/van-hoa/feed",
@@ -421,9 +421,6 @@ class TopicsController extends Controller
         }
 
         
-
-        echo $i."<br>";
-
         return redirect()->route('adminHome');
 
         // return response()->json($array, 200);
