@@ -1,4 +1,4 @@
-@extends('cdc.layout')
+@extends('tinht.layout')
 
 @section('meta')
 
@@ -11,7 +11,7 @@
 @stop
 
 @section('css')
-    <link rel="stylesheet" href="{{ URL::asset('cdc/css/lightgallery.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('tinht/css/lightgallery.css') }}">
 @endsection
 
 @section('content')
@@ -30,19 +30,19 @@
 
                 @if (!empty($Lct))
 
-                    @include('cdc.topic.lich-cong-tac')
+                    @include('tinht.topic.lich-cong-tac')
                 
                 @elseif (!empty($Dbs))
 
-                    @include('cdc.topic.danh-ba-dien-thoai')
+                    @include('tinht.topic.danh-ba-dien-thoai')
 
                 @elseif (!empty($Vcn))
             
-                    @include('cdc.topic.vaccine')
+                    @include('tinht.topic.vaccine')
                 
                 @else
             
-                    @include('cdc.topic.topic')
+                    @include('tinht.topic.topic')
             
                 @endif
                                 
@@ -51,8 +51,8 @@
            <!-- Sidebar Start -->
            <div class="col-md-3">
 
-                @include('cdc.includes.thongbao')
-                @include('cdc.includes.lienket')
+                @include('tinht.includes.thongbao')
+                @include('tinht.includes.lienket')
                 
             </div><!-- Sidebar End -->
             
@@ -84,7 +84,7 @@
             }
         } );
     </script>
-    <script src="{{ URL::asset('cdc/js/picturefill.min.js') }}"></script>
-    <script src="{{ URL::asset('cdc/js/lightgallery-all.min.js') }}"></script>
-    <script src="{{ URL::asset('cdc/js/jquery.mousewheel.min.js') }}"></script>
+    <script src="{{ URL::asset('tinht/js/picturefill.min.js') }}"></script>
+    <script src="{{ URL::asset('tinht/js/lightgallery-all.min.js') }}"></script>
+    <script src="{{ URL::asset('tinht/js/jquery.mousewheel.min.js') }}"></script>
 @endsection

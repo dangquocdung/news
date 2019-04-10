@@ -112,7 +112,7 @@
                                                 @if ($Topic->photo_file != null && file_exists('uploads/topics/'.$Topic->photo_file))
                                                     <img src="uploads/topics/{{ $Topic->photo_file }}" alt="{{ $Topic->$link_title_var}}">
                                                 @else
-                                                    <img src="cdc/img/post/post-103.jpg" alt="{{ $Topic->$link_title_var}}">
+                                                    <img src="tinht/img/post/post-103.jpg" alt="{{ $Topic->$link_title_var}}">
                                                 @endif
 
                                             </a>
@@ -162,10 +162,10 @@
                 <div class="col-lg-3 col-12 mb-20 box-mobile">
 
                     <div class="row">
-                        @include('cdc.includes.dich-vu')
-                        @include('cdc.includes.tien-ich')
-                        @include('cdc.includes.san-pham-moi')
-                        @include('cdc.includes.tai-tro')
+                        @include('tinht.includes.dich-vu')
+                        @include('tinht.includes.tien-ich')
+                        @include('tinht.includes.san-pham-moi')
+                        @include('tinht.includes.tai-tro')
                     </div>
 
                 </div><!-- Sidebar End -->

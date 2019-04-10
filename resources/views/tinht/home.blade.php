@@ -4,7 +4,7 @@
     $slug_var = "seo_url_slug_" . trans('backLang.boxCode');
 @endphp
 
-@extends('cdc.layout')
+@extends('tinht.layout')
 
 @section('meta')
 
@@ -193,22 +193,22 @@
     
                     </div><!-- Post Block Wrapper End -->
     
-                    @include('cdc.home.slide')
+                    @include('tinht.home.slide')
 
                     <div class="clearfix"></div>
 
-                    @include('cdc.home.video')
+                    @include('tinht.home.video')
 
-                    @include('cdc.home.tinbai')
+                    @include('tinht.home.tinbai')
                 </div>
                     
                 <!-- Sidebar Start -->
                 <div class="col-md-3">
                     
-                    {{-- @include('cdc.includes.dichvu') --}}
-                    @include('cdc.includes.thongbao')
-                    {{-- @include('cdc.includes.tienich') --}}
-                    @include('cdc.includes.lienket')
+                    {{-- @include('tinht.includes.dichvu') --}}
+                    @include('tinht.includes.thongbao')
+                    {{-- @include('tinht.includes.tienich') --}}
+                    @include('tinht.includes.lienket')
     
                 </div><!-- Sidebar End -->
                     

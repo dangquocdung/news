@@ -106,7 +106,7 @@
             <!-- Sidebar Start -->
             <div class="col-md-3">
 
-                @include('cdc.includes.thongbao')
+                @include('tinht.includes.thongbao')
                 @include('cdc.includes.lienket')
                     
             </div><!-- Sidebar End -->
