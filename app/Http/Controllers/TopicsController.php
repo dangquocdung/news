@@ -325,8 +325,8 @@ class TopicsController extends Controller
         foreach($xml->channel->item as $item){
 
             $e_title = $item->title;
-            $e_webmaster = $item->category[0];
-            $e_section = $item->category[1];
+            $e_webmaster = $item->category[1];
+            $e_section = $item->category[0];
             $e_sapo = strip_tags($item->description);
             $e_content = $item->children("content", true);
 
