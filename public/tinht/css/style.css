@@ -6772,6 +6772,12 @@ p.sapo {
   height: 100%;
 }
 
+figcaption {
+  text-align: center !important;
+  font-style: italic !important;
+  margin-bottom: 15px !important;
+}
+
 @media only screen and (max-width: 479px), only screen and (max-width: 767px) {
   #mainbox-r {
     padding-left: 0;
