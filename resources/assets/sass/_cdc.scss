@@ -163,6 +163,8 @@ figcaption {
     margin-top: 5px !important;
 }
 
-img .size-full {
-    width: 100% !important;
+img {
+    .size-full {
+        width: 100% !important;
+    }
 }
