@@ -121,6 +121,8 @@
             <div class="tags-social float-left">
 
                 <div class="blog-social float-right">
+                    <a href="{{ route("topicsEdit",["webmasterId"=>$WebmasterSection->id,"id"=>$Topic->id]) }}" class="facebook" data-placement="top" title="Facebook"><i class="material-icons">&#xe3c9;</i> {{ trans('backLang.edit') }}</a>
+
                     <a href="{{ Helper::SocialShare("facebook", $PageTitle)}}" class="facebook" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
                     <a href="{{ Helper::SocialShare("twitter", $PageTitle)}}" class="twitter" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a>
                     <a href="{{ Helper::SocialShare("google", $PageTitle)}}" class="google-plus" data-placement="top" title="Google+"><i class="fa fa-google-plus"></i></a>
