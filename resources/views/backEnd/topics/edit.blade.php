@@ -2737,7 +2737,7 @@
                                         <div>
                                             <button type="submit" class="btn btn-primary m-t"><i class="material-icons">
                                                     &#xe31b;</i> {!! trans('backLang.update') !!}</button>
-                                            <a href="{{ route('topic',$Topics->id) }}"
+                                            <a href="{{ url($Topics->$slug_var)) }}" target="_blank"
                                                     class="btn btn-default m-t"><i class="material-icons">
                                                             &#xe5cd;</i> {!! trans('backLang.view') !!}</a>
                                             <a href="{{ route('topics',$WebmasterSection->id) }}"
