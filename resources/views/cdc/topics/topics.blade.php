@@ -80,6 +80,7 @@
 
                                     <!-- Meta -->
                                     <small>{{ \Carbon\Carbon::parse($Topic->date)->format('d/m/Y')}}</small>
+                                    <br>
 
                                     <em>{{ $Topic->sapo}}</em>
 
