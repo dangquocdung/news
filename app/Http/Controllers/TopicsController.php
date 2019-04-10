@@ -359,11 +359,11 @@ class TopicsController extends Controller
                 $e_details = $e_details."<br><br><a href='".$item->link."'><strong>Nguồn bài viết</strong></a>";
                 $e_date = $item->pubDate;
 
-                $exist = Topic::where('title_vi','like',$e_title)->all();
+                $exist = Topic::where('seo_url_slug_vi','like',str_slug($e_title))->get();
 
                 $webmaster = WebmasterSection::where('name', str_slug($e_webmaster))->first(); 
 
-                if ( empty($exist)  && !empty($webmaster) ){
+                if ( (count($exist) == 0)  && !empty($webmaster) ){
 
                     $next_nor_no = Topic::where('webmaster_id', '=', $webmaster->id)->max('row_no');
 
@@ -392,9 +392,8 @@ class TopicsController extends Controller
                     $Topic->seo_title_vi = $e_title;
 
                     // URL Slugs
-                    $slugs = Helper::URLSlug($e_title, $e_title, "topic", 0);
-                    $Topic->seo_url_slug_vi = $slugs['slug_vi'];
-                    $Topic->seo_url_slug_en = $slugs['slug_en'];
+                    $Topic->seo_url_slug_vi = str_slug($e_title);
+                   
 
                     // Meta Description
                     $Topic->seo_description_vi = mb_substr(strip_tags(stripslashes($e_title)), 0, 165, 'UTF-8');
