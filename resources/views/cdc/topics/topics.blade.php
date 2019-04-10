@@ -81,7 +81,7 @@
                                     <!-- Meta -->
                                     <small>{{ \Carbon\Carbon::parse($Topic->date)->format('d/m/Y')}}</small>
 
-                                    <p class="sapo">{{ $Topic->sapo}}</p>
+                                    <em>{{ $Topic->sapo}}</em>
 
                                 </div>
 
