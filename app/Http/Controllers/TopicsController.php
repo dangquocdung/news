@@ -300,7 +300,7 @@ class TopicsController extends Controller
             return Redirect::to(route('NoPermission'))->send();
         }
 
-        $ch = curl_init('https://www.dkn.tv/feed');
+        $ch = curl_init('https://www.dkn.tv/cat/suc-khoe/feed');
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
         // Identify the rquest User Agent as Chrome - any real browser, or perhaps any value may work
