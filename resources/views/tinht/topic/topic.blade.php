@@ -121,7 +121,12 @@
             <div class="tags-social float-left">
 
                 <div class="blog-social float-right">
-                    <a href="{{ route("topicsEdit",["webmasterId"=>$WebmasterSection->id,"id"=>$Topic->id]) }}" class="facebook" data-placement="top" title="Facebook"><i class="material-icons">&#xe3c9;</i> {{ trans('backLang.edit') }}</a>
+
+                    @if(Helper::GeneralWebmasterSettings("settings_status"))
+                        @if(@Auth::user()->permissionsGroup->settings_status)
+                            <a href="{{ route("topicsEdit",["webmasterId"=>$WebmasterSection->id,"id"=>$Topic->id]) }}" target="_blank" class="dribbble" data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
+                        @endif
+                    @endif
 
                     <a href="{{ Helper::SocialShare("facebook", $PageTitle)}}" class="facebook" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
                     <a href="{{ Helper::SocialShare("twitter", $PageTitle)}}" class="twitter" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a>
