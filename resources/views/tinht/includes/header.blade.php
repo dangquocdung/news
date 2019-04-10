@@ -72,7 +72,9 @@
         <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:220px;overflow:hidden;">
             @foreach($Banners->where('section_id',5) as $HeadBanner)
                 <div data-p="170.00">
-                    <img data-u="image" src="/uploads/banners/{{ $HeadBanner->file_vi }}" />
+                    <a href="/">
+                        <img data-u="image" src="/uploads/banners/{{ $HeadBanner->file_vi }}" />
+                    </a>
                 </div>
             @endforeach
             
