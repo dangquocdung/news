@@ -79,10 +79,9 @@
                                     <h5 class="title"><a href="{{ $topic_link_url }}">{{ $Topic->title_vi }}</a></h5>
 
                                     <!-- Meta -->
-                                    <small>{{ \Carbon\Carbon::parse($Topic->date)->format('d/m/Y')}}</small>
+                                    <small><em>{{ \Carbon\Carbon::parse($Topic->date)->format('d/m/Y')}}</em></small>
                                     <br>
-
-                                    <em>{{ $Topic->sapo}}</em>
+                                    {{ $Topic->sapo}}
 
                                 </div>
 
