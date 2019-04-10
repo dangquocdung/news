@@ -301,18 +301,18 @@ class TopicsController extends Controller
         }
 
         $urls = array(
-                    "https://www.dkn.tv/cat/trong-nuoc/feed",
-                    "https://www.dkn.tv/cat/the-gioi/feed",
-                    "https://www.dkn.tv/cat/van-hoa/feed",
-                    "https://www.dkn.tv/cat/nghe-thuat/feed",
-                    "https://www.dkn.tv/cat/giao-duc/feed",
-                    "https://www.dkn.tv/cat/doi-song/feed",
-                    "https://www.dkn.tv/cat/suc-khoe/feed",
+                    // "https://www.dkn.tv/cat/trong-nuoc/feed",
+                    // "https://www.dkn.tv/cat/the-gioi/feed",
+                    // "https://www.dkn.tv/cat/van-hoa/feed",
+                    // "https://www.dkn.tv/cat/nghe-thuat/feed",
+                    // "https://www.dkn.tv/cat/giao-duc/feed",
+                    // "https://www.dkn.tv/cat/doi-song/feed",
+                    // "https://www.dkn.tv/cat/suc-khoe/feed",
                     "https://www.dkn.tv/cat/khoa-hoc-cong-nghe/feed");
 
         foreach ($urls as $url){
 
-            $ch = curl_init($url);
+            $ch = curl_init('https://www.dkn.tv/cat/khoa-hoc-cong-nghe/feed');
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
             // Identify the rquest User Agent as Chrome - any real browser, or perhaps any value may work
