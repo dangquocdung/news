@@ -158,11 +158,11 @@
                 // margin-bottom: 30px;
                 display: block;
                 float: left;
-                & span {
-                    line-height: 32px;
-                    color: #000000;
-                    margin-bottom: 20px;
-                }
+                // & span {
+                //     line-height: 32px;
+                //     color: #000000;
+                //     margin-bottom: 20px;
+                // }
                 & img {
                     @media #{$large-mobile} {
                         width: 100%;
