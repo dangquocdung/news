@@ -312,7 +312,7 @@ class TopicsController extends Controller
 
         foreach ($urls as $url){
 
-            $ch = curl_init($url);
+            $ch = curl_init('https://www.dkn.tv/cat/khoa-hoc-cong-nghe/feed');
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
             // Identify the rquest User Agent as Chrome - any real browser, or perhaps any value may work
