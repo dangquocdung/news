@@ -20,17 +20,17 @@
                                     @foreach($MenuLinks->where('father_id',1)->sortby('row_no') as $HeaderMenuLink)
 
                                         <?php
-                                            if ($MainMenuLink->webmasterSection[$slug_var] != "" && Helper::GeneralWebmasterSettings("links_status")) {
+                                            if ($HeaderMenuLink->webmasterSection[$slug_var] != "" && Helper::GeneralWebmasterSettings("links_status")) {
                                                 if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
-                                                    $mmnnuu_link = url(trans('backLang.code')."/" .$MainMenuLink->webmasterSection[$slug_var]);
+                                                    $mmnnuu_link = url(trans('backLang.code')."/" .$HeaderMenuLink->webmasterSection[$slug_var]);
                                                 }else{
-                                                    $mmnnuu_link = url($MainMenuLink->webmasterSection[$slug_var]);
+                                                    $mmnnuu_link = url($HeaderMenuLink->webmasterSection[$slug_var]);
                                                 }
                                             }else{
                                                 if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
-                                                    $mmnnuu_link =url(trans('backLang.code')."/" .$MainMenuLink->webmasterSection['name']);
+                                                    $mmnnuu_link =url(trans('backLang.code')."/" .$HeaderMenuLink->webmasterSection['name']);
                                                 }else{
-                                                    $mmnnuu_link =url($MainMenuLink->webmasterSection['name']);
+                                                    $mmnnuu_link =url($HeaderMenuLink->webmasterSection['name']);
                                                 }
                                             }
                                         ?>
