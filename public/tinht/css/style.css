@@ -6779,7 +6779,7 @@ figcaption {
   margin-top: 5px !important;
 }
 
-img .size-full {
+img.size-full {
   width: 100% !important;
 }
 
