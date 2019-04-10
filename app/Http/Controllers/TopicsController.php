@@ -363,7 +363,7 @@ class TopicsController extends Controller
 
                 $webmaster = WebmasterSection::where('name', str_slug($e_webmaster))->first(); 
 
-                if ( (count($exist) == 0)  && (!empty($webmaster)) ){
+                if ( empty($exist)  && !empty($webmaster) ){
 
                     $next_nor_no = Topic::where('webmaster_id', '=', $webmaster->id)->max('row_no');
 
