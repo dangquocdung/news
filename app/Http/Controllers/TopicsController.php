@@ -359,7 +359,7 @@ class TopicsController extends Controller
                 $e_details = $e_details."<br><br><a href='".$item->link."'><strong>Nguồn bài viết</strong></a>";
                 $e_date = $item->pubDate;
 
-                $exist = Topic::where('title_vi','LIKE',$e_title)->first();
+                $exist = Topic::where('title_vi','LIKE',$e_title)->get();
 
                 if ( count($exist) < 1 ){
 
