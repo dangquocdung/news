@@ -47,7 +47,7 @@
                                                                     }
                                                                 ?>
                                                                 <li>
-                                                                    <a href="{{ $Category_link_url }}">{{ $MnuCategory->title_vi }}</a>
+                                                                    <a href="{{ $Category_link_url }}">{{ $MnuCategory->icon.' '.$MnuCategory->title_vi }}</a>
                                                                 </li>
                                                             @endforeach
                                                     
