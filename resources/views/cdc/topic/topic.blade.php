@@ -337,11 +337,13 @@
                                 <!-- Image -->
 
                                 <div class="image">
-                                    @if ($Topic->photo_file != null && file_exists('uploads/topics/'.$Topic->photo_file))
-                                        <img src="uploads/topics/{{ $Topic->photo_file }}" alt="{{ $Topic->title_vi}}" style="max-height:240px;">
-                                    @else
-                                        <img src="cdc/img/post/post-48.jpg" alt="{{ $Topic->title_vi}}">
-                                    @endif
+                                    <a href="{{ $topic_link_url }}">
+                                        @if ($Topic->photo_file != null && file_exists('uploads/topics/'.$Topic->photo_file))
+                                            <img src="uploads/topics/{{ $Topic->photo_file }}" alt="{{ $Topic->title_vi}}" style="max-height:240px;">
+                                        @else
+                                            <img src="cdc/img/post/post-48.jpg" alt="{{ $Topic->title_vi}}">
+                                        @endif
+                                    </a>
                                 </div>
 
                                 <!-- Content -->
