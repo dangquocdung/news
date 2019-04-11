@@ -97,10 +97,6 @@ class TopicsController extends Controller
         }
     }
 
-
-    
-
-
     /**
      * Store a newly created resource in storage.
      *
@@ -147,7 +143,6 @@ class TopicsController extends Controller
 
                 // Image::make($request->file($formFileName))->resize(640)->save($path.'/'.$fileFinalName);
                 // $img->insert('public/watermark.png');
-
 
             }
 
@@ -220,7 +215,6 @@ class TopicsController extends Controller
             $Topic->created_by = Auth::user()->id;
             $Topic->visits = 0;
             $Topic->status = 0;
-
 
             // Meta title
             $Topic->seo_title_vi = $request->title_vi;
@@ -301,15 +295,15 @@ class TopicsController extends Controller
         }
 
         $urls = array(
-                    "https://www.dkn.tv/feed",
-                    "https://www.dkn.tv/cat/trong-nuoc/feed",
-                    "https://www.dkn.tv/cat/the-gioi/feed",
-                    "https://www.dkn.tv/cat/van-hoa/feed",
-                    "https://www.dkn.tv/cat/nghe-thuat/feed",
-                    "https://www.dkn.tv/cat/giao-duc/feed",
-                    "https://www.dkn.tv/cat/doi-song/feed",
-                    "https://www.dkn.tv/cat/suc-khoe/feed",
-                    "https://www.dkn.tv/cat/khoa-hoc-cong-nghe/feed"
+                    // "https://www.dkn.tv/cat/trong-nuoc/feed",
+                    // "https://www.dkn.tv/cat/the-gioi/feed",
+                    // "https://www.dkn.tv/cat/van-hoa/feed",
+                    // "https://www.dkn.tv/cat/nghe-thuat/feed",
+                    // "https://www.dkn.tv/cat/giao-duc/feed",
+                    // "https://www.dkn.tv/cat/doi-song/feed",
+                    // "https://www.dkn.tv/cat/suc-khoe/feed",
+                    // "https://www.dkn.tv/cat/khoa-hoc-cong-nghe/feed",
+                    "https://www.dkn.tv/feed"
                 );
 
         foreach ($urls as $url){
@@ -320,7 +314,6 @@ class TopicsController extends Controller
             // Identify the rquest User Agent as Chrome - any real browser, or perhaps any value may work
             // depending on the resource you are trying to hit
             curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2049.0 Safari/537.36');
-
 
             $feed = curl_exec($ch);
             
@@ -337,8 +330,18 @@ class TopicsController extends Controller
             foreach($xml->channel->item as $item){
 
                 $e_title = $item->title;
-                $e_webmaster = $item->category[1];
-                $e_section = $item->category[0];
+
+                $e_webmaster = $item->category[0];
+                $e_section = $item->category[1];
+
+                $chieu = WebmasterSection::where('name', str_slug($e_webmaster))->first(); 
+
+                if (empty($chieu)){
+                    $e_webmaster = $item->category[1];
+                    $e_section = $item->category[0];
+
+                }
+
                 $e_sapo = strip_tags($item->description);
                 $e_content = $item->children("content", true);
 
@@ -390,21 +393,18 @@ class TopicsController extends Controller
                         $Topic->visits = 0;
                         $Topic->status = 0;
     
-    
                         // Meta title
                         $Topic->seo_title_vi = $e_title;
     
                         // URL Slugs
                         $Topic->seo_url_slug_vi = str_slug($e_title);
                        
-    
                         // Meta Description
                         $Topic->seo_description_vi = mb_substr(strip_tags(stripslashes($e_title)), 0, 165, 'UTF-8');
                 
                         $Topic->save();
     
                         $Topic->refresh();
-    
     
                         $category = Section::where('webmaster_id',$webmaster->id)->where('title_vi',$e_section)->first();
     
@@ -426,11 +426,9 @@ class TopicsController extends Controller
 
         }
 
-        
         return redirect()->route('adminHome');
 
     }
-
 
     public function getUploadPath()
     {
@@ -631,9 +629,6 @@ class TopicsController extends Controller
                 $Topic->updated_by = Auth::user()->id;
                 $Topic->save();
 
-
-
-
                 // Remove old categories
                 TopicCategory::where('topic_id', $Topic->id)->delete();
                 // Save new categories
@@ -649,11 +644,7 @@ class TopicsController extends Controller
                         }
                     }
 
-
                 }
-
-
-
 
                 // Remove old Fields Values
                 TopicField::where('topic_id', $Topic->id)->delete();
