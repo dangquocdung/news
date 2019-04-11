@@ -356,7 +356,7 @@ class TopicsController extends Controller
 
                 $e_details = preg_replace('/<span[^>]+\>/i', '', $e_details);
 
-                $e_details = $e_details."<br><br><a href='".$item->link."'><strong>--NGUỒN BÀI VIẾT--</strong></a>";
+                $e_details = "<a href='".$item->link."'><strong>--NGUỒN BÀI VIẾT--</strong></a><br><br>".$e_details;
                 
                 $e_date = $item->pubDate;
 
