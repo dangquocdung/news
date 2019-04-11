@@ -5184,6 +5184,11 @@ blockquote.blockquote.blockquote-bg p {
   background-color: #eb5e4c;
 }
 
+.single-blog .blog-wrap .post-image .content img {
+  width: 100% !important;
+  margin-bottom: 5px;
+}
+
 /*-- Preview & Next Post Links --*/
 
 .post-nav {
