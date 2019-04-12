@@ -2630,7 +2630,7 @@
                                                 @if(Helper::GeneralWebmasterSettings("vi_box_status") && Helper::GeneralWebmasterSettings("en_box_status"))
                                                     <small>{!!  trans('backLang.arabicBox') !!}</small> @endif
 
-                                                {!! Form::textarea('seo_description_vi',$Topics->seo_description_ar, array('class' => 'form-control','id'=>'seo_description_vi','maxlength'=>'165', 'dir'=>trans('backLang.rtl'),'rows'=>'2')) !!}
+                                                {!! Form::textarea('seo_description_vi',$Topics->seo_description_vi, array('class' => 'form-control','id'=>'seo_description_vi','maxlength'=>'165', 'dir'=>trans('backLang.rtl'),'rows'=>'2')) !!}
                                             </div>
                                         </div>
                                     @endif
@@ -2642,7 +2642,7 @@
                                                 @if(Helper::GeneralWebmasterSettings("vi_box_status") && Helper::GeneralWebmasterSettings("en_box_status"))
                                                     <small>{!!  trans('backLang.arabicBox') !!}</small>@endif
 
-                                                {!! Form::textarea('seo_keywords_vi',$Topics->seo_keywords_ar, array('class' => 'form-control','id'=>'seo_keywords_vi', 'dir'=>trans('backLang.rtl'),'rows'=>'2')) !!}
+                                                {!! Form::textarea('seo_keywords_vi',$Topics->seo_keywords_vi, array('class' => 'form-control','id'=>'seo_keywords_vi', 'dir'=>trans('backLang.rtl'),'rows'=>'2')) !!}
                                             </div>
                                         </div>
                                         <br>
