@@ -62,11 +62,11 @@ class TopicsController extends Controller
                 $Topics = Topic::where('webmaster_id', '=', $webmasterId)->orderby('date','desc')->orderby('row_no','desc')->paginate(env('BACKEND_PAGINATION'));
             }
 
-            foreach ($Topics as $tp){
-                $Topic = Topic::find($tp->id);
-                $Topic->seo_url_slug_vi = str_slug($tp->title_vi);
-                $Topic->save;
-            }
+            // foreach ($Topics as $tp){
+            //     $Topic = Topic::find($tp->id);
+            //     $Topic->seo_url_slug_vi = str_slug($tp->title_vi);
+            //     $Topic->save;
+            // }
             return view("backEnd.topics", compact("Topics", "GeneralWebmasterSections", "WebmasterSection"));
         } else {
             return redirect()->route('NotFound');
