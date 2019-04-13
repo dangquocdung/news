@@ -1,6 +1,5 @@
 /.env
 /node_modules
-/resources/lang
 /public/hot
 /public/storage
 /public/audio

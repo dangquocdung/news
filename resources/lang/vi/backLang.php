@@ -545,4 +545,12 @@ return array (
   'du-lich' => 'Du lịch',
   'xe' => 'Xe',
   'nhan-ai' => 'Vòng tay nhân ái',
+  'doi-song' => 'Đời sống',
+  'van-hoa' => 'Văn hóa',
+  'nghe-thuat' => 'Nghệ thuật',
+  'suc-khoe' => 'Sức khỏe',
+  'khoa-hoc' => 'Khoa học',
+  'storeXML' => 'Lấy dữ liệu',
+  'view' => 'Xem trước',
+  'du-lich-ha-tinh' => 'Du lịch Hà Tĩnh',
 );
