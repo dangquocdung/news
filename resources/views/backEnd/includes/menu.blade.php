@@ -275,11 +275,7 @@ $urlAfterRoot = substr($fullPagePath, strpos($fullPagePath, env('BACKEND_PATH'))
                                         <span class="nav-text">
                                             {!! str_replace("backLang.","",trans('backLang.'.$GeneralWebmasterSection->name)) !!}
 
-                                            @if ( count($GeneralWebmasterSection->topics->where('status',0)) > 0 )
-
-                                                ({{ count($GeneralWebmasterSection->topics->where('status',0))}}/
-                                                    {{ count($GeneralWebmasterSection->topics->where('status',1))}})
-                                            @endif
+                                            ({{ count($GeneralWebmasterSection->topics->where('status',0))}}/{{ count($GeneralWebmasterSection->topics->where('status',1))}})
 
                                         
                                         </span>
