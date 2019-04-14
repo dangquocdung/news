@@ -277,7 +277,7 @@ $urlAfterRoot = substr($fullPagePath, strpos($fullPagePath, env('BACKEND_PATH'))
 
                                             @if ( count($GeneralWebmasterSection->topics->where('status',0)) > 0 )
 
-                                                ({{ count($GeneralWebmasterSection->topics->where('status',0))}})
+                                                <small>({{ count($GeneralWebmasterSection->topics->where('status',0)).'/'.count($GeneralWebmasterSection->topics->where('status',1).'/'.count($GeneralWebmasterSection->topics) }} )</small>
 
                                             @endif
 
