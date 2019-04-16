@@ -71,9 +71,5 @@ return array (
   'map' => 'Bản đồ địa giới',
   'events' => 'Sự kiện',
   'sponsers' => 'Doanh nghiệp',
-<<<<<<< HEAD
   'chuyenmuc' => 'Chuyên mục',
-=======
-  'sumTopic' => 'Tóm tắt',
->>>>>>> 774c18696994f6cceed367ed399cb9a84ce98c73
 );

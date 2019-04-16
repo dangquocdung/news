@@ -69,8 +69,4 @@ return array (
   'map' => 'Province Map',
   'events' => 'Events',
   'sponsers' => 'Sponsers',
-<<<<<<< HEAD
-=======
-  'sumTopic' => 'Summary',
->>>>>>> 774c18696994f6cceed367ed399cb9a84ce98c73
 );

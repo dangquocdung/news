@@ -516,7 +516,7 @@ return array (
   'sumTopic' => 'Tóm tắt',
   'dvyte' => 'Dịch vụ y tế',
   'ythatinh' => 'Y tế Hà Tĩnh',
-  'gioi-thieu' => 'Giới thiệu CDC',
+  'gioi-thieu' => 'Giới thiệu CDC',
   'trang' => 'Trang chức năng',
   'ho-tro' => 'Hỗ trợ',
   'tin-tuc' => 'Tin tức CDC',
