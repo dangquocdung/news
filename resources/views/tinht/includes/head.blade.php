@@ -38,19 +38,20 @@
 <script src="{{ URL::asset('tinht/js/vendor/jquery-3.3.1.js') }}"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138453623-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138418930-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-138453623-1');
+  gtag('config', 'UA-138418930-1');
 </script>
+
 
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
   (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-9602577412117870",
+    google_ad_client: "ca-pub-1700383165487314",
     enable_page_level_ads: true
   });
 </script>
