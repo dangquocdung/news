@@ -1,8 +1,6 @@
 /.env
 /node_modules
-/public/hot
-/public/storage
-/public/audio
+/public/uploads
 /storage/*.key
 /vendor
 /.idea
