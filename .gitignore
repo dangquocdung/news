@@ -1,5 +1,6 @@
 /.env
 /node_modules
+/resources/lang
 /public/uploads
 /storage/*.key
 /vendor
