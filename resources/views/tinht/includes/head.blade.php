@@ -37,5 +37,16 @@
 <!-- jQuery JS -->
 <script src="{{ URL::asset('tinht/js/vendor/jquery-3.3.1.js') }}"></script>
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138453623-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-138453623-1');
+</script>
+
+
 
 
