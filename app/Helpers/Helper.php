@@ -363,12 +363,12 @@ class Helper
 
     }
 
-    static function URLSlug($url_ar, $url_en, $type = "", $id = 0)
+    static function URLSlug($url_vi, $url_en, $type = "", $id = 0)
     {
         $Check_SEO_st_vi = true;
         $Check_SEO_st_en = true;
 
-        $seo_url_slug_vi = str_slug($url_ar, '-');
+        $seo_url_slug_vi = str_slug($url_vi, '-');
         $seo_url_slug_en = str_slug($url_en, '-');
 
         $ReservedURLs = array(
