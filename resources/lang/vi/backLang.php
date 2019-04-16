@@ -523,7 +523,7 @@ return array (
   'y-te-ha-tinh' => 'Y tế Hà Tĩnh',
   'kiem-soat-dich-benh' => 'Kiểm soát dịch bệnh',
   'suc-khoe-cong-dong' => 'Sức khỏe cộng đồng',
-  'benh-khong-lay-nhiem' => 'Bệnh không lây nhiễm',
+  'benh-khong-lay-nhiem' => 'Bệnh không lây nhiễm',
   'dich-vu-y-te' => 'Dịch vụ y tế',
   'thongbao' => 'Tin thông báo',
   'hinh-anh' => 'Hình ảnh',

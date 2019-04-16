@@ -272,7 +272,13 @@ $urlAfterRoot = substr($fullPagePath, strpos($fullPagePath, env('BACKEND_PATH'))
                                                                 <span class="nav-icon">
                                             <i class="material-icons">{!! $LiIcon !!}</i>
                                         </span>
-                                        <span class="nav-text">{!! str_replace("backLang.","",trans('backLang.'.$GeneralWebmasterSection->name)) !!}</span>
+                                        <span class="nav-text">
+                                            {!! str_replace("backLang.","",trans('backLang.'.$GeneralWebmasterSection->name)) !!}
+
+                                            ({{ count($GeneralWebmasterSection->topics->where('status',0))}}/{{ count($GeneralWebmasterSection->topics->where('status',1))}})
+
+                                        
+                                        </span>
                                     </a>
                                     <ul class="nav-sub">
                                         @if($GeneralWebmasterSection->sections_status > 0)
@@ -309,7 +315,11 @@ $urlAfterRoot = substr($fullPagePath, strpos($fullPagePath, env('BACKEND_PATH'))
                                         <span class="nav-icon">
                                             <i class="material-icons">{!! $LiIcon !!}</i>
                                         </span>
-                                        <span class="nav-text">{!! str_replace("backLang.","",trans('backLang.'.$GeneralWebmasterSection->name)) !!}</span>
+                                        <span class="nav-text">
+                                            {!! str_replace("backLang.","",trans('backLang.'.$GeneralWebmasterSection->name)) !!}
+                                            ({{ count($GeneralWebmasterSection->topics->where('status',0))}}/{{ count($GeneralWebmasterSection->topics->where('status',1))}})
+
+                                        </span>
                                     </a>
                                 </li>
                             @endif
