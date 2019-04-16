@@ -6788,10 +6788,6 @@ img.size-full {
   width: 100% !important;
 }
 
-p em {
-  float: right !important;
-}
-
 @media only screen and (max-width: 479px), only screen and (max-width: 767px) {
   #mainbox-r {
     padding-left: 0;
