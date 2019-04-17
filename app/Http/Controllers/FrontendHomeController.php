@@ -116,7 +116,7 @@ class FrontendHomeController extends Controller
                 ['expire_date', null]])
                 ->orderby('date', 'desc')
                 ->orderby('id', 'desc')
-                ->limit(10)
+                ->limit(5)
                 ->get();
 
         // Dich vu
