@@ -490,6 +490,26 @@ class TopicsController extends Controller
         }
     }
 
+    public function hot($webmasterId, $id)
+    {
+       
+            //
+            $Topic = Topic::find($id);
+
+            if ($Topic->hot == 1){
+
+                $Topic->hot = 0;
+
+            }else{
+                $Topic->hot = 1;
+            }
+            
+            $Topic->save();
+
+            return redirect()->route('HomePage');
+             
+    }
+
     /**
      * Update the specified resource in storage.
      *
