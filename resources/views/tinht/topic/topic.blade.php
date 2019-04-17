@@ -184,8 +184,7 @@
 
                     @if(Helper::GeneralWebmasterSettings("settings_status"))
                         @if(@Auth::user()->permissionsGroup->settings_status)
-                            <a href="{{ route("topicsHot",["webmasterId"=>$WebmasterSection->id,"id"=>$Topic->id]) }}" class="Google+" data-placement="top" title="Edit"><i class="fa fa-eye"></i></a>
-
+                            <a href="{{ route("topicsHot",["id"=>$Topic->id]) }}" class="Google+" data-placement="top" title="Hot"><i class="fa fa-eye"></i></a>
                             <a href="{{ route("topicsEdit",["webmasterId"=>$WebmasterSection->id,"id"=>$Topic->id]) }}" target="_blank" class="dribbble" data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
                         @endif
                     @endif

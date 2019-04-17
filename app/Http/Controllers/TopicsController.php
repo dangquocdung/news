@@ -490,18 +490,18 @@ class TopicsController extends Controller
         }
     }
 
-    public function hot($webmasterId, $id)
+    public function hot($id)
     {
        
             //
             $Topic = Topic::find($id);
 
-            if ($Topic->hot == 1){
+            if ($Topic->hot == 0){
 
-                $Topic->hot = 0;
+                $Topic->hot = 1;
 
             }else{
-                $Topic->hot = 1;
+                $Topic->hot = 0;
             }
             
             $Topic->save();
