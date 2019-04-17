@@ -184,7 +184,7 @@ Route::Group(['prefix' => env('BACKEND_PATH', 'admin')], function () {
         Route::get('/{webmasterId}/topics/create', 'TopicsController@create')->name('topicsCreate');
         Route::post('/{webmasterId}/topics/store', 'TopicsController@store')->name('topicsStore');
         Route::get('/{webmasterId}/topics/{id}/edit', 'TopicsController@edit')->name('topicsEdit');
-        Route::post('/topics/{id}', 'TopicsController@hot')->name('topicsHot');
+        Route::get('/topics/{id}', 'TopicsController@hot')->name('topicsHot');
 
         Route::post('/{webmasterId}/topics/{id}/update', 'TopicsController@update')->name('topicsUpdate');
         Route::get('/{webmasterId}/topics/destroy/{id}', 'TopicsController@destroy')->name('topicsDestroy');
