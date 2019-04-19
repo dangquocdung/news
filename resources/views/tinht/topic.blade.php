@@ -107,6 +107,8 @@
 @stop
 
 @section('js')
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     
     <script src="{{ URL::asset('tinht/js/jquery.justifiedGallery.min.js') }}"></script>
     <script src="{{ URL::asset('tinht/js/picturefill.min.js') }}"></script>
