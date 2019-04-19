@@ -1127,10 +1127,13 @@
                                                    
                                                 {!! Form::text('description_'.$photo->id,$photo->description, array('class' => 'pull-left form-control','id'=>'description','style'=>'margin:0; font-size:12px;')) !!}
                                                 
+                                                <div style="position:relative; overflow:hidden; height:200px">
 
-                                                <img class="img-responsive" src="{{ URL::to('uploads/topics/'.$photo->file) }}"
-                                                     alt="{{ $photo->title  }}" title="{{ $photo->title  }}"
-                                                     style="max-height: 200px">
+                                                        <img class="img-responsive" src="{{ URL::to('uploads/topics/'.$photo->file) }}"
+                                                        alt="{{ $photo->title  }}" title="{{ $photo->title  }}" style="position:absolute">
+
+                                                </div>
+                                                
 
                                                      
                                                      
