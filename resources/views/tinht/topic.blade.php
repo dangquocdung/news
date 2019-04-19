@@ -63,9 +63,40 @@
 @stop
 
 @section('js')
+    
+    <script src="{{ URL::asset('tinht/js/picturefill.min.js') }}"></script>
+    <script src="{{ URL::asset('tinht/js/lightgallery-all.min.js') }}"></script>
+    <script src="{{ URL::asset('tinht/js/jquery.mousewheel.min.js') }}"></script>
     <script type="text/javascript">
-        $(document).ready(function(){
-            $('#lightgallery').lightGallery();
+        $(document).ready(function() {
+
+            window.prettyPrint && prettyPrint()
+
+            // Animated thumbnails
+            var $animThumb = $('#aniimated-thumbnails');
+            if ($animThumb.length) {
+                $animThumb.justifiedGallery({
+                    border: 6
+                }).on('jg.complete', function() {
+                    $animThumb.lightGallery({
+                        thumbnail: true
+                    });
+                });
+            };
+
+            //thumbnails without animation
+            var $thumb = $('#thumbnials-without-animation');
+            if ($thumb.length) {
+                $thumb.justifiedGallery({
+                    border: 6
+                }).on('jg.complete', function() {
+                    $thumb.lightGallery({
+                        thumbnail: true,
+                        animateThumb: false,
+                        showThumbByDefault: false
+                    });
+                });
+            };
         });
 
         $('#example').DataTable( {
@@ -85,7 +116,4 @@
             }
         } );
     </script>
-    <script src="{{ URL::asset('tinht/js/picturefill.min.js') }}"></script>
-    <script src="{{ URL::asset('tinht/js/lightgallery-all.min.js') }}"></script>
-    <script src="{{ URL::asset('tinht/js/jquery.mousewheel.min.js') }}"></script>
 @endsection
