@@ -22,8 +22,8 @@
                 @endif
             </a>
             {{--  <a href="javascript:void(0)" class="meta-item author"><img src="/img/post/post-author-1.jpg" alt="post author">{{ $Topic->user->name }}</a>  --}}
-            <span class="meta-item date"><i class="fa fa-clock-o"></i>{{ \Carbon\Carbon::parse($Topic->created_at)->format('d/m/Y') }}</span>
-            <a href="javascript:void(0)" class="meta-item comments"><i class="fa fa-comments"></i>({{ count($Topic->comments) }})</a>
+            <span class="meta-item date">{{ \Carbon\Carbon::parse($Topic->created_at)->format('d/m/Y') }}</span>
+            {{-- <a href="javascript:void(0)" class="meta-item comments"><i class="fa fa-comments"></i>({{ count($Topic->comments) }})</a> --}}
             <span class="meta-item view"><i class="fa fa-eye"></i>({{ $Topic->visits }})</span>
         </div>
 
@@ -101,16 +101,24 @@
             @elseif(count($Topic->photos)>0)
 
                 <div class="demo-gallery mrb50">
-                    <div id="aniimated-thumbnials" class="list-unstyled justified-gallery" style="height: 520px;">
+
+                        <div id="aniimated-thumbnials">
+                            @foreach($Topic->photos as $photo)
+                            <a href="{{ URL::to('uploads/topics/'.$photo->file) }}" data-sub-html="{{ $photo->description  }}">
+                              <img src="{{ URL::to('uploads/topics/'.$photo->file) }}" />
+                            </a>
+                            @endforeach
+                           
+                        </div>
+
                         
-                        @foreach($Topic->photos as $photo)
-                        <a class="jg-entry" href="{{ URL::to('uploads/topics/'.$photo->file) }}" data-sub-html="{{ $photo->description  }}" style="width: 187px; height: 126.144px; top: 6px; left: 6px; opacity: 1;">
+                        {{-- <a class="jg-entry" href="{{ URL::to('uploads/topics/'.$photo->file) }}" data-sub-html="{{ $photo->description  }}" style="width: 187px; height: 126.144px; top: 6px; left: 6px; opacity: 1;">
                             <img class="img-responsive" src="{{ URL::to('uploads/topics/'.$photo->file) }}" style="width: 187px; height: 127px; margin-left: -93.5px; margin-top: -63.5px;">
                             <div class="demo-gallery-poster">
                                 <img src="/tinht/img/zoom.png">
                             </div>
-                        </a>
-                        @endforeach
+                        </a> --}}
+                        
                         
                     </div>
                 </div>
