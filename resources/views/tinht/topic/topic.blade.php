@@ -122,6 +122,12 @@
                         
                     </div>
                 </div>
+
+                <script>
+                    $('#aniimated-thumbnials').lightGallery({
+                        thumbnail:true
+                    }); 
+                </script>
             @endif
 
         <!-- Content -->
