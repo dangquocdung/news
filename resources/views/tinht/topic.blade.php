@@ -12,9 +12,9 @@
 
 @section('css')
 
-    <link href="/tinht/css/main.css" rel="stylesheet">
+    {{-- <link href="/tinht/css/main.css" rel="stylesheet"> --}}
     <link href="/tinht/css/justifiedGallery.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+    {{-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'> --}}
     <link href="/tinht/css/lightgallery.css" rel="stylesheet">
     
 @endsection
