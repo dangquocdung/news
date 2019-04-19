@@ -99,18 +99,6 @@
                     </div>
                 
             @elseif(count($Topic->photos)>0)
-                {{--photo slider--}}
-                <div class="demo-gallery mt-15">
-                    <ul id="lightgallery" class="list-unstyled row">
-                        @foreach($Topic->photos as $photo)
-                        <li class="col-xs-6 col-md-4 mb-15" data-src="{{ URL::to('uploads/topics/'.$photo->file) }}" data-sub-html="{{ $photo->description  }}">
-                            <a href="">
-                                <img class="img-responsive" src="{{ URL::to('uploads/topics/'.$photo->file) }}" style="width:100%">
-                            </a>
-                        </li>
-                        @endforeach
-                    </ul>
-                </div>
 
                 <div class="demo-gallery mrb50">
                     <div id="aniimated-thumbnials" class="list-unstyled justified-gallery" style="height: 520px;">
