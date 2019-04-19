@@ -51,18 +51,18 @@
 
 @section('js')
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> --}}
     
     <script src="/tinht/js/prettify.js"></script>
     <script src="/tinht/js/jquery.justifiedGallery.min.js"></script>
-    <script src="/tinht/js/js/transition.js"></script>
-    <script src="/tinht/js/js/collapse.js"></script>
-    <script src="/tinht/js/js/lightgallery.js"></script>
-    <script src="/tinht/js/js/lg-fullscreen.js"></script>
-    <script src="/tinht/js/js/lg-thumbnail.js"></script>
-    <script src="/tinht/js/js/lg-video.js"></script>
-    <script src="/tinht/js/js/lg-autoplay.js"></script>
-    <script src="/tinht/js/js/lg-zoom.js"></script>
+    <script src="/tinht/jstransition.js"></script>
+    <script src="/tinht/js/collapse.js"></script>
+    <script src="/tinht/js/lightgallery.js"></script>
+    <script src="/tinht/js/lg-fullscreen.js"></script>
+    <script src="/tinht/js/lg-thumbnail.js"></script>
+    <script src="/tinht/js/lg-video.js"></script>
+    <script src="/tinht/js/lg-autoplay.js"></script>
+    <script src="/tinht/js/lg-zoom.js"></script>
     <script src="/tinht/js/jquery.mousewheel.min.js"></script>
 
     <script type="text/javascript">
