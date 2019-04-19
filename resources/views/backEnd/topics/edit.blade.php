@@ -1130,7 +1130,7 @@
 
                                                 <img src="{{ URL::to('uploads/topics/'.$photo->file) }}"
                                                      alt="{{ $photo->title  }}" title="{{ $photo->title  }}"
-                                                     style="height: 150px"
+                                                     style="max-height: 250px"
                                                      class="img-responsive">
 
                                                      
