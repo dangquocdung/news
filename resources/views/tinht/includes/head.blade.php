@@ -25,8 +25,13 @@
 <link rel="stylesheet" href="{{ URL::asset('tinht/css/rypp.css') }}">
 <!-- rypp -->
 <link rel="stylesheet" href="{{ URL::asset('tinht/css/datatables.min.css') }}">
+
+@yield('css')
+
 <!-- Style CSS -->
 <link rel="stylesheet" href="{{ mix('tinht/css/style.css') }}">
+
+
 
 
 <!-- Modernizer JS -->
