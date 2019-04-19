@@ -1202,6 +1202,8 @@
 
                                         <div class="clearfix"></div>
 
+                                        @endif
+
                                         @php
                                             $i++;
                                         @endphp
