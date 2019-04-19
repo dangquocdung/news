@@ -28,6 +28,8 @@
 <!-- Style CSS -->
 <link rel="stylesheet" href="{{ mix('tinht/css/style.css') }}">
 
+@yield('css')
+
 
 <!-- Modernizer JS -->
 <script src="{{ URL::asset('tinht/js/vendor/modernizr-2.8.3.min.js') }}"></script>

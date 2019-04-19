@@ -3,7 +3,6 @@
 
 <head>
     @include('tinht.includes.head')
-    @yield('css')
 </head>
 
 <body>
