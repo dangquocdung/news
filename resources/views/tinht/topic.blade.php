@@ -70,50 +70,31 @@
     <script type="text/javascript">
         $(document).ready(function() {
 
-            window.prettyPrint && prettyPrint()
+           
+            $('#aniimated-thumbnails').lightGallery({
+                thumbnail:true
+            }); 
 
-            // Animated thumbnails
-            var $animThumb = $('#aniimated-thumbnails');
-            if ($animThumb.length) {
-                $animThumb.justifiedGallery({
-                    border: 6
-                }).on('jg.complete', function() {
-                    $animThumb.lightGallery({
-                        thumbnail: true
-                    });
-                });
-            };
+            
+       
 
-            //thumbnails without animation
-            var $thumb = $('#thumbnials-without-animation');
-            if ($thumb.length) {
-                $thumb.justifiedGallery({
-                    border: 6
-                }).on('jg.complete', function() {
-                    $thumb.lightGallery({
-                        thumbnail: true,
-                        animateThumb: false,
-                        showThumbByDefault: false
-                    });
-                });
-            };
+            $('#example').DataTable( {
+                "pageLength": 20,
+                "language": {
+                    "lengthMenu": "Hiện _MENU_ dòng mỗi trang",
+                    "zeroRecords": "Không có dữ liệu",
+                    "info": "Trang _PAGE_ / _PAGES_",
+                    "infoEmpty": "Không có dữ liệu",
+                    "infoFiltered": "(filtered from _MAX_ total records)",
+                    "search": "Tìm kiếm",
+                    "paginate": {
+                        "previous": "Trang trước",
+                        "next": "Trang sau"
+                        }
+                    
+                }
+            } );
+
         });
-
-        $('#example').DataTable( {
-            "pageLength": 20,
-            "language": {
-                "lengthMenu": "Hiện _MENU_ dòng mỗi trang",
-                "zeroRecords": "Không có dữ liệu",
-                "info": "Trang _PAGE_ / _PAGES_",
-                "infoEmpty": "Không có dữ liệu",
-                "infoFiltered": "(filtered from _MAX_ total records)",
-                "search": "Tìm kiếm",
-                "paginate": {
-                    "previous": "Trang trước",
-                    "next": "Trang sau"
-                    }
-                
-            }
-        } );
     </script>
 @endsection
