@@ -12,10 +12,13 @@
 
 @section('css')
 
-    {{-- <link href="/tinht/css/main.css" rel="stylesheet"> --}}
-    <link href="/tinht/css/justifiedGallery.min.css" rel="stylesheet">
-    {{-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'> --}}
-    <link href="/tinht/css/lightgallery.css" rel="stylesheet">
+    @if(count($Topic->photos)>0)
+
+        <link href="/tinht/css/main.css" rel="stylesheet">
+        <link href="/tinht/css/justifiedGallery.min.css" rel="stylesheet">
+        <link href="/tinht/css/lightgallery.css" rel="stylesheet">
+
+    @endif
     
 @endsection
 
@@ -56,20 +59,22 @@
 
 @section('js')
 
-    {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> --}}
+    @if(count($Topic->photos)>0)
     
-    <script src="/tinht/js/prettify.js"></script>
-    <script src="/tinht/js/jquery.justifiedGallery.min.js"></script>
-    <script src="/tinht/jstransition.js"></script>
-    <script src="/tinht/js/collapse.js"></script>
-    <script src="/tinht/js/lightgallery.js"></script>
-    <script src="/tinht/js/lg-fullscreen.js"></script>
-    <script src="/tinht/js/lg-thumbnail.js"></script>
-    <script src="/tinht/js/lg-video.js"></script>
-    <script src="/tinht/js/lg-autoplay.js"></script>
-    <script src="/tinht/js/lg-zoom.js"></script>
-    <script src="/tinht/js/jquery.mousewheel.min.js"></script>
-    <script src="/tinht/js/demos.js"></script>
+        <script src="/tinht/js/prettify.js"></script>
+        <script src="/tinht/js/jquery.justifiedGallery.min.js"></script>
+        <script src="/tinht/jstransition.js"></script>
+        <script src="/tinht/js/collapse.js"></script>
+        <script src="/tinht/js/lightgallery.js"></script>
+        <script src="/tinht/js/lg-fullscreen.js"></script>
+        <script src="/tinht/js/lg-thumbnail.js"></script>
+        <script src="/tinht/js/lg-video.js"></script>
+        <script src="/tinht/js/lg-autoplay.js"></script>
+        <script src="/tinht/js/lg-zoom.js"></script>
+        <script src="/tinht/js/jquery.mousewheel.min.js"></script>
+        <script src="/tinht/js/demos.js"></script>
+
+    @endif
 
 
     
