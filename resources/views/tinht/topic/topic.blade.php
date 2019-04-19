@@ -98,7 +98,7 @@
                 
             @elseif(count($Topic->photos)>0)
 
-                <div class="demo-gallery mrb50">
+                <div class="demo-gallery">
 
                         <div id="aniimated-thumbnials" class="list-unstyled justified-gallery">
                             @foreach($Topic->photos as $photo)
