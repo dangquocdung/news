@@ -69,15 +69,8 @@
     <script src="/tinht/js/lg-autoplay.js"></script>
     <script src="/tinht/js/lg-zoom.js"></script>
     <script src="/tinht/js/jquery.mousewheel.min.js"></script>
+    <script src="/tinht/js/demo.js"></script>
 
-    <script type="text/javascript">
-        $(document).ready(function() {
 
-           
-            $('#aniimated-thumbnials').lightGallery({
-                thumbnail:true
-            }); 
-
-        });
-    </script>
+    
 @endsection
