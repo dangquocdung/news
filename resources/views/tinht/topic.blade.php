@@ -108,6 +108,7 @@
 
 @section('js')
     
+    <script src="{{ URL::asset('tinht/js/jquery.justifiedGallery.min.js') }}"></script>
     <script src="{{ URL::asset('tinht/js/picturefill.min.js') }}"></script>
     <script src="{{ URL::asset('tinht/js/lightgallery-all.min.js') }}"></script>
     <script src="{{ URL::asset('tinht/js/jquery.mousewheel.min.js') }}"></script>
