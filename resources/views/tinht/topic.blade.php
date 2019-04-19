@@ -69,7 +69,7 @@
     <script src="/tinht/js/lg-autoplay.js"></script>
     <script src="/tinht/js/lg-zoom.js"></script>
     <script src="/tinht/js/jquery.mousewheel.min.js"></script>
-    <script src="/tinht/js/demo.js"></script>
+    <script src="/tinht/js/demos.js"></script>
 
 
     
