@@ -98,18 +98,10 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     
-    <script src="/tinht/js/prettify.js"></script>
-    <script src="/tinht/js/jquery.justifiedGallery.min.js"></script>
-    <script src="/tinht/js/js/transition.js"></script>
-    <script src="/tinht/js/js/collapse.js"></script>
-    <script src="/tinht/js/js/lightgallery.js"></script>
-    <script src="/tinht/js/js/lg-fullscreen.js"></script>
-    <script src="/tinht/js/js/lg-thumbnail.js"></script>
-    <script src="/tinht/js/js/lg-video.js"></script>
-    <script src="/tinht/js/js/lg-autoplay.js"></script>
-    <script src="/tinht/js/js/lg-zoom.js"></script>
-    <script src="/tinht/js/jquery.mousewheel.min.js"></script>
-
+    <script src="{{ URL::asset('tinht/js/jquery.justifiedGallery.min.js') }}"></script>
+    <script src="{{ URL::asset('tinht/js/picturefill.min.js') }}"></script>
+    <script src="{{ URL::asset('tinht/js/lightgallery-all.min.js') }}"></script>
+    <script src="{{ URL::asset('tinht/js/jquery.mousewheel.min.js') }}"></script>
     <script type="text/javascript">
         $(document).ready(function() {
 
@@ -117,6 +109,26 @@
             $('#aniimated-thumbnails').lightGallery({
                 thumbnail:true
             }); 
+
+            
+       
+
+            $('#example').DataTable( {
+                "pageLength": 20,
+                "language": {
+                    "lengthMenu": "Hiện _MENU_ dòng mỗi trang",
+                    "zeroRecords": "Không có dữ liệu",
+                    "info": "Trang _PAGE_ / _PAGES_",
+                    "infoEmpty": "Không có dữ liệu",
+                    "infoFiltered": "(filtered from _MAX_ total records)",
+                    "search": "Tìm kiếm",
+                    "paginate": {
+                        "previous": "Trang trước",
+                        "next": "Trang sau"
+                        }
+                    
+                }
+            } );
 
         });
     </script>
