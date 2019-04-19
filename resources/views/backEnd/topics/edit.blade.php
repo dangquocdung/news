@@ -1110,6 +1110,9 @@
                             @if(count($Topics->photos)>0)
                                 <div class="row">
                                     {{Form::open(['route'=>['topicsPhotosUpdateAll',$WebmasterSection->id,$Topics->id],'method'=>'post'])}}
+                                    @php
+                                        $i=1;
+                                    @endphp
                                     @foreach($Topics->photos as $photo)
                                         <div class="col-xs-6 col-sm-4 col-md-3">
                                             <div class="box p-a-xs">
@@ -1194,6 +1197,15 @@
                                                 <!-- / .modal -->
                                             </div>
                                         </div>
+
+                                        @if ($i%4==0)
+
+                                        <div class="clearfix"></div>
+
+                                        @php
+                                            $i++;
+                                        @endphp
+
 
                                     @endforeach
                                     <div class="col-xs-12 col-sm-12 col-md-12">
