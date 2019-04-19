@@ -74,7 +74,7 @@
         $(document).ready(function() {
 
            
-            $('#aniimated-thumbnails').lightGallery({
+            $('#aniimated-thumbnials').lightGallery({
                 thumbnail:true
             }); 
 
