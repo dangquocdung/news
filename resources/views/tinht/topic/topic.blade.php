@@ -111,6 +111,20 @@
                         @endforeach
                     </ul>
                 </div>
+
+                <div class="demo-gallery mrb50">
+                    <div id="aniimated-thumbnials" class="list-unstyled justified-gallery" style="height: 520px;">
+                        @foreach($Topic->photos as $photo)
+                        <a class="jg-entry" href="{{ URL::to('uploads/topics/'.$photo->file) }}" data-sub-html="{{ $photo->description  }}" style="width: 187px; height: 126.144px; top: 6px; left: 6px; opacity: 1;">
+                            <img class="img-responsive" src="{{ URL::to('uploads/topics/'.$photo->file) }}" style="width: 187px; height: 127px; margin-left: -93.5px; margin-top: -63.5px;">
+                            <div class="demo-gallery-poster">
+                                <img src="/tinht/img/zoom.png">
+                            </div>
+                        </a>
+                        @endforeach
+                        
+                    </div>
+                </div>
             @endif
 
         <!-- Content -->

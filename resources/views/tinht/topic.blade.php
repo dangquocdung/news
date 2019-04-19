@@ -12,6 +12,7 @@
 
 @section('css')
     <link rel="stylesheet" href="{{ URL::asset('tinht/css/lightgallery.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('tinht/css/justifiedGallery.min.css') }}">
 @endsection
 
 @section('content')
