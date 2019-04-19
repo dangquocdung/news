@@ -102,10 +102,13 @@
 
                 <div class="demo-gallery mrb50">
 
-                        <div id="aniimated-thumbnials">
+                        <div id="aniimated-thumbnails">
                             @foreach($Topic->photos as $photo)
                             <a href="{{ URL::to('uploads/topics/'.$photo->file) }}" data-sub-html="{{ $photo->description  }}">
                               <img src="{{ URL::to('uploads/topics/'.$photo->file) }}" />
+                              <div class="demo-gallery-poster">
+                                    <img src="/tinht/img/zoom.png">
+                                </div>
                             </a>
                             @endforeach
                            
@@ -123,11 +126,6 @@
                     </div>
                 </div>
 
-                <script>
-                    $('#aniimated-thumbnials').lightGallery({
-                        thumbnail:true
-                    }); 
-                </script>
             @endif
 
         <!-- Content -->
