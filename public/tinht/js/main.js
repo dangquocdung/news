@@ -227,15 +227,15 @@
 
     /*-- Three Column Post Carousel --*/
     $('.three-column-post-carousel').slick({
-        arrows: false,
+        arrows: true,
         autoplay: true,
         autoplaySpeed: 5000,
         pauseOnFocus: false,
         pauseOnHover: false,
         infinite: true,
         slidesToShow: 3,
-        prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-angle-left"></i></button>',
-        nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right"></i></button>',
+        prevArrow: false,
+        nextArrow: false,
         responsive: [{
                 breakpoint: 1199,
                 settings: {
