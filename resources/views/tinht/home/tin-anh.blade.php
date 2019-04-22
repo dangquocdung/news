@@ -16,7 +16,7 @@
             
             <div class="two-column-post-carousel column-post-carousel post-block-carousel row">
 
-                @foreach($LatestNews as $Topic)
+                @foreach($Photo as $Topic)
 
                     <?php
                         if ($Topic->$slug_var != "" && Helper::GeneralWebmasterSettings("links_status")) {
@@ -34,7 +34,7 @@
                         }
                     ?>
                 
-                    <div class="col-md-6 col-12">
+                    <div class="col-md-3 col-6">
                         
                         <!-- Overlay Post Start -->
                         <div class="post hero-post">
