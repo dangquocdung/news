@@ -154,9 +154,11 @@
 
                     <div class="clearfix"></div>
 
-                    @include('tinht.home.video')
+                    @include('tinht.home.tin-anh')
 
                     @include('tinht.home.tinbai')
+
+                    @include('tinht.home.video')
                 </div>
                     
                 <!-- Sidebar Start -->
