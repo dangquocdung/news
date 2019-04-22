@@ -1,6 +1,6 @@
 <div class="three-column-post-carousel column-post-carousel post-block-carousel dark life-style-post-carousel row">
 
-        @foreach ($Photo as $Topic )
+    @foreach ($Photo as $Topic )
         @php
             if ($Topic->$slug_var != "" && Helper::GeneralWebmasterSettings("links_status")) {
                 if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
@@ -18,7 +18,7 @@
         @endphp
     
         <!-- Overlay Post Start -->
-        <div class="post post-large post-overlay hero-post">
+        <div class="post post-large post-overlay hero-post pl-15">
             <div class="post-wrap">
 
                 <!-- Image -->
