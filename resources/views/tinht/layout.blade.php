@@ -15,14 +15,14 @@
 
         <div class="container nen-trang">
             
-            <div class="post-section section mt-10 box-mobile">
+            {{-- <div class="post-section section mt-10 box-mobile">
                 <div class="marbox">
                     <marquee direction="left" scrollamount="2" scrolldelay="60" onmouseover="this.stop()" onmouseout="this.start()">
                             Chào mừng các bạn đến với chuyên trang tin tức của Dũng Thịnh Software
                     </marquee>
                     
                 </div>
-            </div>
+            </div> --}}
 
             @yield('content')
 
