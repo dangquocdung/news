@@ -14,7 +14,7 @@
         <!-- Post Block Body Start -->
         <div class="body">
             
-            <div class="three-column-post-carousel column-post-carousel post-block-carousel row">
+            <div class="two-column-post-carousel column-post-carousel post-block-carousel row">
 
                 @foreach($Photo as $Topic)
 
@@ -34,7 +34,7 @@
                         }
                     ?>
                 
-                    <div class="col-md-4 col-12">
+                    <div class="col-md-6 col-12">
                         
                         <!-- Overlay Post Start -->
                         <div class="post hero-post">
