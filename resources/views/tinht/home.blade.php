@@ -19,7 +19,7 @@
 @section('content')
     
     <!-- Hero Section Start -->
-    <div class="col-md-12 section mb-10 mt-15">
+    <div class="col-md-12 section mb-10">
             <div class="row">        
                 <!-- Feature Post Row Start -->
             
