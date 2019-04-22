@@ -1,5 +1,7 @@
 <div class="three-column-post-carousel column-post-carousel post-block-carousel dark life-style-post-carousel row">
-    
+
+    @foreach ($Photo as $Topic)
+        
     <!-- Post Start -->
     <div class="post post-dark life-style-post col">
         <div class="post-wrap">
@@ -17,6 +19,8 @@
 
         </div>
     </div><!-- Post End -->
+
+    @endforeach
     
    
     
