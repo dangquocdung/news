@@ -155,8 +155,12 @@
                     <div class="clearfix"></div>
 
                     @include('tinht.home.tin-anh')
+                    
+                    <div class="clearfix"></div>
 
                     @include('tinht.home.tinbai')
+
+                    <div class="clearfix"></div>
 
                     @include('tinht.home.video')
                 </div>
