@@ -146,7 +146,6 @@
 
     /*-- Three Row Post Carousel --*/
     $('.three-row-post-carousel').slick({
-        arrows: false,
         autoplay: false,
         autoplaySpeed: 5000,
         pauseOnFocus: false,
@@ -228,7 +227,7 @@
 
     /*-- Three Column Post Carousel --*/
     $('.three-column-post-carousel').slick({
-        arrows: true,
+        arrows: false,
         autoplay: true,
         autoplaySpeed: 5000,
         pauseOnFocus: false,
