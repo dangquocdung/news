@@ -227,7 +227,7 @@
 
     /*-- Three Column Post Carousel --*/
     $('.three-column-post-carousel').slick({
-        arrows: true,
+        arrows: false,
         autoplay: true,
         autoplaySpeed: 5000,
         pauseOnFocus: false,
