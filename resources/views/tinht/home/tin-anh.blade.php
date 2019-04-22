@@ -1,3 +1,10 @@
+<div class="row mb-10">  
+    <div class="Head pos-rel clearfix"> 
+        <h2 class="ParentCate left"> <a href="http://www.tinht.com/vi/hinh-anh">Tin ảnh</a> </h2> 
+        <span class="line-red">.</span>  
+    </div> 
+</div>
+
 <div class="three-column-post-carousel column-post-carousel post-block-carousel dark life-style-post-carousel row">
 
     @foreach ($Photo as $Topic )
@@ -18,7 +25,7 @@
         @endphp
     
         <!-- Overlay Post Start -->
-        <div class="post post-large post-overlay hero-post pl-15">
+        <div class="post post-large post-overlay hero-post col-md-4">
             <div class="post-wrap">
 
                 <!-- Image -->
