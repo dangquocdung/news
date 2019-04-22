@@ -1,25 +1,45 @@
 <div class="three-column-post-carousel column-post-carousel post-block-carousel dark life-style-post-carousel row">
 
-    @foreach ($Photo as $Topic)
-        
-    <!-- Post Start -->
-    <div class="post post-dark life-style-post col">
-        <div class="post-wrap">
+        @foreach ($Photo as $Topic )
+        @php
+            if ($Topic->$slug_var != "" && Helper::GeneralWebmasterSettings("links_status")) {
+                if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
+                    $topic_link_url = url(trans('backLang.code') . "/" . $Topic->$slug_var);
+                } else {
+                    $topic_link_url = url($Topic->$slug_var);
+                }
+            } else {
+                if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
+                    $topic_link_url = route('FrontendTopicByLang', ["lang" => trans('backLang.code'), "section" => $Topic->webmasterSection->name, "id" => $Topic->id]);
+                } else {
+                    $topic_link_url = route('FrontendTopic', ["section" => $Topic->webmasterSection->name, "id" => $Topic->id]);
+                }
+            }
+        @endphp
+    
+        <!-- Overlay Post Start -->
+        <div class="post post-large post-overlay hero-post">
+            <div class="post-wrap">
 
-            <!-- Image -->
-            <a class="image" href="post-details.html"><img src="img/post/post-83.jpg" alt="post"></a>
+                <!-- Image -->
+                <a class="image img-fluid" href="{{ $topic_link_url }}">
+                    @if (empty($Topic->photo_file))
+                        <img src="frontend/hashnews/img/post/post-42.jpg" alt="{{ $Topic->title_vi }}">
+                    @else
+                        <img src="/uploads/topics/{{ $Topic->photo_file}}" alt="{{ $Topic->title_vi }}"></a>
+                    @endif
+                </a>
 
-            <!-- Content -->
-            <div class="content">
+                <!-- Content -->
+                <div class="content" style="bottom:10px">
 
-                <!-- Title -->
-                <h5 class="title"><a href="post-details.html">Liverpool’s attact make easy work of Arsenal madrid.</a></h5>
+                    <!-- Title -->
+                    <h4 style="text-align:center; font-weght:bold; color:#fff"><a href="{{$topic_link_url}}" onMouseOver="this.style.color='#0F0'" onMouseOut="this.style.color='#fff'" >{{$Topic->title_vi}}</a></h4>
 
+                </div>
+                
             </div>
-
-        </div>
-    </div><!-- Post End -->
-
+        </div><!-- Overlay Post End -->
     @endforeach
     
 </div>
