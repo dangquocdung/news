@@ -40,10 +40,13 @@
                 <button ID="btnVoicePause" type="button" ><i class="fa fa-pause white"></i></button>
                 <button ID="btnVoiceResume" type="button" ><i class="fa fa-forward white"></i></button>                             
             </div>
+           
+            <div class="clearfix"></div>
+            <br>
 
             <div class="sapo">
 
-                <input onclick="responsiveVoice.speak('{{ $Topic->sapo}}','Vietnamese Male');" type="button" value="🔊 Đọc" />
+                {{-- <input onclick="responsiveVoice.speak('{{ $Topic->sapo}}','Vietnamese Male');" type="button" value="🔊 Đọc" /> --}}
 
 
                 {{ $Topic->sapo }}
