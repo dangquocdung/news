@@ -100,8 +100,8 @@
         });
 
 
-            // Reset Font Size
-        var originalFontSize = $('p').css('font-size');
+        // Reset Font Size
+        var originalFontSize = $('.sapo').css('font-size');
 
         $(".resetFont").click(function () {
             $('.sapo').css('font-size', 14);
