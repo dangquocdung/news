@@ -43,13 +43,13 @@
 
             <div class="news_utility_font">
                 <span>Xem cỡ chữ</span>
-                <a href="#" class="increaseFont">
+                <a href="javscript:void(0)" class="increaseFont">
                     <i class="fa fa-font" style="font-size:24px;color:blue"></i>
                 </a>
-                <a href="#" class="decreaseFont">
+                <a href="javscript:void(0)" class="decreaseFont">
                     <i class="fa fa-font" style="font-size:12px;color:blue"></i>
                 </a>
-                <a href="#" class="resetFont">
+                <a href="javscript:void(0)" class="resetFont">
                     <i class="fa fa-font" style="font-size:16px;color:blue"></i>
                 </a>
             </div>
