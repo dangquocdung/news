@@ -2620,7 +2620,7 @@
                                                 @if(Helper::GeneralWebmasterSettings("vi_box_status") && Helper::GeneralWebmasterSettings("en_box_status"))
                                                     <small>{!!  trans('backLang.arabicBox') !!}</small> @endif
 
-                                                {!! Form::text('seo_title_vi',$Topics->seo_title_vi, array('class' => 'form-control','id'=>'seo_title_vi','maxlength'=>'65', 'dir'=>trans('backLang.rtl'))) !!}
+                                                {!! Form::text('seo_title_vi',$Topics->seo_title_vi, array('class' => 'form-control','id'=>'seo_title_vi','maxlength'=>'65', 'dir'=>trans('backLang.ltr'))) !!}
                                             </div>
                                         </div>
                                     @endif
@@ -2632,7 +2632,7 @@
                                                 @if(Helper::GeneralWebmasterSettings("vi_box_status") && Helper::GeneralWebmasterSettings("en_box_status"))
                                                     <small>{!!  trans('backLang.arabicBox') !!}</small> @endif
 
-                                                {!! Form::text('seo_url_slug_vi',$Topics->seo_url_slug_vi, array('class' => 'form-control','id'=>'seo_url_slug_vi', 'dir'=>trans('backLang.rtl'))) !!}
+                                                {!! Form::text('seo_url_slug_vi',$Topics->seo_url_slug_vi, array('class' => 'form-control','id'=>'seo_url_slug_vi', 'dir'=>trans('backLang.ltr'))) !!}
                                             </div>
                                         </div>
                                     @endif
