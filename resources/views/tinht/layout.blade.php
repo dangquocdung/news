@@ -92,7 +92,7 @@
     <!-- Datatables JS -->
     <script src="{{ URL::asset('tinht/js/vendor/datatables.min.js') }}"></script>
 
-    <script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></script>
+    {{-- <script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></script> --}}
     <!-- Main JS -->
     <script src="{{ URL::asset('tinht/js/main.js') }}"></script>
 
