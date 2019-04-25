@@ -231,7 +231,7 @@ class TopicsController extends Controller
             // URL Slugs
             $slugs = Helper::URLSlug($request->title_vi, $request->title_en, "topic", 0);
             $Topic->seo_url_slug_vi = $slugs['slug_vi'];
-            // $Topic->seo_url_slug_en = $slugs['slug_en'];
+            $Topic->seo_url_slug_en = $slugs['slug_en'];
 
             // $Topic->seo_url_slug_vi = str_slug($request->title_vi);
 
