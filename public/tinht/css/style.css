@@ -10,10 +10,10 @@
     Version: 1.0
 
 -----------------------------------------------------------------------------------
-    
+
     CSS INDEX
     ===================
-	
+
     1.    Theme Default CSS
 	2.    Header
     3.    Post Common Style For Post Block, Carousel & Nav Etc
@@ -23,7 +23,7 @@
 	7.    Sidebar
 	8.    Contact
 	9.    Footer
-	
+
 -----------------------------------------------------------------------------------*/
 
 /** WARNING - USE AT OWN RISK */
@@ -6790,6 +6790,113 @@ img.size-full {
 
 .pl-15 {
   padding-left: 15px;
+}
+
+#thoi-tiet .container {
+  width: 500px;
+  height: 300px;
+  margin: 25vh auto;
+  border-radius: 25px;
+  box-shadow: 0 20px 40px 0px rgba(0, 0, 0, 0.3);
+}
+
+#thoi-tiet .header {
+  height: 20%;
+  background-color: #FF9800;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  text-align: center;
+  position: relative;
+}
+
+#thoi-tiet #temp,
+#thoi-tiet #humidity-div {
+  font-family: "Courier New";
+  font-weight: bold;
+  font-size: 60px;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#thoi-tiet .city-icon-holder {
+  position: absolute;
+  left: 25%;
+  top: 40%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#thoi-tiet #city-name {
+  font-family: "Courier New";
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+}
+
+#thoi-tiet #icon {
+  width: 50%;
+}
+
+#thoi-tiet #main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#thoi-tiet .city-icon {
+  height: 80%;
+  width: 50%;
+  border-bottom-left-radius: 25px;
+  background-color: #FFC107;
+}
+
+#thoi-tiet .temperature {
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  height: 40%;
+  width: 50%;
+  background-color: #9C27B0;
+}
+
+#thoi-tiet .humidity {
+  height: 40%;
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  border-bottom-right-radius: 25px;
+  background-color: #E91E63;
+}
+
+#thoi-tiet #search-btn {
+  width: 40px;
+  height: 40px;
+  color: #eee;
+}
+
+#thoi-tiet #search-txt {
+  color: red;
+  height: 30px;
+  border-radius: 10px;
+  border-style: none;
+  outline: none;
+  padding-right: 1px;
+  padding-left: 1px;
+  text-align: center;
+}
+
+#thoi-tiet .search {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 @media only screen and (max-width: 479px), only screen and (max-width: 767px) {
