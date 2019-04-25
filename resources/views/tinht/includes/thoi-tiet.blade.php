@@ -4,7 +4,7 @@
         <header class="header">
             <div class="search">
             <input type="text" placeholder="Enter City Name" id="search-txt" value="Ha Tinh">
-            <a id="search-btn" href="#"><i class="fas fa-search"></i></a>
+            {{-- <a id="search-btn" href="#"><i class="fas fa-search"></i></a> --}}
             </div>
         </header>
         
