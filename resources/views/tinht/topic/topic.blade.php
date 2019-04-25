@@ -44,13 +44,13 @@
             <div class="news_utility_font">
                 <span>Xem cỡ chữ</span>
                 <a href="#" class="increaseFont">
-                    <span class="glyphicon glyphicon-font blue" style="font-size:24px;"></span>
+                    <i class="fa fa-font" style="font-size:24px;color:blue"></i>
                 </a>
                 <a href="#" class="decreaseFont">
-                    <span class="glyphicon glyphicon-font blue" style="font-size:12px;"></span>
+                    <i class="fa fa-font" style="font-size:12px;color:blue"></i>
                 </a>
                 <a href="#" class="resetFont">
-                    <span class="glyphicon glyphicon-font blue" style="font-size:16px;"></span>
+                    <i class="fa fa-font" style="font-size:16px;color:blue"></i>
                 </a>
             </div>
            
