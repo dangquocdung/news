@@ -180,6 +180,7 @@
                     
                     {{-- @include('tinht.includes.dichvu') --}}
                     @include('tinht.includes.thongbao')
+                    @include('tinht.includes.thoi-tiet')
                     {{-- @include('tinht.includes.tienich') --}}
                     @include('tinht.includes.lienket')
     
