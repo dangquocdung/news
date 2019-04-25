@@ -93,6 +93,8 @@
     <script src="{{ URL::asset('tinht/js/vendor/datatables.min.js') }}"></script>
     <!-- Main JS -->
     <script src="{{ URL::asset('tinht/js/main.js') }}"></script>
+
+    <script src="//code.responsivevoice.org/responsivevoice.js?key=fJp93z4l"></script>
     
     
 

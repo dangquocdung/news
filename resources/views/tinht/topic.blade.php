@@ -75,9 +75,5 @@
         <script src="/tinht/js/demos.js"></script>
 
     @endif
-
-    <script src="//code.responsivevoice.org/responsivevoice.js?key=Ywnx5fxD"></script>
-
-
     
 @endsection
