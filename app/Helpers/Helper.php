@@ -441,122 +441,11 @@ class Helper
         } else {
             // .. ..  Topics
             $check_Topic = Topic::where('seo_url_slug_vi', $seo_url_slug_vi)->get();
-            if (count((array)$check_Topic) > 0) {
+            if (count($check_Topic) > 0) {
                 $Check_SEO_st_vi = false;
             }
             $check_Topic = Topic::where('seo_url_slug_en', $seo_url_slug_en)->get();
-            if (count((array)$check_Topic) > 0) {
-                $Check_SEO_st_en = false;
-            }
-        }
-
-        if (in_array($seo_url_slug_vi, $ReservedURLs)) {
-            $Check_SEO_st_vi = false;
-        }
-        if (in_array($seo_url_slug_en, $ReservedURLs)) {
-            $Check_SEO_st_en = false;
-        }
-        if ($seo_url_slug_vi == "") {
-            $Check_SEO_st_vi = true;
-        }
-        if ($seo_url_slug_en == "") {
-            $Check_SEO_st_en = true;
-        }
-
-        // $vi_slug = "";
-        // if ($Check_SEO_st_vi) {
-            $vi_slug = $seo_url_slug_vi;
-        // }
-        $en_slug = "";
-        if ($Check_SEO_st_en) {
-            $en_slug = $seo_url_slug_en;
-        }
-        return array("slug_vi" => $vi_slug, "slug_en" => $en_slug);
-    }
-
-    static function URLSlugVI($url_vi, $url_en, $type = "", $id = 0)
-    {
-        $Check_SEO_st_vi = true;
-        $Check_SEO_st_en = true;
-
-        $seo_url_slug_vi = str_slug($url_vi, '-');
-        $seo_url_slug_en = str_slug($url_en, '-');
-
-        $ReservedURLs = array(
-            "home",
-            "about",
-            "privacy",
-            "terms",
-            "contact",
-            "search",
-            "comment",
-            "order",
-            "sitemap"
-        );
-
-
-        if ($type == "section" && $id > 0) {
-            // .. ..  Webmaster Sections
-            $check_WebmasterSection = WebmasterSection::where([['seo_url_slug_vi', $seo_url_slug_vi], ['id', '!=', $id]])->orWhere([['seo_url_slug_en', $seo_url_slug_vi], ['id', '!=', $id]])->get();
-            if (count((array)$check_WebmasterSection) > 0) {
-                $Check_SEO_st_vi = false;
-            }
-            $check_WebmasterSection = WebmasterSection::where([['seo_url_slug_en', $seo_url_slug_en], ['id', '!=', $id]])->orWhere([['seo_url_slug_en', $seo_url_slug_en], ['id', '!=', $id]])->get();
-            if (count((array)$check_WebmasterSection) > 0) {
-                $Check_SEO_st_en = false;
-            }
-        } else {
-            // .. ..  Webmaster Sections
-            $check_WebmasterSection = WebmasterSection::where('seo_url_slug_vi', $seo_url_slug_vi)->orWhere('seo_url_slug_en', $seo_url_slug_vi)->get();
-            if (count((array)$check_WebmasterSection) > 0) {
-                $Check_SEO_st_vi = false;
-            }
-            $check_WebmasterSection = WebmasterSection::where('seo_url_slug_en', $seo_url_slug_en)->orWhere('seo_url_slug_en', $seo_url_slug_en)->get();
-            if (count((array)$check_WebmasterSection) > 0) {
-                $Check_SEO_st_en = false;
-            }
-        }
-
-        if ($type == "category" && $id > 0) {
-            // .. ..  Sections
-            $check_Section = Section::where([['seo_url_slug_vi', $seo_url_slug_vi], ['id', '!=', $id]])->orWhere([['seo_url_slug_en', $seo_url_slug_vi], ['id', '!=', $id]])->get();
-            if (count((array)$check_Section) > 0) {
-                $Check_SEO_st_vi = false;
-            }
-            $check_Section = Section::where([['seo_url_slug_en', $seo_url_slug_en], ['id', '!=', $id]])->orWhere([['seo_url_slug_en', $seo_url_slug_en], ['id', '!=', $id]])->get();
-            if (count((array)$check_Section) > 0) {
-                $Check_SEO_st_en = false;
-            }
-        } else {
-            // .. ..  Sections
-            $check_Section = Section::where('seo_url_slug_vi', $seo_url_slug_vi)->orWhere('seo_url_slug_en', $seo_url_slug_vi)->get();
-            if (count((array)$check_Section) > 0) {
-                $Check_SEO_st_vi = false;
-            }
-            $check_Section = Section::where('seo_url_slug_en', $seo_url_slug_en)->orWhere('seo_url_slug_en', $seo_url_slug_en)->get();
-            if (count((array)$check_Section) > 0) {
-                $Check_SEO_st_en = false;
-            }
-        }
-
-        if ($type == "topic" && $id > 0) {
-            // .. ..  Topics
-            $check_Topic = Topic::where([['seo_url_slug_vi', $seo_url_slug_vi], ['id', '!=', $id]])->get();
-            if (count((array)$check_Topic) > 0) {
-                $Check_SEO_st_vi = false;
-            }
-            $check_Topic = Topic::where([['seo_url_slug_en', $seo_url_slug_en], ['id', '!=', $id]])->get();
-            if (count((array)$check_Topic) > 0) {
-                $Check_SEO_st_en = false;
-            }
-        } else {
-            // .. ..  Topics
-            $check_Topic = Topic::where('seo_url_slug_vi', $seo_url_slug_vi)->get();
-            if (count((array)$check_Topic) > 0) {
-                $Check_SEO_st_vi = false;
-            }
-            $check_Topic = Topic::where('seo_url_slug_en', $seo_url_slug_en)->get();
-            if (count((array)$check_Topic) > 0) {
+            if (count($check_Topic) > 0) {
                 $Check_SEO_st_en = false;
             }
         }
@@ -578,6 +467,7 @@ class Helper
         if ($Check_SEO_st_vi) {
             $vi_slug = $seo_url_slug_vi;
         }
+
         $en_slug = "";
         if ($Check_SEO_st_en) {
             $en_slug = $seo_url_slug_en;
