@@ -229,11 +229,11 @@ class TopicsController extends Controller
             $Topic->seo_title_en = $request->title_en;
 
             // URL Slugs
-            // $slugs = Helper::URLSlug($request->title_vi, $request->title_en, "topic", 0);
-            // $Topic->seo_url_slug_vi = $slugs['slug_vi'];
+            $slugs = Helper::URLSlug($request->title_vi, $request->title_en, "topic", 0);
+            $Topic->seo_url_slug_vi = $slugs['slug_vi'];
             // $Topic->seo_url_slug_en = $slugs['slug_en'];
 
-            $Topic->seo_url_slug_vi = str_slug($request->title_vi);
+            // $Topic->seo_url_slug_vi = str_slug($request->title_vi);
 
             // Meta Description
             $Topic->seo_description_vi = mb_substr(strip_tags(stripslashes($request->sapo)), 0, 165, 'UTF-8');
