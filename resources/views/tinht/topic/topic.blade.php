@@ -35,7 +35,7 @@
                 </h3>
             </div>
 
-            <div class="mb-1">
+            <div class="mb-2">
 
                 <div class="news_utility_voice" style="vertical-align:top;float:right;">&nbsp;&nbsp;
                     <button ID="btnVoice" type="button" ><i class="fa fa-volume-up white"></i></button>
