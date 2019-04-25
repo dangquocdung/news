@@ -430,21 +430,21 @@ class Helper
 
         if ($type == "topic" && $id > 0) {
             // .. ..  Topics
-            $check_Topic = Topic::where([['seo_url_slug_vi', $seo_url_slug_vi], ['id', '!=', $id]])->orWhere([['seo_url_slug_en', $seo_url_slug_vi], ['id', '!=', $id]])->get();
+            $check_Topic = Topic::where([['seo_url_slug_vi', $seo_url_slug_vi], ['id', '!=', $id]])->get();
             if (count((array)$check_Topic) > 0) {
                 $Check_SEO_st_vi = false;
             }
-            $check_Topic = Topic::where([['seo_url_slug_en', $seo_url_slug_en], ['id', '!=', $id]])->orWhere([['seo_url_slug_en', $seo_url_slug_en], ['id', '!=', $id]])->get();
+            $check_Topic = Topic::where([['seo_url_slug_en', $seo_url_slug_en], ['id', '!=', $id]])->get();
             if (count((array)$check_Topic) > 0) {
                 $Check_SEO_st_en = false;
             }
         } else {
             // .. ..  Topics
-            $check_Topic = Topic::where('seo_url_slug_vi', $seo_url_slug_vi)->orWhere('seo_url_slug_en', $seo_url_slug_vi)->get();
+            $check_Topic = Topic::where('seo_url_slug_vi', $seo_url_slug_vi)->get();
             if (count((array)$check_Topic) > 0) {
                 $Check_SEO_st_vi = false;
             }
-            $check_Topic = Topic::where('seo_url_slug_en', $seo_url_slug_en)->orWhere('seo_url_slug_en', $seo_url_slug_en)->get();
+            $check_Topic = Topic::where('seo_url_slug_en', $seo_url_slug_en)->get();
             if (count((array)$check_Topic) > 0) {
                 $Check_SEO_st_en = false;
             }
