@@ -95,8 +95,28 @@
     <script src="{{ URL::asset('tinht/js/main.js') }}"></script>
 
     <script src="//code.responsivevoice.org/responsivevoice.js?key=fJp93z4l"></script>
-    
-    
+
+    <script>
+
+        $("#btnVoice").click(function () {
+            var text = $(".sapo").text();
+            responsiveVoice.speak(text, "Vietnamese Male");
+
+        });
+        $("#btnVoicePause").click(function () {
+            //var text = $(".news_list_detail").text();
+            //responsiveVoice.speak(text, "Vietnamese Male");
+            responsiveVoice.pause();
+
+        });
+        $("#btnVoiceResume").click(function () {
+            //var text = $(".news_list_detail").text();
+            //responsiveVoice.speak(text, "Vietnamese Male");
+            responsiveVoice.resume();
+
+        });
+
+    </script>
 
 </body>
 
