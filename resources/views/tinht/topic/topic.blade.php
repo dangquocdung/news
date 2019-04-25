@@ -56,7 +56,7 @@
            
             <div class="clearfix"></div>
 
-            <div class="sapo">
+            <div class="sapo noi-dung-doc">
 
                 {{-- <input onclick="responsiveVoice.speak('{{ $Topic->sapo}}','Vietnamese Male');" type="button" value="🔊 Đọc" /> --}}
 
@@ -142,7 +142,7 @@
 
             @endif
 
-            <div class="content" id="noi-dung-bai-viet">
+            <div class="content noi-dung-doc">
                 {!! $Topic->details_vi !!}
             </div>
 

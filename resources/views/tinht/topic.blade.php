@@ -82,7 +82,7 @@
     <script>
 
         $("#btnVoice").click(function () {
-            var text = $(".sapo").text() + $(".noi-dung-bai-viet").text();
+            var text = $(".noi-dung-doc").text();
             responsiveVoice.speak(text, "Vietnamese Male");
 
         });
@@ -101,27 +101,27 @@
 
 
         // Reset Font Size
-        var originalFontSize = $('.sapo').css('font-size');
+        var originalFontSize = $('.noi-dung-doc').css('font-size');
 
         $(".resetFont").click(function () {
-            $('.sapo').css('font-size', 14);
+            $('.noi-dung-doc').css('font-size', 14);
         });      
 
         // Increase Font Size
         $(".increaseFont").click(function () {
-            var currentFontSize = $('.sapo').css('font-size');
+            var currentFontSize = $('.noi-dung-doc').css('font-size');
             var currentFontSizeNum = parseFloat(currentFontSize, 10);
             var newFontSize = currentFontSizeNum * 1.2;
-            $('.sapo').css('font-size', newFontSize);
+            $('.noi-dung-doc').css('font-size', newFontSize);
             return false;
         }); 
 
         // Decrease Font Size
         $(".decreaseFont").click(function () {
-            var currentFontSize = $('.sapo').css('font-size');
+            var currentFontSize = $('.noi-dung-doc').css('font-size');
             var currentFontSizeNum = parseFloat(currentFontSize, 10);
             var newFontSize = currentFontSizeNum * 0.8;
-            $('.sapo').css('font-size', newFontSize);
+            $('.noi-dung-doc').css('font-size', newFontSize);
 
             return false;
         });
