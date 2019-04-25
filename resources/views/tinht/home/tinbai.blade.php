@@ -121,10 +121,12 @@
 
                                                 <!-- Title -->
                                                 <h4 class="title" style="text-align:center">
-                                                    @if($Topic->icon !="")
-                                                        <i class="fa {!! $Topic->icon !!} "></i>&nbsp;
-                                                    @endif
-                                                    <a href="{{ $topic_link_url }}">{{ $Topic->title_vi }}</a>
+                                                    <a href="{{ $topic_link_url }}">
+                                                            @if($Topic->icon !="")
+                                                            <i class="fa {!! $Topic->icon !!}"></i>&nbsp;
+                                                        @endif
+                                                        {{ $Topic->title_vi }}
+                                                    </a>
                                                 </h4>
                                                 <!-- Description -->
                                                 <p class="sapo">{{ $Topic->sapo }}</p>
@@ -176,10 +178,12 @@
 
                                                     <!-- Title -->
                                                     <h5 class="title">
-                                                        @if($Topic->icon !="")
-                                                            <i class="fa {!! $Topic->icon !!} "></i>&nbsp;
-                                                        @endif
-                                                        <a href="{{ $topic_link_url }}">{{ $Topic->title_vi }}</a>
+                                                        <a href="{{ $topic_link_url }}">
+                                                                @if($Topic->icon !="")
+                                                                <i class="fa {!! $Topic->icon !!}"></i>&nbsp;
+                                                            @endif
+                                                            {{ $Topic->title_vi }}
+                                                        </a>
                                                     </h5>
 
                                                     <!-- Meta -->
