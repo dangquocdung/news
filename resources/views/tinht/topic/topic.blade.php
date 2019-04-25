@@ -209,7 +209,7 @@
                 <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:600px;overflow:hidden;">
                     @foreach($Topic->photos as $photo)
                         <div data-p="170.00">
-                            <img data-u="image" src="{{ URL::to('uploads/topics/'.$photo->file) }}" /alt="{{ $photo->title  }}">
+                            <img data-u="image" src="{{ URL::to('uploads/topics/'.$photo->file) }}" alt="{{ $photo->title  }}">
                             <div u="thumb">{{ $photo->description  }}</div>
                         </div>
                     @endforeach
