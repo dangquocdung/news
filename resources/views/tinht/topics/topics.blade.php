@@ -81,7 +81,6 @@
                                     <!-- Meta -->
                                     <small><em>{{ \Carbon\Carbon::parse($Topic->date)->format('d/m/Y')}}</em></small>
                                     <br>
-                                    <input onclick="responsiveVoice.speak({{ $Topic->sapo}});" type="button" value="🔊 Play" />
 
                                     {{ $Topic->sapo}}
 
