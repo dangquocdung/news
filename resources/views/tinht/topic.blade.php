@@ -75,5 +75,27 @@
         <script src="/tinht/js/demos.js"></script>
 
     @endif
+
+    <script>
+
+        $("#btnVoice").click(function () {
+            var text = $(".sapo").text().' '.$(".content").text();
+            responsiveVoice.speak(text, "Vietnamese Male");
+
+        });
+        $("#btnVoicePause").click(function () {
+            //var text = $(".news_list_detail").text();
+            //responsiveVoice.speak(text, "Vietnamese Male");
+            responsiveVoice.pause();
+
+        });
+        $("#btnVoiceResume").click(function () {
+            //var text = $(".news_list_detail").text();
+            //responsiveVoice.speak(text, "Vietnamese Male");
+            responsiveVoice.resume();
+
+        });
+
+    </script>
     
 @endsection

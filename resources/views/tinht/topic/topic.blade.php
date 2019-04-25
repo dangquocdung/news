@@ -42,7 +42,6 @@
             </div>
            
             <div class="clearfix"></div>
-            <br>
 
             <div class="sapo">
 
