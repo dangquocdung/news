@@ -35,25 +35,29 @@
                 </h3>
             </div>
 
-            <div class="news_utility_voice" style="vertical-align:top;float:right;">&nbsp;&nbsp;
-                <button ID="btnVoice" type="button" ><i class="fa fa-volume-up white"></i></button>
-                <button ID="btnVoicePause" type="button" ><i class="fa fa-pause white"></i></button>
-                <button ID="btnVoiceResume" type="button" ><i class="fa fa-forward white"></i></button>                             
+            <div class="mb-1">
+
+                <div class="news_utility_voice" style="vertical-align:top;float:right;">&nbsp;&nbsp;
+                    <button ID="btnVoice" type="button" ><i class="fa fa-volume-up white"></i></button>
+                    <button ID="btnVoicePause" type="button" ><i class="fa fa-pause white"></i></button>
+                    <button ID="btnVoiceResume" type="button" ><i class="fa fa-forward white"></i></button>                             
+                </div>
+    
+                <div class="news_utility_font">
+                    <span>Xem cỡ chữ</span>
+                    <a href="javscript:void(0)" class="increaseFont">
+                        <i class="fa fa-font" style="font-size:24px;color:blue"></i>
+                    </a>
+                    <a href="javscript:void(0)" class="decreaseFont">
+                        <i class="fa fa-font" style="font-size:12px;color:blue"></i>
+                    </a>
+                    <a href="javscript:void(0)" class="resetFont">
+                        <i class="fa fa-font" style="font-size:16px;color:blue"></i>
+                    </a>
+                </div>
+
             </div>
 
-            <div class="news_utility_font">
-                <span>Xem cỡ chữ</span>
-                <a href="javscript:void(0)" class="increaseFont">
-                    <i class="fa fa-font" style="font-size:24px;color:blue"></i>
-                </a>
-                <a href="javscript:void(0)" class="decreaseFont">
-                    <i class="fa fa-font" style="font-size:12px;color:blue"></i>
-                </a>
-                <a href="javscript:void(0)" class="resetFont">
-                    <i class="fa fa-font" style="font-size:16px;color:blue"></i>
-                </a>
-            </div>
-           
             <div class="clearfix"></div>
 
             <div class="sapo noi-dung-doc">
