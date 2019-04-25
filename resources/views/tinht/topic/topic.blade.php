@@ -26,7 +26,7 @@
         </div>
 
         <div class="post-image">
-            <div class="post-heading mt-15 mb-15">
+            <div class="post-heading mt-15 mb-15 noi-dung-doc">
                 <h3>
                     @if($Topic->icon !="")
                         <i class="fa {!! $Topic->icon !!} "></i>&nbsp;
