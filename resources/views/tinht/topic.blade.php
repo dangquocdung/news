@@ -82,7 +82,7 @@
     <script>
 
         $("#btnVoice").click(function () {
-            var text = $(".sapo").text();
+            var text = $(".sapo").text() + $(".content").text();
             responsiveVoice.speak(text, "Vietnamese Male");
 
         });
