@@ -390,7 +390,7 @@ class Helper
             if (count((array)$check_WebmasterSection) > 0) {
                 $Check_SEO_st_vi = false;
             }
-            $check_WebmasterSection = WebmasterSection::where([['seo_url_slug_vi', $seo_url_slug_en], ['id', '!=', $id]])->orWhere([['seo_url_slug_en', $seo_url_slug_en], ['id', '!=', $id]])->get();
+            $check_WebmasterSection = WebmasterSection::where([['seo_url_slug_en', $seo_url_slug_en], ['id', '!=', $id]])->orWhere([['seo_url_slug_en', $seo_url_slug_en], ['id', '!=', $id]])->get();
             if (count((array)$check_WebmasterSection) > 0) {
                 $Check_SEO_st_en = false;
             }
@@ -400,7 +400,7 @@ class Helper
             if (count((array)$check_WebmasterSection) > 0) {
                 $Check_SEO_st_vi = false;
             }
-            $check_WebmasterSection = WebmasterSection::where('seo_url_slug_vi', $seo_url_slug_en)->orWhere('seo_url_slug_en', $seo_url_slug_en)->get();
+            $check_WebmasterSection = WebmasterSection::where('seo_url_slug_en', $seo_url_slug_en)->orWhere('seo_url_slug_en', $seo_url_slug_en)->get();
             if (count((array)$check_WebmasterSection) > 0) {
                 $Check_SEO_st_en = false;
             }
@@ -412,7 +412,7 @@ class Helper
             if (count((array)$check_Section) > 0) {
                 $Check_SEO_st_vi = false;
             }
-            $check_Section = Section::where([['seo_url_slug_vi', $seo_url_slug_en], ['id', '!=', $id]])->orWhere([['seo_url_slug_en', $seo_url_slug_en], ['id', '!=', $id]])->get();
+            $check_Section = Section::where([['seo_url_slug_en', $seo_url_slug_en], ['id', '!=', $id]])->orWhere([['seo_url_slug_en', $seo_url_slug_en], ['id', '!=', $id]])->get();
             if (count((array)$check_Section) > 0) {
                 $Check_SEO_st_en = false;
             }
@@ -422,7 +422,7 @@ class Helper
             if (count((array)$check_Section) > 0) {
                 $Check_SEO_st_vi = false;
             }
-            $check_Section = Section::where('seo_url_slug_vi', $seo_url_slug_en)->orWhere('seo_url_slug_en', $seo_url_slug_en)->get();
+            $check_Section = Section::where('seo_url_slug_en', $seo_url_slug_en)->orWhere('seo_url_slug_en', $seo_url_slug_en)->get();
             if (count((array)$check_Section) > 0) {
                 $Check_SEO_st_en = false;
             }
@@ -434,7 +434,7 @@ class Helper
             if (count((array)$check_Topic) > 0) {
                 $Check_SEO_st_vi = false;
             }
-            $check_Topic = Topic::where([['seo_url_slug_vi', $seo_url_slug_en], ['id', '!=', $id]])->orWhere([['seo_url_slug_en', $seo_url_slug_en], ['id', '!=', $id]])->get();
+            $check_Topic = Topic::where([['seo_url_slug_en', $seo_url_slug_en], ['id', '!=', $id]])->orWhere([['seo_url_slug_en', $seo_url_slug_en], ['id', '!=', $id]])->get();
             if (count((array)$check_Topic) > 0) {
                 $Check_SEO_st_en = false;
             }
@@ -444,7 +444,7 @@ class Helper
             if (count((array)$check_Topic) > 0) {
                 $Check_SEO_st_vi = false;
             }
-            $check_Topic = Topic::where('seo_url_slug_vi', $seo_url_slug_en)->orWhere('seo_url_slug_en', $seo_url_slug_en)->get();
+            $check_Topic = Topic::where('seo_url_slug_en', $seo_url_slug_en)->orWhere('seo_url_slug_en', $seo_url_slug_en)->get();
             if (count((array)$check_Topic) > 0) {
                 $Check_SEO_st_en = false;
             }
