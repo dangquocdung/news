@@ -144,6 +144,12 @@
             httpRequest.send();
         }
 
+        $(document).ready(function() { 
+
+            findWeatherDetails();
+
+         });
+
     </script>
 
 
