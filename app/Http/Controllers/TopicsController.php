@@ -936,9 +936,8 @@ class TopicsController extends Controller
                 $Topic->updated_by = Auth::user()->id;
 
                 //URL Slugs
-                $slugs = Helper::URLSlug($request->seo_url_slug_vi, $request->seo_url_slug_en, "topic", $id);
-                $Topic->seo_url_slug_vi = $slugs['slug_vi'];
-                $Topic->seo_url_slug_en = $slugs['slug_en'];
+                $Topic->seo_url_slug_vi = $request->seo_url_slug_vi;
+                $Topic->seo_url_slug_en = $request->seo_url_slug_en;
 
                 $Topic->save();
                 return redirect()->action('TopicsController@edit', [$webmasterId, $id])->with('doneMessage',
