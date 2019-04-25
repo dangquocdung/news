@@ -450,12 +450,12 @@ class Helper
             }
         }
 
-        // if (in_array($seo_url_slug_vi, $ReservedURLs)) {
-        //     $Check_SEO_st_vi = false;
-        // }
-        // if (in_array($seo_url_slug_en, $ReservedURLs)) {
-        //     $Check_SEO_st_en = false;
-        // }
+        if (in_array($seo_url_slug_vi, $ReservedURLs)) {
+            $Check_SEO_st_vi = false;
+        }
+        if (in_array($seo_url_slug_en, $ReservedURLs)) {
+            $Check_SEO_st_en = false;
+        }
         if ($seo_url_slug_vi == "") {
             $Check_SEO_st_vi = true;
         }
