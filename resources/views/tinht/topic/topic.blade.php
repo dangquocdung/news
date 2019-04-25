@@ -36,7 +36,7 @@
             </div>
             <div class="sapo">
 
-                <input onclick="responsiveVoice.speak({{ $Topic->sapo}});" type="button" value="🔊 Play" />
+                <input onclick="responsiveVoice.speak('{{ $Topic->sapo}}');" type="button" value="🔊 Play" />
 
 
                 {{ $Topic->sapo }}
