@@ -62,7 +62,7 @@
     @if(count($Topic->photos)>0)
     
         <script src="/tinht/js/prettify.js"></script>
-        <script src="/tinht/js/$.justifiedGallery.min.js"></script>
+        <script src="/tinht/js/jquery.justifiedGallery.min.js"></script>
         <script src="/tinht/jstransition.js"></script>
         <script src="/tinht/js/collapse.js"></script>
         <script src="/tinht/js/lightgallery.js"></script>
@@ -71,7 +71,7 @@
         <script src="/tinht/js/lg-video.js"></script>
         <script src="/tinht/js/lg-autoplay.js"></script>
         <script src="/tinht/js/lg-zoom.js"></script>
-        <script src="/tinht/js/$.mousewheel.min.js"></script>
+        <script src="/tinht/js/jquery.mousewheel.min.js"></script>
         <script src="/tinht/js/demos.js"></script>
 
     @endif
