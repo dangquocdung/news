@@ -76,10 +76,13 @@
 
     @endif
 
+    <script src="//code.responsivevoice.org/responsivevoice.js?key=fJp93z4l"></script>
+
+
     <script>
 
         $("#btnVoice").click(function () {
-            var text = $(".sapo").text().' '.$(".content").text();
+            var text = $(".sapo").text();
             responsiveVoice.speak(text, "Vietnamese Male");
 
         });

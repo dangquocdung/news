@@ -61,7 +61,6 @@
   });
 </script>
 
-<script src="//code.responsivevoice.org/responsivevoice.js?key=fJp93z4l"></script>
 
 
 
