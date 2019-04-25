@@ -104,24 +104,24 @@
         var originalFontSize = $('p').css('font-size');
 
         $(".resetFont").click(function () {
-            $('p').css('font-size', 12);
+            $('.sapo').css('font-size', 14);
         });      
 
         // Increase Font Size
         $(".increaseFont").click(function () {
-            var currentFontSize = $('p').css('font-size');
+            var currentFontSize = $('.sapo').css('font-size');
             var currentFontSizeNum = parseFloat(currentFontSize, 10);
             var newFontSize = currentFontSizeNum * 1.2;
-            $('p').css('font-size', newFontSize);
+            $('.sapo').css('font-size', newFontSize);
             return false;
         }); 
-              
+
         // Decrease Font Size
         $(".decreaseFont").click(function () {
-            var currentFontSize = $('p').css('font-size');
+            var currentFontSize = $('.sapo').css('font-size');
             var currentFontSizeNum = parseFloat(currentFontSize, 10);
             var newFontSize = currentFontSizeNum * 0.8;
-            $('p').css('font-size', newFontSize);
+            $('.sapo').css('font-size', newFontSize);
 
             return false;
         });
