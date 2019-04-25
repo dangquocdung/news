@@ -62,7 +62,7 @@
     @if(count($Topic->photos)>0)
     
         <script src="/tinht/js/prettify.js"></script>
-        <script src="/tinht/js/jquery.justifiedGallery.min.js"></script>
+        <script src="/tinht/js/$.justifiedGallery.min.js"></script>
         <script src="/tinht/jstransition.js"></script>
         <script src="/tinht/js/collapse.js"></script>
         <script src="/tinht/js/lightgallery.js"></script>
@@ -71,7 +71,7 @@
         <script src="/tinht/js/lg-video.js"></script>
         <script src="/tinht/js/lg-autoplay.js"></script>
         <script src="/tinht/js/lg-zoom.js"></script>
-        <script src="/tinht/js/jquery.mousewheel.min.js"></script>
+        <script src="/tinht/js/$.mousewheel.min.js"></script>
         <script src="/tinht/js/demos.js"></script>
 
     @endif
@@ -82,7 +82,7 @@
     <script>
 
         $("#btnVoice").click(function () {
-            var text = $(".sapo").text() + $(".content").text();
+            var text = $(".sapo").text() + $(".noi-dung-bai-viet").text();
             responsiveVoice.speak(text, "Vietnamese Male");
 
         });
@@ -98,6 +98,37 @@
             responsiveVoice.resume();
 
         });
+
+
+            // Reset Font Size
+        var originalFontSize = $('p').css('font-size');
+
+        $(".resetFont").click(function () {
+            $('p').css('font-size', 12);
+        });      
+
+        // Increase Font Size
+        $(".increaseFont").click(function () {
+            var currentFontSize = $('p').css('font-size');
+            var currentFontSizeNum = parseFloat(currentFontSize, 10);
+            var newFontSize = currentFontSizeNum * 1.2;
+            $('p').css('font-size', newFontSize);
+            return false;
+        }); 
+              
+        // Decrease Font Size
+        $(".decreaseFont").click(function () {
+            var currentFontSize = $('p').css('font-size');
+            var currentFontSizeNum = parseFloat(currentFontSize, 10);
+            var newFontSize = currentFontSizeNum * 0.8;
+            $('p').css('font-size', newFontSize);
+
+            return false;
+        });
+
+     
+    });   
+
 
     </script>
     

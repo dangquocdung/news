@@ -40,6 +40,19 @@
                 <button ID="btnVoicePause" type="button" ><i class="fa fa-pause white"></i></button>
                 <button ID="btnVoiceResume" type="button" ><i class="fa fa-forward white"></i></button>                             
             </div>
+
+            <div class="news_utility_font">
+                <span>Xem cỡ chữ</span>
+                <a href="#" class="increaseFont">
+                    <span class="glyphicon glyphicon-font blue" style="font-size:24px;"></span>
+                </a>
+                <a href="#" class="decreaseFont">
+                    <span class="glyphicon glyphicon-font blue" style="font-size:12px;"></span>
+                </a>
+                <a href="#" class="resetFont">
+                    <span class="glyphicon glyphicon-font blue" style="font-size:16px;"></span>
+                </a>
+            </div>
            
             <div class="clearfix"></div>
 
@@ -129,7 +142,7 @@
 
             @endif
 
-            <div class="content">
+            <div class="content" id="noi-dung-bai-viet">
                 {!! $Topic->details_vi !!}
             </div>
 
