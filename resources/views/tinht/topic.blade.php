@@ -76,7 +76,7 @@
 
     @endif
 
-    <script src="//code.responsivevoice.org/responsivevoice.js?key=fJp93z4l"></script>
+    <script src="//code.responsivevoice.org/responsivevoice.js?key=nET6yOkN"></script>
 
 
     <script>
