@@ -463,15 +463,15 @@ class Helper
             $Check_SEO_st_en = true;
         }
 
-        $vislug = "";
+        $vi_slug = "";
         if ($Check_SEO_st_vi) {
-            $vislug = $seo_url_slug_vi;
+            $vi_slug = $seo_url_slug_vi;
         }
         $en_slug = "";
         if ($Check_SEO_st_en) {
             $en_slug = $seo_url_slug_en;
         }
-        return array("slug_vi" => $vislug, "slug_en" => $en_slug);
+        return array("slug_vi" => $vi_slug, "slug_en" => $en_slug);
     }
 
 }
