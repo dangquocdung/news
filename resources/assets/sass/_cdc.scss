@@ -173,11 +173,13 @@ img.size-full {
 
 #thoi-tiet{
     .container{
-        width: 500px;
+        // width: 500px;
         height: 300px;
         margin:25vh auto;
         border-radius: 25px;
-        box-shadow: 0 20px 40px 0px rgba(0,0,0,0.3)
+        box-shadow: 0 20px 40px 0px rgba(0,0,0,0.3);
+        padding: 0;
+        
       }
       
       .header {
@@ -192,7 +194,7 @@ img.size-full {
       #temp, #humidity-div {
         font-family: "Courier New";
         font-weight: bold;
-        font-size: 60px;
+        font-size: 20px;
         color: #fff;
         position: absolute;
         left: 50%;
@@ -212,7 +214,7 @@ img.size-full {
       
       #city-name {
         font-family: "Courier New";
-        font-size: 30px;
+        font-size: 16px;
         font-weight: bold;
         color: #fff;
       }
