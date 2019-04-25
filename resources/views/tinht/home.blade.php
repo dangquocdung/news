@@ -80,8 +80,6 @@
                                                                 <i class="fa {!! $Topic->icon !!}"></i>&nbsp;
                                                             @endif
 
-                                                            &nbsp;
-                                                            
                                                             {{ $Topic->title_vi }}
                                                         </a>
                                                     </h4>
@@ -148,9 +146,7 @@
                                                                     @if($Topic->icon !="")
                                                                     <i class="fa {!! $Topic->icon !!}"></i>&nbsp;
                                                                 @endif
-    
-                                                                &nbsp;
-                                                                
+                                                                    
                                                                 {{ $Topic->title_vi }}
                                                             </a>
                                                         </h5>
