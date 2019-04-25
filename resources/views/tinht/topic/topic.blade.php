@@ -36,14 +36,14 @@
             </div>
 
             <div class="news_utility_voice" style="vertical-align:top;float:right;">&nbsp;&nbsp;
-                <button ID="btnVoice" type="button" ><i class="glyphicon glyphicon-volume-up white"></i></button>
-                <button ID="btnVoicePause" type="button" ><i class="glyphicon glyphicon-pause white"></i></button>
-                <button ID="btnVoiceResume" type="button" ><i class="glyphicon glyphicon-forward white"></i></button>                             
+                <button ID="btnVoice" type="button" ><i class="fa fa-volume-up white"></i></button>
+                <button ID="btnVoicePause" type="button" ><i class="fa fa-pause white"></i></button>
+                <button ID="btnVoiceResume" type="button" ><i class="fa fa-forward white"></i></button>                             
             </div>
 
             <div class="sapo">
 
-                {{-- <input onclick="responsiveVoice.speak('{{ $Topic->sapo}}');" type="button" value="🔊 Đọc" /> --}}
+                <input onclick="responsiveVoice.speak('{{ $Topic->sapo}}','Vietnamese Male');" type="button" value="🔊 Đọc" />
 
 
                 {{ $Topic->sapo }}
