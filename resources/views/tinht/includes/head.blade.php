@@ -36,8 +36,10 @@
 <link rel="stylesheet" href="{{ mix('tinht/css/style.css') }}">
 
 
-<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
 <!-- Modernizer JS -->
 <script src="{{ URL::asset('tinht/js/vendor/modernizr-2.8.3.min.js') }}"></script>
 <!-- Jssor Slider JS -->
