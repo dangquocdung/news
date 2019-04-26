@@ -458,7 +458,7 @@ class TopicsController extends Controller
                     // "https://www.dkn.tv/cat/suc-khoe/feed",
                     // "https://www.dkn.tv/cat/khoa-hoc-cong-nghe/feed",
                     // "https://www.dkn.tv/feed",
-                    http://an-hoang-trung-tuong-2014.blogspot.com/feeds/1827151785901796818/comments/default?max-results=500&start-index=1
+                    "http://an-hoang-trung-tuong-2014.blogspot.com/feeds/1827151785901796818/comments/default?max-results=500&start-index=1"
 
                 );
 
