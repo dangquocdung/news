@@ -486,9 +486,6 @@ class TopicsController extends Controller
         
 
         }
-
-        return redirect()->route('adminHome');
-
     }
 
     public function getUploadPath()
