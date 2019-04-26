@@ -72,7 +72,6 @@ class TopicsController extends Controller
             return redirect()->route('NotFound');
         }
 
-
     }
 
     /**
@@ -467,16 +466,11 @@ class TopicsController extends Controller
             $xmldata = simplexml_load_file($url) or die("Failed to load");
 
             foreach($xmldata->entry as $item) {         
-                echo $item->id;   
+                echo $item->author->name;   
                 echo "<br>";        
                 echo $item->content;
                 echo "<hr>"; 
             } 
-
-            
-
-
-        
 
         }
 
