@@ -133,11 +133,11 @@
 
 
 
-                                    @if (strlen($title) < 15)
+                                    {{-- @if (strlen($title) < 15)
                                         {{ $title.' '.$details }}
-                                    @else
+                                    @else --}}
                                         {{ $title }}
-                                    @endif
+                                    {{-- @endif --}}
 
                                     <div>
                                         <small>
