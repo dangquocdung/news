@@ -483,11 +483,14 @@ class TopicsController extends Controller
             // $decode = json_decode($encode, true);
             // print_r($decode);
 
-            foreach($xml->entry as $item){
+            // foreach($xml->entry as $item){
 
-                print_r($item->content);
+            //     print_r($item->content);
 
-            }
+
+            // }
+
+            return response()->json($xml->entry); 
 
         
 
