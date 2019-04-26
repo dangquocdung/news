@@ -22,7 +22,7 @@
                 @endif
             </a>
             <span class="meta-item date">{{ \Carbon\Carbon::parse($Topic->date)->format('d/m/Y') }}</span>
-            <span class="meta-item view"><i class="fa fa-eye"></i>({{ $Topic->visits }})</span>
+            {{-- <span class="meta-item view"><i class="fa fa-eye"></i>({{ $Topic->visits }})</span> --}}
         </div>
 
         <div class="post-image">
