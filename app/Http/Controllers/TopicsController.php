@@ -468,7 +468,8 @@ class TopicsController extends Controller
 
             foreach($xmldata->entry as $empl) {         
                 echo $empl->id;           
-                echo $empl->content . "<\n>"; 
+                echo $empl->content;
+                echo "<hr>"; 
             } 
 
             
