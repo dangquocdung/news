@@ -485,7 +485,7 @@ class TopicsController extends Controller
 
             foreach($xml->entry as $item){
 
-                print_r($item->author->name);
+                print_r($item->author['name']);
 
                 print_r('<br');
 
