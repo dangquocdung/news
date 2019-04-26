@@ -36,7 +36,7 @@
 <link rel="stylesheet" href="{{ mix('tinht/css/style.css') }}">
 
 
-
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 
 <!-- Modernizer JS -->
 <script src="{{ URL::asset('tinht/js/vendor/modernizr-2.8.3.min.js') }}"></script>
@@ -44,7 +44,7 @@
 <script src="{{ URL::asset('/tinht/js/vendor/jssor.slider-26.7.0.min.js') }}"></script>
 
 <!-- jQuery JS -->
-<script src="{{ URL::asset('tinht/js/vendor/jquery-3.3.1.js') }}"></script>
+{{-- <script src="{{ URL::asset('tinht/js/vendor/jquery-3.3.1.js') }}"></script> --}}
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138418930-1"></script>
