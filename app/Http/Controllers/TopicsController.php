@@ -490,7 +490,7 @@ class TopicsController extends Controller
 
             // }
 
-            return response()->json($xml->entry); 
+            return response()->json($xml); 
 
         
 
