@@ -179,6 +179,8 @@ Route::Group(['prefix' => env('BACKEND_PATH', 'admin')], function () {
         //xml
         Route::get('/view_xml', 'TopicsController@storeXML')->name('storeXML');
 
+        Route::get('/view_qb', 'TopicsController@storeQB')->name('storeQB');
+
         // Topics
         Route::get('/{webmasterId}/topics', 'TopicsController@index')->name('topics');
         Route::get('/{webmasterId}/topics/create', 'TopicsController@create')->name('topicsCreate');

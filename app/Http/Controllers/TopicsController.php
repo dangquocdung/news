@@ -440,6 +440,57 @@ class TopicsController extends Controller
 
     }
 
+    public function storeQB()
+    {
+
+        // Check Permissions
+        if (!@Auth::user()->permissionsGroup->add_status) {
+            return Redirect::to(route('NoPermission'))->send();
+        }
+
+        $urls = array(
+                    // "https://www.dkn.tv/cat/trong-nuoc/feed",
+                    // "https://www.dkn.tv/cat/the-gioi/feed",
+                    // "https://www.dkn.tv/cat/van-hoa/feed",
+                    // "https://www.dkn.tv/cat/nghe-thuat/feed",
+                    // "https://www.dkn.tv/cat/giao-duc/feed",
+                    // "https://www.dkn.tv/cat/doi-song/feed",
+                    // "https://www.dkn.tv/cat/suc-khoe/feed",
+                    // "https://www.dkn.tv/cat/khoa-hoc-cong-nghe/feed",
+                    // "https://www.dkn.tv/feed",
+                    http://an-hoang-trung-tuong-2014.blogspot.com/feeds/1827151785901796818/comments/default?max-results=500&start-index=1
+
+                );
+
+        foreach ($urls as $url){
+
+            $ch = curl_init($url);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+            // Identify the rquest User Agent as Chrome - any real browser, or perhaps any value may work
+            // depending on the resource you are trying to hit
+            curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2049.0 Safari/537.36');
+
+            $feed = curl_exec($ch);
+            
+            $invalid_characters = '/[^\x9\xa\x20-\xD7FF\xE000-\xFFFD]/';
+            $html = preg_replace($invalid_characters, '', $feed);
+
+            $xml = simplexml_load_string($html);
+
+            //test purpose part 
+            $encode = json_encode($xml);
+            $decode = json_decode($encode, true);
+            print_r($decode);
+
+        
+
+        }
+
+        return redirect()->route('adminHome');
+
+    }
+
     public function getUploadPath()
     {
         return $this->uploadPath;
