@@ -464,44 +464,19 @@ class TopicsController extends Controller
 
         foreach ($urls as $url){
 
-            $ch = curl_init($url);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            $xmlfile = file_get_contents($url);
+            $ob= simplexml_load_string($xmlfile);
+            $json  = json_encode($ob);
+            $cm = json_decode($json, true);
 
-            // Identify the rquest User Agent as Chrome - any real browser, or perhaps any value may work
-            // depending on the resource you are trying to hit
-            curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2049.0 Safari/537.36');
-
-            $feed = curl_exec($ch);
             
-            $invalid_characters = '/[^\x9\xa\x20-\xD7FF\xE000-\xFFFD]/';
-            $html = preg_replace($invalid_characters, '', $feed);
-
-            $xml = simplexml_load_string($html);
-
-            //test purpose part 
-            // $encode = json_encode($xml);
-            // $decode = json_decode($encode, true);
-            // print_r($decode);
-
-            foreach($xml->entry as $item){
-
-                print_r($item->author['name']);
-
-                print_r('<br');
-
-                print_r($item->content);
-
-                print_r('<br');
-
-
-            }
 
 
         
 
         }
 
-        // return response()->json($cm); 
+        return response()->json($cm); 
     }
 
     public function getUploadPath()
