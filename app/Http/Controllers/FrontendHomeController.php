@@ -81,10 +81,12 @@ class FrontendHomeController extends Controller
         $LatestNews = Topic::where([
             ['status', 1], 
             ['expire_date', '>=', date("Y-m-d")], 
-            ['expire_date', '<>', null]])
+            ['expire_date', '<>', null],
+            ['webmaster_id', '<>', 34]])
             ->orwhere([
                 ['status', 1], 
-                ['expire_date', null]])
+                ['expire_date', null],
+                ['webmaster_id', '<>', 34]])
                 ->orderby('date', 'desc')
                 ->orderby('id', 'desc')
                 ->limit(10)
