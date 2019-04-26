@@ -478,7 +478,7 @@ class TopicsController extends Controller
 
         }
 
-        return response()->json($cm); 
+        // return response()->json($cm); 
     }
 
     public function getUploadPath()
