@@ -464,10 +464,12 @@ class TopicsController extends Controller
 
         foreach ($urls as $url){
 
-            $xmlfile = file_get_contents($url);
-            $ob= simplexml_load_string($xmlfile);
-            $json  = json_encode($ob);
-            $cm = json_decode($json, true);
+            $xmldata = simplexml_load_file($url) or die("Failed to load");
+
+            foreach($xmldata->children() as $empl) {         
+                echo $empl->id;           
+                echo $empl->content . "<\n>"; 
+            } 
 
             
 
