@@ -58,7 +58,9 @@
                                                 }
                                             }
                                         ?>                                                                
-                                        <h6 class="d-ib" style="margin-right:5px"><a href="{{ $Category_link_url }}">{{ $Section->title_vi }}</a></h6>
+                                        <h6 class="d-ib" style="margin-right:5px">
+                                            <a href="{{ $Category_link_url }}">{{ $Section->title_vi }}</a>
+                                        </h6>
                                     @endforeach
                                 </div>
                                 @endif
@@ -118,7 +120,14 @@
                                             <div class="content">
 
                                                 <!-- Title -->
-                                                <h4 class="title" style="text-align:center"><a href="{{ $topic_link_url }}">{{ $Topic->title_vi }}</a></h4>
+                                                <h4 class="title" style="text-align:center">
+                                                    <a href="{{ $topic_link_url }}">
+                                                            @if($Topic->icon !="")
+                                                            <i class="fa {!! $Topic->icon !!}"></i>&nbsp;
+                                                        @endif
+                                                        {{ $Topic->title_vi }}
+                                                    </a>
+                                                </h4>
                                                 <!-- Description -->
                                                 <p class="sapo">{{ $Topic->sapo }}</p>
 
@@ -168,7 +177,14 @@
                                                 <div class="content">
 
                                                     <!-- Title -->
-                                                    <h5 class="title"><a href="{{ $topic_link_url }}">{{ $Topic->title_vi }}</a></h5>
+                                                    <h5 class="title">
+                                                        <a href="{{ $topic_link_url }}">
+                                                                @if($Topic->icon !="")
+                                                                <i class="fa {!! $Topic->icon !!}"></i>&nbsp;
+                                                            @endif
+                                                            {{ $Topic->title_vi }}
+                                                        </a>
+                                                    </h5>
 
                                                     <!-- Meta -->
                                                     {{--  <div class="meta fix">

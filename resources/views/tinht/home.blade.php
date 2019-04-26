@@ -73,7 +73,16 @@
                                                 <div class="content">
     
                                                     <!-- Title -->
-                                                    <h4 class="title" style="text-align:center"><a href="{{ $topic_link_url }}">{{ $Topic->title_vi }}</a></h4>
+                                                    <h4 class="title" style="text-align:center">
+                                                        
+                                                        <a href="{{ $topic_link_url }}">
+                                                            @if($Topic->icon !="")
+                                                                <i class="fa {!! $Topic->icon !!}"></i>&nbsp;
+                                                            @endif
+
+                                                            {{ $Topic->title_vi }}
+                                                        </a>
+                                                    </h4>
     
                                                     <!-- Meta -->
                                                     {{--  <div class="meta fix">
@@ -131,7 +140,16 @@
                                                     <div class="content">
     
                                                         <!-- Title -->
-                                                        <h5 class="title"><a href="{{ $topic_link_url }}">{{ $Topic->title_vi }}</a></h5>
+                                                        <h5 class="title">
+                                                            
+                                                            <a href="{{ $topic_link_url }}">
+                                                                    @if($Topic->icon !="")
+                                                                    <i class="fa {!! $Topic->icon !!}"></i>&nbsp;
+                                                                @endif
+                                                                    
+                                                                {{ $Topic->title_vi }}
+                                                            </a>
+                                                        </h5>
     
                                                         <!-- Meta -->
                                                         {{--  <div class="meta fix">
@@ -170,6 +188,7 @@
                     
                     {{-- @include('tinht.includes.dichvu') --}}
                     @include('tinht.includes.thongbao')
+                    {{-- @include('tinht.includes.thoi-tiet') --}}
                     {{-- @include('tinht.includes.tienich') --}}
                     @include('tinht.includes.lienket')
     

@@ -26,6 +26,10 @@
 <!-- rypp -->
 <link rel="stylesheet" href="{{ URL::asset('tinht/css/datatables.min.css') }}">
 
+<!-- normalize.min.css -->
+<link rel="stylesheet" href="{{ URL::asset('tinht/css/normalize.min.css') }}">
+
+
 @yield('css')
 
 <!-- Style CSS -->
