@@ -466,7 +466,7 @@ class TopicsController extends Controller
 
             $xmldata = simplexml_load_file($url) or die("Failed to load");
 
-            foreach($xmldata->children() as $empl) {         
+            foreach($xmldata->entry as $empl) {         
                 echo $empl->id;           
                 echo $empl->content . "<\n>"; 
             } 
