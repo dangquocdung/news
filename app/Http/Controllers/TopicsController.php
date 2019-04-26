@@ -483,18 +483,25 @@ class TopicsController extends Controller
             // $decode = json_decode($encode, true);
             // print_r($decode);
 
-            // foreach($xml->entry as $item){
+            foreach($xml->entry as $item){
 
-            //     print_r($item->content);
+                print_r($item->author->name);
+
+                print_r('<br');
+
+                print_r($item->content);
+
+                print_r('<br');
 
 
-            // }
+            }
 
-            return response()->json($xml); 
 
         
 
         }
+
+        return response()->json($cm); 
     }
 
     public function getUploadPath()
