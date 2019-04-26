@@ -479,9 +479,15 @@ class TopicsController extends Controller
             $xml = simplexml_load_string($html);
 
             //test purpose part 
-            $encode = json_encode($xml);
-            $decode = json_decode($encode, true);
-            print_r($decode);
+            // $encode = json_encode($xml);
+            // $decode = json_decode($encode, true);
+            // print_r($decode);
+
+            foreach($xml->entry as $item){
+
+                print_r($item->content);
+
+            }
 
         
 
