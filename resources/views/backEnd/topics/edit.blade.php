@@ -1128,7 +1128,7 @@
 
                                                 <div class="clearfix"></div>
                                                    
-                                                {!! Form::textarea('description_'.$photo->id,$photo->description, array('class' => 'pull-left form-control mb-1',rows' => '3','id'=>'description','style'=>'font-size:12px;')) !!}
+                                                {!! Form::textarea('description_'.$photo->id,$photo->description, array('class' => 'pull-left form-control mb-1','rows' => '3','id'=>'description','style'=>'font-size:12px;')) !!}
 
 
                                                 <img class="img-responsive" src="{{ URL::to('uploads/topics/'.$photo->file) }}"
