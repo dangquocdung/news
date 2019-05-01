@@ -66,9 +66,9 @@
                                 <!-- Image -->
                                 <a class="image img-fluid" href="{{ $topic_link_url }}">
                                     @if (empty($Topic->photo_file))
-                                        <img src="frontend/hashnews/img/post/post-13.jpg" alt="{{ $Topic->title_vi }}">
+                                        <img src="frontend/hashnews/img/post/post-13.jpg" alt="{{ $Topic->title_vi }}" style="width:auto; max-width:300px">
                                     @else
-                                        <img src="/uploads/topics/{{ $Topic->photo_file}}" alt="{{ $Topic->title_vi }}">
+                                        <img src="/uploads/topics/{{ $Topic->photo_file}}" alt="{{ $Topic->title_vi }}" style="width:auto; max-width:300px">
                                     @endif
                                 </a>
 
