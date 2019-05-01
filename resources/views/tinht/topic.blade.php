@@ -47,7 +47,7 @@
            <!-- Sidebar Start -->
            <div class="col-md-3">
 
-                @include('tinht.includes.thongbao')
+                {{-- @include('tinht.includes.thongbao') --}}
                 @include('tinht.includes.lienket')
                 
             </div><!-- Sidebar End -->
