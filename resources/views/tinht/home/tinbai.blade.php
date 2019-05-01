@@ -71,7 +71,7 @@
 
                         @php
                             
-                            $Tins = $MainMenuLink->webmasterSection->topics->where('status',1)->sortbyDesc('date')->sortbyDesc('id')->take(6);
+                            $Tins = $MainMenuLink->webmasterSection->topics->where('status',1)->sortbyDesc('date')->sortbyDesc('id')->take(7);
                             
                         @endphp
 
