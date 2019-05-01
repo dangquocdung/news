@@ -16,25 +16,45 @@
                 
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner">
-                        <div class="item {{ ($key==0)?'active':'' }}">
-                            @if (empty($Topic->photo_file))
-                                <img src="frontend/hashnews/img/post/post-11.jpg" alt="{{ $Topic->title_vi }}">
-                            @else
-                                <img src="/uploads/topics/{{ $Topic->photo_file}}" alt="{{ $Topic->title_vi }}"></a>
-                            @endif
-                            <div class="carousel-caption">
-                            <h4>
-                                <a href="{{ $topic_link_url }}">
-                                    @if($Topic->icon !="")
-                                        <i class="fa {!! $Topic->icon !!}"></i>&nbsp;
-                                    @endif
+                        @foreach ($HotTopics as $key=>$Topic )
 
-                                    {{ $Topic->title_vi }}
-                                </a>
-                            </h4>
-                            <p class="sapo">{{ $Topic->sapo }}</p>
+                            @php
+
+                                if ($Topic->$slug_var != "" && Helper::GeneralWebmasterSettings("links_status")) {
+                                    if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
+                                        $topic_link_url = url(trans('backLang.code') . "/" . $Topic->$slug_var);
+                                    } else {
+                                        $topic_link_url = url($Topic->$slug_var);
+                                    }
+                                } else {
+                                    if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
+                                        $topic_link_url = route('FrontendTopicByLang', ["lang" => trans('backLang.code'), "section" => $Topic->webmasterSection->name, "id" => $Topic->id]);
+                                    } else {
+                                        $topic_link_url = route('FrontendTopic', ["section" => $Topic->webmasterSection->name, "id" => $Topic->id]);
+                                    }
+                                }
+                                
+                            @endphp
+
+                            <div class="item {{ ($key==0)?'active':'' }}">
+                                @if (empty($Topic->photo_file))
+                                    <img src="frontend/hashnews/img/post/post-11.jpg" alt="{{ $Topic->title_vi }}">
+                                @else
+                                    <img src="/uploads/topics/{{ $Topic->photo_file}}" alt="{{ $Topic->title_vi }}"></a>
+                                @endif
+                                <div class="carousel-caption">
+                                <h4>
+                                    <a href="{{ $topic_link_url }}">
+                                        @if($Topic->icon !="")
+                                            <i class="fa {!! $Topic->icon !!}"></i>&nbsp;
+                                        @endif
+
+                                        {{ $Topic->title_vi }}
+                                    </a>
+                                </h4>
+                                <p class="sapo">{{ $Topic->sapo }}</p>
+                                </div>
                             </div>
-                        </div>
                         @endforeach
                 
                     </div>
