@@ -75,10 +75,10 @@
                             
                         @endphp
 
-                        <div class="col-md-12">
+                        <div class="row">
 
                             <!-- Post Wrapper Start -->
-                        <div class="col-md-7 col-xs-12">
+                            <div class="col-md-7 col-xs-12">
                                 @php
                                 
                                     $Topic =  $Tins->shift();
