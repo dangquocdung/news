@@ -1,4 +1,4 @@
-<div class="col-md-12 mt-15 clearfix">
+<div class="col-md-12">
     <div class="row">
         <div class="Head pos-rel clearfix">
             <h2 class="ParentCate left">
@@ -32,68 +32,6 @@
             @endforeach
         </ul>
                     
-    </div>
-            
-</div>
-
-<div class="col-md-12 mt-15 clearfix">
-    <div class="row">
-        <div class="Head pos-rel clearfix">
-            <h2 class="ParentCate left">
-                <a href="#">Hình ảnh</a>
-            </h2>
-            <span class="line-red">.</span>
-        </div>
-    </div>
-
-    <div class="row sidebar">
-            
-    <!-- Hero Post Slider Start -->
-        <div class="post-carousel-1" style="width:100%">
-                    
-            @foreach ($Photo as $Topic )
-                @php
-                    if ($Topic->$slug_var != "" && Helper::GeneralWebmasterSettings("links_status")) {
-                        if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
-                            $topic_link_url = url(trans('backLang.code') . "/" . $Topic->$slug_var);
-                        } else {
-                            $topic_link_url = url($Topic->$slug_var);
-                        }
-                    } else {
-                        if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
-                            $topic_link_url = route('FrontendTopicByLang', ["lang" => trans('backLang.code'), "section" => $Topic->webmasterSection->name, "id" => $Topic->id]);
-                        } else {
-                            $topic_link_url = route('FrontendTopic', ["section" => $Topic->webmasterSection->name, "id" => $Topic->id]);
-                        }
-                    }
-                @endphp
-            
-                <!-- Overlay Post Start -->
-                <div class="post post-large post-overlay hero-post">
-                    <div class="post-wrap">
-
-                        <!-- Image -->
-                        <a class="image img-fluid" href="{{ $topic_link_url }}">
-                            @if (empty($Topic->photo_file))
-                                <img src="frontend/hashnews/img/post/post-42.jpg" alt="{{ $Topic->title_vi }}">
-                            @else
-                                <img src="/uploads/topics/{{ $Topic->photo_file}}" alt="{{ $Topic->title_vi }}"></a>
-                            @endif
-                        </a>
-
-                        <!-- Content -->
-                        <div class="content" style="bottom:10px">
-
-                            <!-- Title -->
-                            <h4 style="text-align:center; font-weght:bold; color:#fff"><a href="{{$topic_link_url}}" onMouseOver="this.style.color='#0F0'" onMouseOut="this.style.color='#fff'" >{{$Topic->title_vi}}</a></h4>
-
-                        </div>
-                        
-                    </div>
-                </div><!-- Overlay Post End -->
-            @endforeach
-            
-        </div>
     </div>
             
 </div>
