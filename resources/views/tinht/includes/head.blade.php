@@ -45,8 +45,12 @@
 <!-- Jssor Slider JS -->
 <script src="{{ URL::asset('/tinht/js/vendor/jssor.slider-26.7.0.min.js') }}"></script>
 
+
 <!-- jQuery JS -->
 {{-- <script src="{{ URL::asset('tinht/js/vendor/jquery-3.3.1.js') }}"></script> --}}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138418930-1"></script>

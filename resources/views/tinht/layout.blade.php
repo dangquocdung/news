@@ -39,7 +39,7 @@
     <!-- Popper JS -->
     <script src="{{ URL::asset('tinht/js/popper.min.js') }}"></script>
     <!-- Bootstrap JS -->
-    <script src="{{ URL::asset('tinht/js/bootstrap.min.js') }}"></script>
+    {{-- <script src="{{ URL::asset('tinht/js/bootstrap.min.js') }}"></script> --}}
     <!-- Plugins JS -->
     <script src="{{ URL::asset('tinht/js/plugins.js') }}"></script>
     <!-- rypp JS -->
