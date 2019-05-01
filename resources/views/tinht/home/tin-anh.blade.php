@@ -6,6 +6,8 @@
         <span class="line-red">.</span>
     </div>
 
+    <div class="clearfix"></div>
+
     <div class="four-column-post-carousel column-post-carousel post-block-carousel dark life-style-post-carousel row">
 
         @foreach ($Photo as $Topic )
