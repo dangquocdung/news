@@ -1,4 +1,4 @@
-<div class="col-md-12 mt-15">
+<div class="col-md-12">
     <div class="Head pos-rel clearfix">
         <h2 class="ParentCate left">
             <a href="#">Video clips</a>
