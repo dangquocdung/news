@@ -78,7 +78,7 @@
                         <div class="row">
 
                             <!-- Post Wrapper Start -->
-                            <div class="col-md-7 col-xs-12">
+                            <div class="col-md-7 col-xs-12 mb-15">
                                 @php
                                 
                                     $Topic =  $Tins->shift();
@@ -136,7 +136,7 @@
                             </div><!-- Post Wrapper End -->
     
                                 <!-- Small Post Wrapper Start -->
-                            <div class="col-md-5 col-xs-12">
+                            <div class="col-md-5 col-xs-12 mb-15">
                                 
                                     @foreach ($Tins as $Topic )
     
