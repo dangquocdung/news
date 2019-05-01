@@ -161,13 +161,13 @@
                                             <div class="post-wrap">
     
                                                 <!-- Image -->
-                                                <a class="image img-fluid" href="{{ $topic_link_url }}">
+                                                {{-- <a class="image img-fluid" href="{{ $topic_link_url }}">
                                                     @if (empty($Topic->photo_file))
                                                         <img src="frontend/hashnews/img/post/post-13.jpg" alt="{{ $Topic->title_vi }}">
                                                     @else
                                                         <img src="/uploads/topics/{{ $Topic->photo_file}}" alt="{{ $Topic->title_vi }}">
                                                     @endif
-                                                </a>
+                                                </a> --}}
     
                                                 <!-- Content -->
                                                 <div class="content">
