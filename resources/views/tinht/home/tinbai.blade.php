@@ -18,52 +18,54 @@
                 <div class="col-md-6 mb-20 mt-15">
                     
 
-                            <?php
-                                if ($MainMenuLink->webmasterSection[$slug_var] != "" && Helper::GeneralWebmasterSettings("links_status")) {
-                                    if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
-                                        $mmnnuu_link = url(trans('backLang.code')."/" .$MainMenuLink->webmasterSection[$slug_var]);
-                                    }else{
-                                        $mmnnuu_link = url($MainMenuLink->webmasterSection[$slug_var]);
-                                    }
+                        <?php
+                            if ($MainMenuLink->webmasterSection[$slug_var] != "" && Helper::GeneralWebmasterSettings("links_status")) {
+                                if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
+                                    $mmnnuu_link = url(trans('backLang.code')."/" .$MainMenuLink->webmasterSection[$slug_var]);
                                 }else{
-                                    if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
-                                        $mmnnuu_link =url(trans('backLang.code')."/" .$MainMenuLink->webmasterSection['name']);
-                                    }else{
-                                        $mmnnuu_link =url($MainMenuLink->webmasterSection['name']);
-                                    }
+                                    $mmnnuu_link = url($MainMenuLink->webmasterSection[$slug_var]);
                                 }
-                            ?>
-                            <div class="Head pos-rel clearfix">
-                                <h2 class="ParentCate left">
-                                    <a href="{{ $mmnnuu_link }}">{{ $MainMenuLink->title_vi }}</a>
-                                </h2>
-                                <span class="line-red">.</span>
-                                @if(!empty($MainMenuLink->webmasterSection->sections))
-                                <div class="mini-menu c-86">&nbsp;
-                                    @foreach($MainMenuLink->webmasterSection->sections as $key=>$Section)
+                            }else{
+                                if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
+                                    $mmnnuu_link =url(trans('backLang.code')."/" .$MainMenuLink->webmasterSection['name']);
+                                }else{
+                                    $mmnnuu_link =url($MainMenuLink->webmasterSection['name']);
+                                }
+                            }
+                        ?>
+                        <div class="Head pos-rel clearfix">
+                            <h2 class="ParentCate left">
+                                <a href="{{ $mmnnuu_link }}">{{ $MainMenuLink->title_vi }}</a>
+                            </h2>
+                            <span class="line-red">.</span>
+                            @if(!empty($MainMenuLink->webmasterSection->sections))
+                            <div class="mini-menu c-86">&nbsp;
+                                @foreach($MainMenuLink->webmasterSection->sections as $key=>$Section)
 
-                                        <?php
-                                            if ($Section->$slug_var != "" && Helper::GeneralWebmasterSettings("links_status")) {
-                                                if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
-                                                    $Category_link_url = url(trans('backLang.code')."/" .$Section->$slug_var);
-                                                }else{
-                                                    $Category_link_url = url($Section->$slug_var);
-                                                }
-                                            } else {
-                                                if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
-                                                    $Category_link_url = route('FrontendTopicsByCatWithLang', ["lang"=>trans('backLang.code'),"section" => $Section->webmasterSection->name, "cat" => $Section->id]);
-                                                }else{
-                                                    $Category_link_url = route('FrontendTopicsByCat', ["section" => $Section->webmasterSection->name, "cat" => $Section->id]);
-                                                }
+                                    <?php
+                                        if ($Section->$slug_var != "" && Helper::GeneralWebmasterSettings("links_status")) {
+                                            if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
+                                                $Category_link_url = url(trans('backLang.code')."/" .$Section->$slug_var);
+                                            }else{
+                                                $Category_link_url = url($Section->$slug_var);
                                             }
-                                        ?>                                                                
-                                        <h6 class="d-ib" style="margin-right:5px">
-                                            <a href="{{ $Category_link_url }}">{{ $Section->title_vi }}</a>
-                                        </h6>
-                                    @endforeach
-                                </div>
-                                @endif
+                                        } else {
+                                            if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
+                                                $Category_link_url = route('FrontendTopicsByCatWithLang', ["lang"=>trans('backLang.code'),"section" => $Section->webmasterSection->name, "cat" => $Section->id]);
+                                            }else{
+                                                $Category_link_url = route('FrontendTopicsByCat', ["section" => $Section->webmasterSection->name, "cat" => $Section->id]);
+                                            }
+                                        }
+                                    ?>                                                                
+                                    <h6 class="d-ib" style="margin-right:5px">
+                                        <a href="{{ $Category_link_url }}">{{ $Section->title_vi }}</a>
+                                    </h6>
+                                @endforeach
                             </div>
+                            @endif
+                        </div>
+
+                        <div class="clearfix"></div>
 
                         @if(count($MainMenuLink->webmasterSection->topics->where('status',1))>0)
 
