@@ -98,7 +98,6 @@
                                     
                                 @endphp
 
-                                <div class="row">
 
                                         <!-- Post Start -->
                                     <div class="post feature-post post-separator-border">
@@ -132,7 +131,6 @@
                                             
                                         </div>
                                     </div><!-- Post End -->
-                                </div>
 
                             </div><!-- Post Wrapper End -->
 

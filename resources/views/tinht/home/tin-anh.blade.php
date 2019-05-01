@@ -1,11 +1,9 @@
 <div class="col-md-12 mt-15">
-    <div class="row">
-        <div class="Head pos-rel clearfix">
-            <h2 class="ParentCate left">
-                <a href="/hinh-anh">Hình ảnh</a>
-            </h2>
-            <span class="line-red">.</span>
-        </div>
+    <div class="Head pos-rel clearfix">
+        <h2 class="ParentCate left">
+            <a href="/hinh-anh">Hình ảnh</a>
+        </h2>
+        <span class="line-red">.</span>
     </div>
 
     <div class="four-column-post-carousel column-post-carousel post-block-carousel dark life-style-post-carousel row">
