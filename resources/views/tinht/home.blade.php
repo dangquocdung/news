@@ -170,31 +170,30 @@
     
                     @include('tinht.home.slide')
 
-                    <div class="clearfix"></div>
-
-                    @include('tinht.home.tin-anh')
-                    
-                    <div class="clearfix"></div>
-
-                    @include('tinht.home.tinbai')
-
-                    <div class="clearfix"></div>
-
-                    @include('tinht.home.video')
                 </div>
-                    
-                <!-- Sidebar Start -->
+
                 <div class="col-md-3">
                     
                     {{-- @include('tinht.includes.dichvu') --}}
-                    @include('tinht.includes.thongbao')
+                    {{-- @include('tinht.includes.thongbao') --}}
                     {{-- @include('tinht.includes.thoi-tiet') --}}
                     {{-- @include('tinht.includes.tienich') --}}
                     @include('tinht.includes.lienket')
     
-                </div><!-- Sidebar End -->
+                </div>
+
+                <div class="clearfix"></div>
+
+                @include('tinht.home.tin-anh')
+                
+                <div class="clearfix"></div>
+
+                @include('tinht.home.tinbai')
+
+                <div class="clearfix"></div>
+
+                @include('tinht.home.video')
                     
-                <!-- Feature Post Row End -->
                             
             </div>
             

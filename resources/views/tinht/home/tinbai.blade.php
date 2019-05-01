@@ -15,7 +15,7 @@
                 @foreach($MenuLinks->where('father_id',21)->sortby('row_no') as $MainMenuLink)
 
                 <!-- Post Block Wrapper Start -->
-                <div class="col-md-12 mb-20 mt-15">
+                <div class="col-md-6 mb-20 mt-15">
                     
                         <div class="row mb-10">
 
