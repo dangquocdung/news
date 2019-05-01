@@ -57,9 +57,9 @@
                                         }
                                     }
                                 ?>                                                                
-                                <h6 class="d-ib" style="margin-right:5px">
+                                {{-- <h6 class="d-ib" style="margin-right:5px">
                                     <a href="{{ $Category_link_url }}">{{ $Section->title_vi }}</a>
-                                </h6>
+                                </h6> --}}
                             @endforeach
                         </div>
                         @endif
@@ -161,13 +161,13 @@
                                             <div class="post-wrap">
     
                                                 <!-- Image -->
-                                                {{-- <a class="image img-fluid" href="{{ $topic_link_url }}">
+                                                <a class="image img-fluid" href="{{ $topic_link_url }}">
                                                     @if (empty($Topic->photo_file))
                                                         <img src="frontend/hashnews/img/post/post-13.jpg" alt="{{ $Topic->title_vi }}">
                                                     @else
                                                         <img src="/uploads/topics/{{ $Topic->photo_file}}" alt="{{ $Topic->title_vi }}">
                                                     @endif
-                                                </a> --}}
+                                                </a>
     
                                                 <!-- Content -->
                                                 <div class="content">
