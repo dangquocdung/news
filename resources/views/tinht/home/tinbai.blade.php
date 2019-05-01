@@ -136,7 +136,7 @@
                             </div><!-- Post Wrapper End -->
     
                                 <!-- Small Post Wrapper Start -->
-                            <div class="col-md-5 col-xs-12" id="mainbox-r">
+                            <div class="col-md-5 col-xs-12">
                                 
                                     @foreach ($Tins as $Topic )
     
