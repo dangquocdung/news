@@ -17,7 +17,6 @@
                 <!-- Post Block Wrapper Start -->
                 <div class="col-md-6 mb-20 mt-15">
                     
-                        <div class="row mb-10">
 
                             <?php
                                 if ($MainMenuLink->webmasterSection[$slug_var] != "" && Helper::GeneralWebmasterSettings("links_status")) {
@@ -65,7 +64,6 @@
                                 </div>
                                 @endif
                             </div>
-                        </div>
 
                         @if(count($MainMenuLink->webmasterSection->topics->where('status',1))>0)
 
@@ -77,7 +75,6 @@
 
                         
                     
-                        <div class="row">
 
                             <!-- Post Wrapper Start -->
                             <div class="col-md-7 col-xs-12">
@@ -186,10 +183,7 @@
                                                         </a>
                                                     </h5>
 
-                                                    <!-- Meta -->
-                                                    {{--  <div class="meta fix">
-                                                        <span class="meta-item date"><i class="fa fa-clock-o"></i>{{ \Carbon\Carbon::parse($Topic->date)->format('d/m/Y')}}</span>
-                                                    </div>  --}}
+                                                    
 
                                                 </div>
                                                 
@@ -201,7 +195,6 @@
 
                             
 
-                        </div>
                         
 
 
