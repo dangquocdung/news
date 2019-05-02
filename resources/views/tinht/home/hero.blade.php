@@ -152,7 +152,9 @@
                         <div class="order-lg-3 col-lg-3 col-12">
                             <div class="row row-1">
 
-                                @foreach ($ThongBao->take(2) as $Topic )
+                                @foreach ($ThongBao->take(4) as $key=>$Topic )
+
+                                @if ($key > 1)
     
                                     @php
                                         if ($Topic->$slug_var != "" && Helper::GeneralWebmasterSettings("links_status")) {
@@ -211,6 +213,9 @@
 
                                         </div>
                                     </div><!-- Overlay Post End -->
+
+                                @endif
+                                
 
                                 @endforeach
                                 
