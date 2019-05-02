@@ -10,30 +10,65 @@
                             <!-- Hero Post Slider Start -->
                             <div class="post-carousel-1">
 
-                                <!-- Overlay Post Start -->
-                                <div class="post post-large post-overlay hero-post">
-                                    <div class="post-wrap">
+                                @foreach ($HotTopics as $Topic )
+    
+                                    @php
+                                        if ($Topic->$slug_var != "" && Helper::GeneralWebmasterSettings("links_status")) {
+                                            if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
+                                                $topic_link_url = url(trans('backLang.code') . "/" . $Topic->$slug_var);
+                                            } else {
+                                                $topic_link_url = url($Topic->$slug_var);
+                                            }
+                                        } else {
+                                            if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
+                                                $topic_link_url = route('FrontendTopicByLang', ["lang" => trans('backLang.code'), "section" => $Topic->webmasterSection->name, "id" => $Topic->id]);
+                                            } else {
+                                                $topic_link_url = route('FrontendTopic', ["section" => $Topic->webmasterSection->name, "id" => $Topic->id]);
+                                            }
+                                        }
+                                    @endphp
 
-                                        <!-- Image -->
-                                        <div class="image"><img src="img/post/post-3.jpg" alt="post"></div>
+                                    <!-- Overlay Post Start -->
+                                    <div class="post post-large post-overlay hero-post">
+                                        <div class="post-wrap">
 
-                                        <!-- Category -->
-                                        <a href="#" class="category politic">Politic</a>
-
-                                        <!-- Content -->
-                                        <div class="content">
-
-                                            <!-- Title -->
-                                            <h2 class="title"><a href="post-details.html">Political Allies Are Not Friend.</a></h2>
-
-                                            <!-- Meta -->
-                                            <div class="meta fix">
-                                                <span class="meta-item date"><i class="fa fa-clock-o"></i>10 March 2017</span>
+                                            <!-- Image -->
+                                            <div class="image">
+                                                @if (empty($Topic->photo_file))
+                                                    <img src="frontend/hashnews/img/post/post-3.jpg" alt="{{ $Topic->title_vi }}">
+                                                @else
+                                                    <img src="/uploads/topics/{{ $Topic->photo_file}}" alt="{{ $Topic->title_vi }}"></a>
+                                                @endif
                                             </div>
+
+                                            <!-- Category -->
+                                            <a href="#" class="category politic">Politic</a>
+
+                                            <!-- Content -->
+                                            <div class="content">
+
+                                                <!-- Title -->
+                                                <h2 class="title">
+                                                    <a href="{{ $topic_link_url }}">
+                                                            @if($Topic->icon !="")
+                                                            <i class="fa {!! $Topic->icon !!}"></i>&nbsp;
+                                                        @endif
+                                                        {{ $Topic->title_vi }}
+                                                    </a>
+                                                </h2>
+
+                                                <!-- Meta -->
+                                                <div class="meta fix">
+                                                    <span class="meta-item date">
+                                                        <i class="fa fa-clock-o"></i>
+                                                        {{ \Carbon\Carbon::parse($Topic->date)->format('d/m/Y')}}
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            
                                         </div>
-                                        
-                                    </div>
-                                </div><!-- Overlay Post End -->
+                                    </div><!-- Overlay Post End -->
+                                @endforeach
                                 
                                 
                             </div><!-- Hero Post Slider End -->
