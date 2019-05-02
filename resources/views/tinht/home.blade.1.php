@@ -23,9 +23,26 @@
             <div class="row">        
                 <!-- Feature Post Row Start -->
             
-                @include('tinht.home.hero')
+                <div class="col-md-9">
+    
+                    <!-- Post Block Wrapper Start -->
+
+                    @include('tinht.home.hero')
                     
-                
+    
+                    {{-- @include('tinht.home.slide') --}}
+
+                </div>
+
+                <div class="col-md-3">
+                    
+                    {{-- @include('tinht.includes.dichvu') --}}
+                    {{-- @include('tinht.includes.thongbao') --}}
+                    {{-- @include('tinht.includes.thoi-tiet') --}}
+                    {{-- @include('tinht.includes.tienich') --}}
+                    @include('tinht.includes.lienket')
+    
+                </div>
 
                 <div class="clearfix"></div>
 
