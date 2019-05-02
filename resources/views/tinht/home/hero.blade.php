@@ -44,7 +44,7 @@
                                             </div>
 
                                             <!-- Category -->
-                                        <a href="{{ url(trans('backLang.code')."/" .$Topic->webmasterSection->name) }}" class="category {{ $Topic->webmasterSection->name}}">{{ trans('backLang.'.$Topic->webmasterSection->name) }}</a>
+                                            <a href="{{ url(trans('backLang.code')."/" .$Topic->webmasterSection->name) }}" class="category {{ $Topic->webmasterSection->name}}">{{ trans('backLang.'.$Topic->webmasterSection->name) }}</a>
 
                                             <!-- Content -->
                                             <div class="content">
@@ -114,7 +114,7 @@
                                             </div>
 
                                             <!-- Category -->
-                                            <a href="#" class="category travel">travel</a>
+                                            <a href="{{ url(trans('backLang.code')."/" .$Topic->webmasterSection->name) }}" class="category {{ $Topic->webmasterSection->name}}">{{ trans('backLang.'.$Topic->webmasterSection->name) }}</a>
 
                                             <!-- Content -->
                                             <div class="content">
@@ -184,7 +184,7 @@
                                             </div>
 
                                             <!-- Category -->
-                                            <a href="#" class="category travel">travel</a>
+                                            <a href="{{ url(trans('backLang.code')."/" .$Topic->webmasterSection->name) }}" class="category {{ $Topic->webmasterSection->name}}">{{ trans('backLang.'.$Topic->webmasterSection->name) }}</a>
 
                                             <!-- Content -->
                                             <div class="content">
