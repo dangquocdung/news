@@ -1,5 +1,5 @@
 <!-- Hero Section Start -->
-<div class="hero-section section">
+<div class="hero-section section mb-20">
         <div class="container">
             <div class="row">
                 <div class="col">
