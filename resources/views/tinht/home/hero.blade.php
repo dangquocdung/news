@@ -44,7 +44,7 @@
                                             </div>
 
                                             <!-- Category -->
-                                            <a href="#" class="category politic">Politic</a>
+                                        <a href="#" class="category {{ $Topic->webmasterSection->name}}">{{ $Topic->webmasterSection->name}}</a>
 
                                             <!-- Content -->
                                             <div class="content">
