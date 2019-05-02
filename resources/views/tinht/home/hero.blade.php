@@ -32,7 +32,7 @@
                             <div class="post-wrap">
             
                                 <!-- Image -->
-                                <a href="{{ $Topic->$topic_link_url }}">
+                                <a href="{{ $Topic->$topic_link_url }}" class="image">
                                     @if (empty($Topic->photo_file))
                                         <img src="frontend/hashnews/img/post/post-13.jpg" alt="{{ $Topic->title_vi }}">
                                     @else
@@ -77,7 +77,7 @@
                         <div class="post-wrap">
     
                             <!-- Image -->
-                            <a class="image img-fluid" href="{{ $topic_link_url }}" class="image image-fluid">
+                            <a class="image img-fluid" href="{{ $topic_link_url }}">
                                 @if (empty($Topic->photo_file))
                                     <img src="frontend/hashnews/img/post/post-13.jpg" alt="{{ $Topic->title_vi }}">
                                 @else
