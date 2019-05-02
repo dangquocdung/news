@@ -587,7 +587,7 @@ class TopicsController extends Controller
 
                     $img = Image::make($request->file($formFileName));
                     
-                    $img->resize(640, null, function ($constraint) {
+                    $img->resize(584, 444, function ($constraint) {
                         $constraint->aspectRatio();
                     });
                     
