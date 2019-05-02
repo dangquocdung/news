@@ -106,31 +106,7 @@
                                     </div>
                                 </div><!-- Overlay Post End -->
 
-                                <!-- Overlay Post Start -->
-                                <div class="post post-overlay hero-post col-lg-12 col-md-6 col-12">
-                                    <div class="post-wrap">
-
-                                        <!-- Image -->
-                                        <div class="image"><img src="img/post/post-2.jpg" alt="post"></div>
-
-                                        <!-- Category -->
-                                        <a href="#" class="category fashion">Fashion</a>
-
-                                        <!-- Content -->
-                                        <div class="content">
-
-                                            <!-- Title -->
-                                            <h4 class="title"><a href="post-details.html">Fashion is about some thing that comes from with in you.</a></h4>
-
-                                            <!-- Meta -->
-                                            <div class="meta fix">
-                                                <span class="meta-item date"><i class="fa fa-clock-o"></i>10 March 2017</span>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                </div><!-- Overlay Post End -->
+                                
 
                             </div>
                         </div>
@@ -163,32 +139,7 @@
 
                                     </div>
                                 </div><!-- Overlay Post End -->
-
-                                <!-- Overlay Post Start -->
-                                <div class="post post-overlay gradient-overlay-1 hero-post col-lg-12 col-md-6 col-12">
-                                    <div class="post-wrap">
-
-                                        <!-- Image -->
-                                        <div class="image"><img src="img/post/post-6.jpg" alt="post"></div>
-
-                                        <!-- Category -->
-                                        <a href="#" class="category gadgets">Gadgets</a>
-
-                                        <!-- Content -->
-                                        <div class="content">
-
-                                            <!-- Title -->
-                                            <h4 class="title"><a href="post-details.html">Apple, time to IOS With macos.</a></h4>
-
-                                            <!-- Meta -->
-                                            <div class="meta fix">
-                                                <span class="meta-item date"><i class="fa fa-clock-o"></i>10 March 2017</span>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                </div><!-- Overlay Post End -->
+                                
 
                             </div>
                         </div>

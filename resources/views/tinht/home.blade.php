@@ -25,8 +25,6 @@
             
                 @include('tinht.home.hero')
                     
-                
-
                 <div class="clearfix"></div>
 
                 @include('tinht.home.tin-anh')
@@ -39,12 +37,8 @@
 
                 @include('tinht.home.video')
                     
-                            
             </div>
             
     </div>
     
-    
-   
-
  @stop

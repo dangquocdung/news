@@ -146,7 +146,11 @@ class TopicsController extends Controller
                     //     $constraint->aspectRatio();
                     // });
 
-                $img->resize(584, 444);
+                // $img->resize(584, 444);
+
+                $img->fit($width = 584, $height = 444, function ($constraint) {
+                    $constraint->upsize();
+                });
                 
                 $img->save($path.'/'.$fileFinalName);
 
@@ -589,7 +593,11 @@ class TopicsController extends Controller
 
                     $img = Image::make($request->file($formFileName));
                     
-                    $img->resize(584, 444);
+                    // $img->resize(584, 444);
+
+                    $img->fit($width = 584, $height = 444, function ($constraint) {
+                        $constraint->upsize();
+                    });
                     
                     $img->save($path.'/'.$fileFinalName);
 
