@@ -142,11 +142,13 @@ class TopicsController extends Controller
 
                 $img = Image::make($request->file($formFileName));
                     
-                    $img->resize(640, null, function ($constraint) {
-                        $constraint->aspectRatio();
-                    });
-                    
-                    $img->save($path.'/'.$fileFinalName);
+                    // $img->resize(640, null, function ($constraint) {
+                    //     $constraint->aspectRatio();
+                    // });
+
+                $img->resize(584, 444);
+                
+                $img->save($path.'/'.$fileFinalName);
 
                 // Image::make($request->file($formFileName))->resize(640)->save($path.'/'.$fileFinalName);
                 // $img->insert('public/watermark.png');
