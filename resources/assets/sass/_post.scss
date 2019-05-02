@@ -506,9 +506,11 @@
                 & .title {
                     & a {
                         color: $white;
+
                         &:hover {
-                            text-decoration: underline;
+                            text-decoration: none;
                             color: $white;
+                            
                         }
                     }
                 }
