@@ -34,12 +34,12 @@
 
                                             <!-- Image -->
                                             <div class="image">
-                                                {{-- @if (empty($Topic->photo_file))
+                                                @if (empty($Topic->photo_file))
                                                     <img src="frontend/hashnews/img/post/post-3.jpg" alt="{{ $Topic->title_vi }}">
                                                 @else
                                                     <img src="/uploads/topics/{{ $Topic->photo_file}}" alt="{{ $Topic->title_vi }}"></a>
-                                                @endif --}}
-                                                <img src="frontend/hashnews/img/post/post-3.jpg" alt="{{ $Topic->title_vi }}">
+                                                @endif
+                                                {{-- <img src="frontend/hashnews/img/post/post-3.jpg" alt="{{ $Topic->title_vi }}"> --}}
 
                                             </div>
 
