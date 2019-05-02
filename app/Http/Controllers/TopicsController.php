@@ -587,9 +587,7 @@ class TopicsController extends Controller
 
                     $img = Image::make($request->file($formFileName));
                     
-                    $img->resize(584, 444, function ($constraint) {
-                        $constraint->aspectRatio();
-                    });
+                    $img->resize(584, 444);
                     
                     $img->save($path.'/'.$fileFinalName);
 
