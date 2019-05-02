@@ -77,7 +77,7 @@
                         <div class="post-wrap">
     
                             <!-- Image -->
-                            <a class="image img-fluid" href="{{ $topic_link_url }}">
+                            <a class="image img-fluid" href="{{ $topic_link_url }}" class="image image-fluid">
                                 @if (empty($Topic->photo_file))
                                     <img src="frontend/hashnews/img/post/post-13.jpg" alt="{{ $Topic->title_vi }}">
                                 @else
