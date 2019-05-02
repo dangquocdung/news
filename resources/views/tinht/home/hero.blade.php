@@ -80,31 +80,69 @@
                         <div class="order-lg-1 col-lg-3 col-12">
                             <div class="row row-1">
 
-                                <!-- Overlay Post Start -->
-                                <div class="post post-overlay hero-post col-lg-12 col-md-6 col-12">
-                                    <div class="post-wrap">
+                                @foreach ($ThongBao->take(2) as $Topic )
+    
+                                    @php
+                                        if ($Topic->$slug_var != "" && Helper::GeneralWebmasterSettings("links_status")) {
+                                            if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
+                                                $topic_link_url = url(trans('backLang.code') . "/" . $Topic->$slug_var);
+                                            } else {
+                                                $topic_link_url = url($Topic->$slug_var);
+                                            }
+                                        } else {
+                                            if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
+                                                $topic_link_url = route('FrontendTopicByLang', ["lang" => trans('backLang.code'), "section" => $Topic->webmasterSection->name, "id" => $Topic->id]);
+                                            } else {
+                                                $topic_link_url = route('FrontendTopic', ["section" => $Topic->webmasterSection->name, "id" => $Topic->id]);
+                                            }
+                                        }
+                                    @endphp
 
-                                        <!-- Image -->
-                                        <div class="image"><img src="img/post/post-1.jpg" alt="post"></div>
 
-                                        <!-- Category -->
-                                        <a href="#" class="category travel">travel</a>
 
-                                        <!-- Content -->
-                                        <div class="content">
+                                    <!-- Overlay Post Start -->
+                                    <div class="post post-overlay hero-post col-lg-12 col-md-6 col-12">
+                                        <div class="post-wrap">
 
-                                            <!-- Title -->
-                                            <h4 class="title"><a href="post-details.html">Hynpodia helps fmale travelers find health.</a></h4>
+                                            <!-- Image -->
+                                            <div class="image">
+                                                @if (empty($Topic->photo_file))
+                                                    <img src="frontend/hashnews/img/post/post-1.jpg" alt="{{ $Topic->title_vi }}">
+                                                @else
+                                                    <img src="/uploads/topics/{{ $Topic->photo_file}}" alt="{{ $Topic->title_vi }}"></a>
+                                                @endif
+                                            </div>
 
-                                            <!-- Meta -->
-                                            <div class="meta fix">
-                                                <span class="meta-item date"><i class="fa fa-clock-o"></i>10 March 2017</span>
+                                            <!-- Category -->
+                                            <a href="#" class="category travel">travel</a>
+
+                                            <!-- Content -->
+                                            <div class="content">
+
+                                                <!-- Title -->
+                                                <h4 class="title">
+                                                    <a href="{{ $topic_link_url }}">
+                                                            @if($Topic->icon !="")
+                                                            <i class="fa {!! $Topic->icon !!}"></i>&nbsp;
+                                                        @endif
+                                                        {{ $Topic->title_vi }}
+                                                    </a>
+                                                </h4>
+
+                                                <!-- Meta -->
+                                                <div class="meta fix">
+                                                    <span class="meta-item date">
+                                                        <i class="fa fa-clock-o"></i>
+                                                        {{ \Carbon\Carbon::parse($Topic->date)->format('d/m/Y')}}
+                                                    </span>
+                                                </div>
+
                                             </div>
 
                                         </div>
+                                    </div><!-- Overlay Post End -->
 
-                                    </div>
-                                </div><!-- Overlay Post End -->
+                                @endforeach
 
                                 
 
