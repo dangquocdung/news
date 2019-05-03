@@ -28,9 +28,9 @@
 
             assetPath = '/uploads/topics/';
 
-            topic = {!! json_encode($Topic->toArray()) !!};
+            topic = JSON.parse({!! json_encode($Topic->toArray()) !!});
 
-            photo_file = topic['attach_file'];
+            photo_file = topic.attach_file;
             
             panorama = new PANOLENS.ImagePanorama(assetPath + photo_file);
             viewer = new PANOLENS.Viewer();
