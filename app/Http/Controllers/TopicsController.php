@@ -575,7 +575,7 @@ class TopicsController extends Controller
                     'photo_file' => 'mimes:png,jpeg,jpg,gif|max:3000',
                     'audio_file' => 'mimes:mpga,wav', // mpga = mp3
                     'video_file' => 'mimes:mp4,ogv,webm',
-                    'attach_file' => 'mimes:pdf,docx,xlsx,jpg'
+                    'attach_file' => 'mimes:pdf,docx,xlsx,jpeg,jpg'
                 ]);
 
                 // Start of Upload Files
