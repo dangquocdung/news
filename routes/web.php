@@ -351,7 +351,7 @@ Route::get('/sitemap.xml', 'SiteMapController@siteMap')->name('siteMap');
 // Route::get('/{lang}/sitemap', 'SiteMapController@siteMap')->name('siteMapByLang');
 
 // ../panolens
-Route::get('/hinh-anh-360/{id}', 'FrontendHomeController@panoLens')->name('panoLens');
+Route::get('/hinh-anh-360/{id}-{slug}', 'FrontendHomeController@panoLens')->name('panoLens');
 
 
 
