@@ -272,7 +272,7 @@
 
 
                         <div class="text-center">
-                            <a href="/panolens/{{ $Topic->id }}">
+                            <a href="/hinh-anh-360/{{ $Topic->id }}">
                                 <img src="{{ URL::to('uploads/topics/'.$Topic->attach_file) }}"
                                 alt="{{ $title }}" width="100%"/>
 
