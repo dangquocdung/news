@@ -1411,7 +1411,7 @@ class FrontendHomeController extends Controller
 
     }
 
-    public function panoLens($slug,$id){
+    public function panoLens($id){
 
         $Topic = Topic::find($id);
 
