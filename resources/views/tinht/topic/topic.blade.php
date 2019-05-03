@@ -270,7 +270,7 @@
                 <div class="bottom-article">
                     @if($file_ext ==".jpg"|| $file_ext ==".jpeg"|| $file_ext ==".png"|| $file_ext ==".gif")
 
-                        <iframe allowfullscreen src="{{ route('panalens',$Topic->id)}}"></iframe>
+                        <iframe allowfullscreen src="/panalens/{{ $Topic->id }}"></iframe>
 
                         <br>
                         <div class="text-center">
