@@ -30,7 +30,7 @@
 
             topic = JSON.parse({!! json_encode($Topic->toArray()) !!});
 
-            photo_file = topic.attach_file;
+            photo_file = '15568609885419.jpg';
             
             panorama = new PANOLENS.ImagePanorama(assetPath + photo_file);
             viewer = new PANOLENS.Viewer();
