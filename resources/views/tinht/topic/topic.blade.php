@@ -272,7 +272,7 @@
 
 
                         <div class="text-center">
-                            <a href="/hinh-anh-360/{{ $Topic->id }}">
+                            <a href="{{ route('panolens',[$Topic->seo_url_slug_vi,$Topic->id]) }}">
                                 <img src="{{ URL::to('uploads/topics/'.$Topic->attach_file) }}"
                                 alt="{{ $title }}" width="100%"/>
 
