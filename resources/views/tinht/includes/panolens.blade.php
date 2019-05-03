@@ -3,7 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, shrink-to-fit=no">
-    <title>Panolens.js panorama image panorama</title>
+    <title>{{$PageTitle}} {{($PageTitle !="")? "|":""}} {{ Helper::GeneralSiteSettings("site_title_" . trans('backLang.boxCode')) }}</title>
+    <meta name="description" content="{{$PageDescription}}"/>
+    <meta name="keywords" content="{{$PageKeywords}}"/>
     <style>
         html, body {
           margin: 0;

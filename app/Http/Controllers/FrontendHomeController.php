@@ -1415,10 +1415,38 @@ class FrontendHomeController extends Controller
 
         $Topic = Topic::find($id);
 
+        // Page Title, Description, Keywords
+        $WebsiteSettings = Setting::find(1);
+        
+        $seo_title_var = "seo_title_" . trans('backLang.boxCode');
+        $seo_description_var = "seo_description_" . trans('backLang.boxCode');
+        $seo_keywords_var = "seo_keywords_" . trans('backLang.boxCode');
+        $tpc_title_var = "title_" . trans('backLang.boxCode');
+        $site_desc_var = "site_desc_" . trans('backLang.boxCode');
+        $site_keywords_var = "site_keywords_" . trans('backLang.boxCode');
+        if ($Topic->$seo_title_var != "") {
+            $PageTitle = $Topic->$seo_title_var;
+        } else {
+            $PageTitle = $Topic->$tpc_title_var;
+        }
+        if ($Topic->$seo_description_var != "") {
+            $PageDescription = $Topic->$seo_description_var;
+        } else {
+            $PageDescription = $WebsiteSettings->$site_desc_var;
+        }
+        if ($Topic->$seo_keywords_var != "") {
+            $PageKeywords = $Topic->$seo_keywords_var;
+        } else {
+            $PageKeywords = $WebsiteSettings->$site_keywords_var;
+        }
+
         if (!empty($Topic)){
 
             return view("tinht.includes.panolens",
-                compact("Topic"));
+                compact("PageTitle",
+                        "PageDescription",
+                        "PageKeywords",
+                        "Topic"));
 
         }else{
 
