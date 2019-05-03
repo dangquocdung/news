@@ -28,7 +28,7 @@
 
             var assetPath = '/uploads/topics/';
 
-            var topic = JSON.parse({!! json_encode($Topic->toArray()) !!});
+            // var topic = JSON.parse({!! json_encode($Topic->toArray()) !!});
 
             var photo_file = '15568609885419.jpg';
             
