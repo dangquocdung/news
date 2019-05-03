@@ -270,12 +270,14 @@
                 <div class="bottom-article">
                     @if($file_ext ==".jpg"|| $file_ext ==".jpeg"|| $file_ext ==".png"|| $file_ext ==".gif")
 
-                        <iframe allowfullscreen src="/panolens/{{ $Topic->id }}" width="100%"></iframe>
 
-                        <br>
                         <div class="text-center">
-                            <img src="{{ URL::to('uploads/topics/'.$Topic->attach_file) }}"
+                            <a href="/panolens/{{ $Topic->id }}">
+                                <img src="{{ URL::to('uploads/topics/'.$Topic->attach_file) }}"
                                 alt="{{ $title }}" width="100%"/>
+
+                            </a>
+                            
                         </div>
                     @else
 
