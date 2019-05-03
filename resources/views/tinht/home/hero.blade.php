@@ -52,9 +52,9 @@
                                                 <!-- Title -->
                                                 <h2 class="title">
                                                     <a href="{{ $topic_link_url }}">
-                                                            @if($Topic->icon !="")
+                                                        {{-- @if($Topic->icon !="")
                                                             <i class="fa {!! $Topic->icon !!}"></i>&nbsp;
-                                                        @endif
+                                                        @endif --}}
                                                         {{ $Topic->title_vi }}
                                                     </a>
                                                 </h2>
@@ -122,9 +122,9 @@
                                                 <!-- Title -->
                                                 <h4 class="title">
                                                     <a href="{{ $topic_link_url }}">
-                                                            @if($Topic->icon !="")
+                                                        {{-- @if($Topic->icon !="")
                                                             <i class="fa {!! $Topic->icon !!}"></i>&nbsp;
-                                                        @endif
+                                                        @endif --}}
                                                         {{ $Topic->title_vi }}
                                                     </a>
                                                 </h4>
@@ -194,9 +194,9 @@
                                                 <!-- Title -->
                                                 <h4 class="title">
                                                     <a href="{{ $topic_link_url }}">
-                                                            @if($Topic->icon !="")
+                                                        {{-- @if($Topic->icon !="")
                                                             <i class="fa {!! $Topic->icon !!}"></i>&nbsp;
-                                                        @endif
+                                                        @endif --}}
                                                         {{ $Topic->title_vi }}
                                                     </a>
                                                 </h4>
