@@ -356,7 +356,7 @@
                                         </div>
                                         {!! Form::hidden('attach_delete','0', array('id'=>'attach_delete')) !!}
                                     @endif
-                                    {!! Form::file('attach_file', array('class' => 'form-control','id'=>'attach_file','accept'=>'.pdf,.docx,.xlsx')) !!}
+                                    {!! Form::file('attach_file', array('class' => 'form-control','id'=>'attach_file','accept'=>'.pdf,.docx,.xlsx,.jpg')) !!}
                                 </div>
                             </div>
                             <div class="form-group row m-t-md" style="margin-top: 0 !important;">
