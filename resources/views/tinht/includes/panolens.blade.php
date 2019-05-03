@@ -26,11 +26,11 @@
 
 
 
-            assetPath = '/uploads/topics/';
+            var assetPath = '/uploads/topics/';
 
-            topic = JSON.parse({!! json_encode($Topic->toArray()) !!});
+            var topic = JSON.parse({!! json_encode($Topic->toArray()) !!});
 
-            photo_file = '15568609885419.jpg';
+            var photo_file = '15568609885419.jpg';
             
             panorama = new PANOLENS.ImagePanorama(assetPath + photo_file);
             viewer = new PANOLENS.Viewer();
