@@ -1411,8 +1411,24 @@ class FrontendHomeController extends Controller
 
     }
 
-    public function panoLens(){
-        return view('tinht.includes.panolens');
+    public function panoLens($id){
+
+        $Topic = Topic::find($id);
+
+        if (!empty($Topic)){
+
+            return view("tinht.includes.panolens",
+                compact("Topic"));
+
+        }else{
+
+            return redirect()->route('NotFound');
+
+
+
+        }
+
+        
     }
 
 }
