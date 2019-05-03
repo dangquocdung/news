@@ -350,6 +350,11 @@ Route::Group(['prefix' => '/api/v1'], function () {
 Route::get('/sitemap.xml', 'SiteMapController@siteMap')->name('siteMap');
 // Route::get('/{lang}/sitemap', 'SiteMapController@siteMap')->name('siteMapByLang');
 
+// ../panolens
+Route::get('/panolens', 'FrontendHomeController@panoLens')->name('panoLens');
+
+
+
 // ../site map
 Route::get('/sitemap', 'FrontendHomeController@siteMap')->name('siteMap');
 Route::get('/{lang}/sitemap', 'FrontendHomeController@siteMap')->name('siteMapByLang');

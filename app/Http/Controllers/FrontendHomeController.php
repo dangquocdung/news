@@ -1411,4 +1411,8 @@ class FrontendHomeController extends Controller
 
     }
 
+    public function panoLens(){
+        return view('tinht.includes.panolens');
+    }
+
 }
