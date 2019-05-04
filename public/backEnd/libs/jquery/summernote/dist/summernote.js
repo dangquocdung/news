@@ -5547,11 +5547,11 @@
       context.memo('button.lfm', function () {
         return ui.button({
 
-          contents: '<i class="note-icon-file"></i> ',
+          contents: ui.icon(options.icons.file),
           tooltip: 'Chèn tệp với trình quản lý tệp',
           click: function() {
   
-            lfm({type: '*', prefix: '/admin/lfm'}, function(lfmItems, path) {
+            lfm({prefix: '/admin/lfm'}, function(lfmItems, path) {
               lfmItems.forEach(function (lfmItem) {
                 context.invoke('insertImage', lfmItem.url);
               });
