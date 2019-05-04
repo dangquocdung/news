@@ -5546,9 +5546,8 @@
 
       // Define LFM summernote button
       context.memo('button.lfm', function () {
-        var LFMButton = function(context) {
-          var ui = $.summernote.ui;
-          var button = ui.button({
+
+        return ui.button({
             contents: '<i class="note-icon-picture"></i> ',
             tooltip: 'Insert image with filemanager',
             click: function() {
@@ -5560,9 +5559,8 @@
               });
 
             }
-          });
-          return button.render();
-        };
+          }).render();
+
       });
 
       context.memo('button.video', function () {
