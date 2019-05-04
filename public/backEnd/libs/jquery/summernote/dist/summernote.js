@@ -5439,13 +5439,6 @@
         click: context.createInvokeHandler('editor.indent')
       });
 
-      // Define function to open filemanager window
-      var lfm = function(options, cb) {
-        var route_prefix = (options && options.prefix) ? options.prefix : '/laravel-filemanager';
-        window.open(route_prefix + '?type=' + options.type || 'file', 'FileManager', 'width=900,height=600');
-        window.SetUrl = cb;
-      };
-
       context.memo('button.justifyLeft', func.invoke(justifyLeft, 'render'));
       context.memo('button.justifyCenter', func.invoke(justifyCenter, 'render'));
       context.memo('button.justifyRight', func.invoke(justifyRight, 'render'));
@@ -5544,6 +5537,13 @@
         }).render();
       });
 
+      // Define function to open filemanager window
+      var lfm = function(options, cb) {
+        var route_prefix = (options && options.prefix) ? options.prefix : '/laravel-filemanager';
+        window.open(route_prefix + '?type=' + options.type || 'file', 'FileManager', 'width=900,height=600');
+        window.SetUrl = cb;
+      };
+
       context.memo('button.lfm', function () {
         return ui.button({
 
@@ -5551,7 +5551,7 @@
           tooltip: 'Insert image with filemanager',
           click: function() {
   
-            lfm({type: 'image', prefix: '/laravel-filemanager'}, function(lfmItems, path) {
+            lfm({type: 'image', prefix: '/admin/lfm'}, function(lfmItems, path) {
               lfmItems.forEach(function (lfmItem) {
                 context.invoke('insertImage', lfmItem.url);
               });
@@ -6868,7 +6868,9 @@
         ['para', ['ul', 'ol', 'paragraph']],
         ['table', ['table']],
         ['insert', ['link', 'picture', 'video']],
-        ['view', ['fullscreen', 'codeview', 'help','lfm']],
+        ['view', ['fullscreen', 'codeview', 'help']],
+        ['lfm', ['lfm']],
+
         // ['popovers', ['lfm']],
       ],
 
