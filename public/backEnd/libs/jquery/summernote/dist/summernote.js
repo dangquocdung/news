@@ -2095,7 +2095,7 @@
         videoLink: 'Video Link',
         insert: 'Insert Video',
         url: 'Video URL?',
-        providers: '(YouTube, Vimeo, Vine, Instagram, DailyMotion or Youku)'
+        providers: '(Đường dẫn đến tệp Video hoặc Youtube, Vimeo...)'
       },
       link: {
         link: 'Link',
