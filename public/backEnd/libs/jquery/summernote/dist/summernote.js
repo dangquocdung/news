@@ -5538,30 +5538,30 @@
       });
 
       // Define function to open filemanager window
-      var lfm = function(options, cb) {
-        var route_prefix = (options && options.prefix) ? options.prefix : '/admin/lfm';
-        window.open(route_prefix + '?type=' + options.type || 'file', 'FileManager', 'width=900,height=600');
-        window.SetUrl = cb;
-      };
+      // var lfm = function(options, cb) {
+      //   var route_prefix = (options && options.prefix) ? options.prefix : '/admin/lfm';
+      //   window.open(route_prefix + '?type=' + options.type || 'file', 'FileManager', 'width=900,height=600');
+      //   window.SetUrl = cb;
+      // };
 
       // Define LFM summernote button
-      context.memo('button.lfm', function () {
+      // context.memo('button.lfm', function () {
 
-        return ui.button({
-            contents: '<i class="note-icon-picture"></i> ',
-            tooltip: 'Insert image with filemanager',
-            click: function() {
+      //   return ui.button({
+      //       contents: '<i class="note-icon-picture"></i> ',
+      //       tooltip: 'Insert image with filemanager',
+      //       click: function() {
 
-              lfm({type: 'image', prefix: '/admin/lfm'}, function(lfmItems, path) {
-                lfmItems.forEach(function (lfmItem) {
-                  context.invoke('insertImage', lfmItem.url);
-                });
-              });
+      //         lfm({type: 'image', prefix: '/admin/lfm'}, function(lfmItems, path) {
+      //           lfmItems.forEach(function (lfmItem) {
+      //             context.invoke('insertImage', lfmItem.url);
+      //           });
+      //         });
 
-            }
-          }).render();
+      //       }
+      //     }).render();
 
-      });
+      // });
 
       context.memo('button.video', function () {
         return ui.button({
@@ -6870,7 +6870,7 @@
         ['table', ['table']],
         ['insert', ['link', 'picture', 'video']],
         ['view', ['fullscreen', 'codeview', 'help']],
-        ['view', ['lfm']],
+        // ['view', ['lfm']],
       ],
 
       // popover
