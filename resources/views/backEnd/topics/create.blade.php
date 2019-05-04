@@ -217,9 +217,7 @@
                     @if($WebmasterSection->editor_status)
                         @if(Helper::GeneralWebmasterSettings("vi_box_status"))
 
-                            <a href="javascript:;" class="btn btn-info" data-type="rv-media" data-target="#description" data-editor="summernote">
-                                <i class="fa fa-picture-o" aria-hidden="true"></i> {{ __('Add Media') }}
-                            </a>
+                            
 
                             <div class="form-group row">
                                 <label for="details_vi"
@@ -228,6 +226,13 @@
                                 </label>
                                 <div class="col-sm-10">
                                     <div class="box p-a-xs">
+                                            <a href="javascript:;" class="btn btn-info" data-type="rv-media" data-target="#description" data-editor="summernote">
+                                                <i class="fa fa-picture-o" aria-hidden="true"></i> {{ __('Add Media') }}
+                                            </a>
+                
+                                            @include('media::partials.media')
+                                            <script src="{{ asset('vendor/media/js/jquery.addMedia.js') }}"></script>
+                                            
                                         {!! Form::textarea('details_vi',null, ['id'=>'description', 'ui-jp'=>'summernote','placeholder' => '','class' => 'form-control summernote', 'dir'=>trans('backLang.rtl'),'ui-options'=>'{height: 300}']) !!}
                                     </div>
                                 </div>
