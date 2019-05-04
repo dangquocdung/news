@@ -750,7 +750,7 @@
               tooltip: 'Insert image with filemanager',
               click: function() {
       
-                lfm({type: 'image', prefix: '/laravel-filemanager'}, function(lfmItems, path) {
+                lfm({type: 'image', prefix: '/admin/lfm'}, function(lfmItems, path) {
                   lfmItems.forEach(function (lfmItem) {
                     context.invoke('insertImage', lfmItem.url);
                   });
