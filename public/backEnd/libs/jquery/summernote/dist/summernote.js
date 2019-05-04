@@ -5545,23 +5545,25 @@
       };
 
       // Define LFM summernote button
-      var LFMButton = function(context) {
-        var ui = $.summernote.ui;
-        var button = ui.button({
-          contents: '<i class="note-icon-picture"></i> ',
-          tooltip: 'Insert image with filemanager',
-          click: function() {
+      context.memo('button.lfm', function () {
+        var LFMButton = function(context) {
+          var ui = $.summernote.ui;
+          var button = ui.button({
+            contents: '<i class="note-icon-picture"></i> ',
+            tooltip: 'Insert image with filemanager',
+            click: function() {
 
-            lfm({type: 'image', prefix: '/admin/lfm'}, function(lfmItems, path) {
-              lfmItems.forEach(function (lfmItem) {
-                context.invoke('insertImage', lfmItem.url);
+              lfm({type: 'image', prefix: '/admin/lfm'}, function(lfmItems, path) {
+                lfmItems.forEach(function (lfmItem) {
+                  context.invoke('insertImage', lfmItem.url);
+                });
               });
-            });
 
-          }
-        });
-        return button.render();
-      };
+            }
+          });
+          return button.render();
+        };
+      });
 
       context.memo('button.video', function () {
         return ui.button({
