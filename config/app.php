@@ -169,6 +169,7 @@ return [
         UniSharp\LaravelFilemanager\LaravelFilemanagerServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         Orchestra\Parser\XmlServiceProvider::class,
+        Botble\Media\Providers\MediaServiceProvider::class,
 
     ],
 

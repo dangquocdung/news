@@ -11,6 +11,7 @@
         "anlutro/l4-settings": "^0.7.0",
         "barryvdh/laravel-cors": "^0.11.0",
         "barryvdh/laravel-translation-manager": "^0.4.2",
+        "botble/media": "*@dev",
         "fideloper/proxy": "^4.0",
         "htmlmin/htmlmin": "^5.7",
         "intervention/image": "^2.4",
@@ -80,6 +81,10 @@
         {
             "type": "path",
             "url": "./packages/backup"
+        },
+        {
+            "type": "path",
+            "url": "./packages/media"
         }
     ]
 }
