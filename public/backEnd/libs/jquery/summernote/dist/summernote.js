@@ -6856,9 +6856,7 @@
         'airPopover': AirPopover
       },
 
-      buttons: {
-        lfm: LFMButton
-      },
+      buttons: {},
       
       lang: 'vi-VN',
 
@@ -6874,6 +6872,10 @@
         ['view', ['fullscreen', 'codeview', 'help']],
         ['popovers', ['lfm']],
       ],
+
+      buttons: {
+        lfm: LFMButton
+      },
 
       // popover
       popover: {
