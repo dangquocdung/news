@@ -5439,6 +5439,13 @@
         click: context.createInvokeHandler('editor.indent')
       });
 
+      // Define function to open filemanager window
+      var lfm = function(options, cb) {
+        var route_prefix = (options && options.prefix) ? options.prefix : '/laravel-filemanager';
+        window.open(route_prefix + '?type=' + options.type || 'file', 'FileManager', 'width=900,height=600');
+        window.SetUrl = cb;
+      };
+
       context.memo('button.justifyLeft', func.invoke(justifyLeft, 'render'));
       context.memo('button.justifyCenter', func.invoke(justifyCenter, 'render'));
       context.memo('button.justifyRight', func.invoke(justifyRight, 'render'));
@@ -5539,7 +5546,7 @@
 
       context.memo('button.lfm', function () {
         return ui.button({
-          
+
           contents: '<i class="note-icon-picture"></i> ',
           tooltip: 'Insert image with filemanager',
           click: function() {
