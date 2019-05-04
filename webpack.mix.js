@@ -11,8 +11,9 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/tinht/js')
-    .sass('resources/assets/sass/style.scss', 'public/tinht/css')
-    .version();
+mix
+.js('resources/assets/js/app.js', 'public/backEnd/scripts')
+.sass('resources/assets/sass/style.scss', 'public/tinht/css')
+.version();
 
 mix.disableNotifications();

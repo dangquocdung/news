@@ -6844,12 +6844,12 @@
         ['table', ['table']],
         ['insert', ['link', 'picture', 'video']],
         ['view', ['fullscreen', 'codeview', 'help']],
-        ['popovers', ['lfm']],
+        // ['popovers', ['lfm']],
       ],
 
-      buttons: {
-        lfm: LFMButton
-      },
+      // buttons: {
+      //   lfm: LFMButton
+      // },
 
       // popover
       popover: {

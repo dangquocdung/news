@@ -3453,6 +3453,7 @@ blockquote.blockquote.blockquote-bg p {
 
 .post .post-wrap .image img {
   width: 100%;
+  height: 100%;
 }
 
 .post .post-wrap .image .video-btn {
@@ -4036,7 +4037,7 @@ blockquote.blockquote.blockquote-bg p {
 }
 
 .post.post-overlay .post-wrap .content .title a:hover {
-  text-decoration: underline;
+  text-decoration: none;
   color: #ffffff;
 }
 
