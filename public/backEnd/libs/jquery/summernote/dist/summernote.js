@@ -6838,7 +6838,7 @@
       toolbar: [
         ['style', ['style']],
         ['font', ['bold', 'italic', 'underline', 'clear']],
-        ['fontname', ['fontname','fontsize']],
+        ['fontname', ['fontsize']],
         ['color', ['color']],
         ['para', ['ul', 'ol', 'paragraph']],
         ['table', ['table']],
