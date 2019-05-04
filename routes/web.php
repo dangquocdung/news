@@ -51,6 +51,11 @@ Route::Group(['prefix' => env('BACKEND_PATH', 'admin')], function () {
         return view('backEnd.backups');
     })->name('backup');
 
+    //Backup
+    Route::get('/rvm', function (){
+        return view('backEnd.rvm');
+    })->name('rvm');
+
     // Admin Home
     Route::get('/', 'HomeController@index')->name('adminHome');
     //Search
