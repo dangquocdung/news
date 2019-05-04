@@ -276,7 +276,7 @@
                 @endif
 
                 <!-- markup -->
-                <textarea id="summernote-editor" name="content">{!! old('content', $content) !!}</textarea>
+                <textarea id="summernote-editor" name="content"></textarea>
 
                 @if($WebmasterSection->type==2)
                     <div class="form-group row">
