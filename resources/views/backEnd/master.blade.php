@@ -108,12 +108,6 @@
         </div>
         <div id="docs-navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="{{ url('/') }}">Media</a></li>
-                <li><a href="{{ route('integration.ckeditor') }}">CkEditor</a></li>
-                <li><a href="{{ route('integration.summernote') }}">Summernote</a></li>
-                <li><a href="{{ route('integration.wysihtml5') }}">Wysihtml5</a></li>
-                <li><a href="{{ route('integration.tinymce') }}">TinyMce</a></li>
-                <li><a href="{{ route('integration.standard-alone-button') }}">Standard alone button</a></li>
                 <li><a href="https://goo.gl/BTYHda" target="_blank">Purchase</a></li>
                 <div class="btn-group">
                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
