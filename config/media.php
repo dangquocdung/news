@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'max_quota' => env('RV_MEDIA_MAX_QUOTA', 1024 * 1024 * 1024),
+    'max_quota' => env('RV_MEDIA_MAX_QUOTA', 1024 * 1024 * 1024 * 1024),
     // These sizes will be auto generate when upload an image
     'sizes' => [
         'thumb' => '150x150',
@@ -30,8 +30,8 @@ return [
         'folders.favorite',
     ],
     'route' => [
-        'prefix' => 'media', // Media URL. Ex: media => http://laravel.dev/media
-        'middleware' => ['web', 'auth'],
+        'prefix' => 'admin/file-manager', // Media URL. Ex: media => http://laravel.dev/media
+        'middleware' => ['auth'],
         'options' => [],
     ],
     'views' => [
@@ -102,7 +102,7 @@ return [
             'youtube',
         ],
     ],
-    'max_file_size_upload' => env('RV_MEDIA_MAX_FILE_SIZE_UPLOAD', 4 * 1024), // Maximum size to upload
+    'max_file_size_upload' => env('RV_MEDIA_MAX_FILE_SIZE_UPLOAD', 1024 * 1024), // Maximum size to upload
     'default-img' => env('RV_MEDIA_DEFAULT_IMAGE', '/vendor/core/images/default-image.png'), // Default image
     'sidebar_display' => env('RV_MEDIA_SIDEBAR_DISPLAY', 'vertical'), // Use "vertical" or "horizontal"
     'pagination'=>[
