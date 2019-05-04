@@ -19,6 +19,7 @@
         "laravelcollective/html": "^5.6",
         "orchestra/parser": "3.6",
         "spatie/laravel-feed": "^2.0",
+        "unisharp/laravel-filemanager": "~1.8",
         "weidner/goutte": "^1.0"
     },
     "require-dev": {
