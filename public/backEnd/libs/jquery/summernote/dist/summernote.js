@@ -6869,7 +6869,7 @@
         ['table', ['table']],
         ['insert', ['link', 'picture', 'video']],
         ['view', ['fullscreen', 'codeview', 'help']],
-        ['lfm', ['lfm']],
+        ['view', ['lfm']],
       ],
 
       // popover
