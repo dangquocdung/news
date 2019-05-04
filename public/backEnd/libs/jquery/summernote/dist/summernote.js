@@ -2089,14 +2089,6 @@
         maximumFileSizeError: 'Maximum file size exceeded.',
         url: 'Image URL',
         remove: 'Remove Image',
-        click: function() {
-
-          lfm({type: 'image', prefix: '/laravel-filemanager'}, function(lfmItems, path) {
-            lfmItems.forEach(function (lfmItem) {
-              context.invoke('insertImage', lfmItem.url);
-            });
-          });
-        },
       },
       video: {
         video: 'Video',
@@ -6851,8 +6843,13 @@
         ['para', ['ul', 'ol', 'paragraph']],
         ['table', ['table']],
         ['insert', ['link', 'picture', 'video']],
-        ['view', ['fullscreen', 'codeview', 'help']]
+        ['view', ['fullscreen', 'codeview', 'help']],
+        ['popovers', ['lfm']],
       ],
+
+      buttons: {
+        lfm: LFMButton
+      },
 
       // popover
       popover: {
