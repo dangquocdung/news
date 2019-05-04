@@ -5,14 +5,6 @@
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
-    <!-- dependencies (Summernote depends on Bootstrap & jQuery) -->
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
-
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.3/summernote.css" rel="stylesheet">
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.3/summernote.js"></script>
 @endsection
 @section('content')
     <div class="padding">
@@ -274,9 +266,6 @@
                         @endif
                     @endif
                 @endif
-
-                <!-- markup -->
-                <textarea id="summernote-editor" name="content"></textarea>
 
                 @if($WebmasterSection->type==2)
                     <div class="form-group row">
@@ -743,7 +732,7 @@
     </script>
 
     <!-- summernote config -->
-<script>
+    <script>
         $(document).ready(function(){
       
           // Define function to open filemanager window
