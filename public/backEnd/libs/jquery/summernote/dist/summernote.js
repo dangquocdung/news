@@ -5551,7 +5551,7 @@
           tooltip: 'Insert image with filemanager',
           click: function() {
   
-            lfm({type: 'image', prefix: '/admin/lfm'}, function(lfmItems, path) {
+            lfm({type: 'image', prefix: '/uploads/lfm'}, function(lfmItems, path) {
               lfmItems.forEach(function (lfmItem) {
                 context.invoke('insertImage', lfmItem.url);
               });
@@ -6870,13 +6870,7 @@
         ['insert', ['link', 'picture', 'video']],
         ['view', ['fullscreen', 'codeview', 'help']],
         ['lfm', ['lfm']],
-
-        // ['popovers', ['lfm']],
       ],
-
-      // buttons: {
-      //   lfm: LFMButton
-      // },
 
       // popover
       popover: {
