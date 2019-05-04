@@ -6873,10 +6873,6 @@
         ['popovers', ['lfm']],
       ],
 
-      buttons: {
-        lfm: LFMButton
-      },
-
       // popover
       popover: {
         image: [
