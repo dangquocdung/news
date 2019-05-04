@@ -223,7 +223,7 @@
                                 </label>
                                 <div class="col-sm-10">
                                     <div class="box p-a-xs">
-                                        {!! Form::textarea('details_vi','<div dir=ltr><br></div>', array('placeholder' => '','class' => 'form-control summernote-editor', 'dir'=>trans('backLang.rtl'))) !!}
+                                        {!! Form::textarea('details_vi','<div dir=ltr><br></div>', array('ui-jp'=>'summernote','placeholder' => '','class' => 'form-control summernote', 'dir'=>trans('backLang.rtl'),'ui-options'=>'{height: 300}')) !!}
                                     </div>
                                 </div>
                             </div>
@@ -731,46 +731,4 @@
         });
     </script>
 
-    <!-- summernote config -->
-    <script>
-        $(document).ready(function(){
-      
-          // Define function to open filemanager window
-          var lfm = function(options, cb) {
-            var route_prefix = (options && options.prefix) ? options.prefix : '/laravel-filemanager';
-            window.open(route_prefix + '?type=' + options.type || 'file', 'FileManager', 'width=900,height=600');
-            window.SetUrl = cb;
-          };
-      
-          // Define LFM summernote button
-          var LFMButton = function(context) {
-            var ui = $.summernote.ui;
-            var button = ui.button({
-              contents: '<i class="note-icon-picture"></i> ',
-              tooltip: 'Insert image with filemanager',
-              click: function() {
-      
-                lfm({type: 'image', prefix: '/admin/lfm'}, function(lfmItems, path) {
-                  lfmItems.forEach(function (lfmItem) {
-                    context.invoke('insertImage', lfmItem.url);
-                  });
-                });
-      
-              }
-            });
-            return button.render();
-          };
-      
-          // Initialize summernote with LFM button in the popover button group
-          // Please note that you can add this button to any other button group you'd like
-          $('.summernote-editor').summernote({
-            toolbar: [
-              ['popovers', ['lfm']],
-            ],
-            buttons: {
-              lfm: LFMButton
-            }
-          })
-        });
-    </script>
 @endsection
