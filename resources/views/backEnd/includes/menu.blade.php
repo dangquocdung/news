@@ -220,6 +220,15 @@ $urlAfterRoot = substr($fullPagePath, strpos($fullPagePath, env('BACKEND_PATH'))
                             <span class="nav-text">{{ trans('backLang.storeXML') }}</span>
                         </a>
                     </li>
+
+                    <li>
+                        <a href="{{ url('/admin/file-manager') }}" onclick="location.href='{{ url('/admin/file-manager') }}'">
+                            <span class="nav-icon">
+                                <i class="material-icons">&#xe2c8;</i>
+                            </span>
+                            <span class="nav-text">{{ trans('backLang.fileManager') }}</span>
+                        </a>
+                    </li>
                         
                     <li class="nav-header hidden-folded">
                         <small class="text-muted">{{ trans('backLang.siteData') }}</small>
