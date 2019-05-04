@@ -5548,7 +5548,7 @@
         return ui.button({
 
           contents: '<i class="note-icon-file"></i> ',
-          tooltip: 'Insert image with filemanager',
+          tooltip: 'Chèn tệp với trình quản lý tệp',
           click: function() {
   
             lfm({type: '*', prefix: '/admin/lfm'}, function(lfmItems, path) {
