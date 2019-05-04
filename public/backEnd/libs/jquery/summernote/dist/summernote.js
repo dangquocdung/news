@@ -5537,6 +5537,24 @@
         }).render();
       });
 
+      context.memo('button.lfm', function () {
+        return ui.button({
+          
+          contents: '<i class="note-icon-picture"></i> ',
+          tooltip: 'Insert image with filemanager',
+          click: function() {
+  
+            lfm({type: 'image', prefix: '/laravel-filemanager'}, function(lfmItems, path) {
+              lfmItems.forEach(function (lfmItem) {
+                context.invoke('insertImage', lfmItem.url);
+              });
+            });
+  
+          }
+
+        }).render();
+      });
+
       context.memo('button.video', function () {
         return ui.button({
           contents: ui.icon(options.icons.video),
@@ -6836,14 +6854,14 @@
 
       // toolbar
       toolbar: [
-        ['style', ['style']],
+        // ['style', ['style']],
         ['font', ['bold', 'italic', 'underline', 'clear']],
-        ['fontname', ['fontsize']],
+        ['fontname', ['fontname','fontsize']],
         ['color', ['color']],
         ['para', ['ul', 'ol', 'paragraph']],
         ['table', ['table']],
         ['insert', ['link', 'picture', 'video']],
-        ['view', ['fullscreen', 'codeview', 'help']],
+        ['view', ['fullscreen', 'codeview', 'help','lfm']],
         // ['popovers', ['lfm']],
       ],
 
