@@ -15,7 +15,7 @@ return [
     'middlewares' => ['auth'],
 
     // The url to this package. Change it if necessary.
-    'url_prefix' => '/uploads/lfm',
+    'url_prefix' => '/admin/lfm',
 
     /*
     |--------------------------------------------------------------------------
