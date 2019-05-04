@@ -5544,23 +5544,24 @@
         window.SetUrl = cb;
       };
 
-      context.memo('button.lfm', function () {
-        return ui.button({
-
-          contents: ui.icon(options.icons.file),
-          tooltip: 'Chèn tệp với trình quản lý tệp',
+      // Define LFM summernote button
+      var LFMButton = function(context) {
+        var ui = $.summernote.ui;
+        var button = ui.button({
+          contents: '<i class="note-icon-picture"></i> ',
+          tooltip: 'Insert image with filemanager',
           click: function() {
-  
-            lfm({prefix: '/admin/lfm'}, function(lfmItems, path) {
+
+            lfm({type: 'image', prefix: '/admin/lfm'}, function(lfmItems, path) {
               lfmItems.forEach(function (lfmItem) {
                 context.invoke('insertImage', lfmItem.url);
               });
             });
-  
-          }
 
-        }).render();
-      });
+          }
+        });
+        return button.render();
+      };
 
       context.memo('button.video', function () {
         return ui.button({
@@ -6855,7 +6856,9 @@
         'airPopover': AirPopover
       },
 
-      buttons: {},
+      buttons: {
+        lfm: LFMButton
+      },
       
       lang: 'vi-VN',
 
@@ -6869,7 +6872,7 @@
         ['table', ['table']],
         ['insert', ['link', 'picture', 'video']],
         ['view', ['fullscreen', 'codeview', 'help']],
-        ['view', ['lfm']],
+        ['popovers', ['lfm']],
       ],
 
       // popover
