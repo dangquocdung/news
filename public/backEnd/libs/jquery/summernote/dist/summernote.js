@@ -5547,11 +5547,11 @@
       context.memo('button.lfm', function () {
         return ui.button({
 
-          contents: '<i class="note-icon-picture"></i> ',
+          contents: '<i class="note-icon-file"></i> ',
           tooltip: 'Insert image with filemanager',
           click: function() {
   
-            lfm({type: 'image', prefix: '/admin/lfm'}, function(lfmItems, path) {
+            lfm({type: '*', prefix: '/admin/lfm'}, function(lfmItems, path) {
               lfmItems.forEach(function (lfmItem) {
                 context.invoke('insertImage', lfmItem.url);
               });
