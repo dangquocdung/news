@@ -6873,9 +6873,9 @@
           ['float', ['floatLeft', 'floatRight', 'floatNone']],
           ['remove', ['removeMedia']]
         ],
-        video: [
-          ['remove', ['removeMedia']]
-        ],
+        // video: [
+        //   ['remove', ['removeMedia']]
+        // ],
         link: [
           ['link', ['linkDialogShow', 'unlink']]
         ],
