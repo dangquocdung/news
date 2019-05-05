@@ -5549,9 +5549,9 @@
 
         return ui.button({
           contents: ui.icon(options.icons.video),
-            tooltip: lang.video.video,
-            click: context.createInvokeHandler('videoDialog.show')
-          }).render();
+          tooltip: lang.video.video,
+          click: context.createInvokeHandler('videoDialog.show')
+        }).render();
 
       });
 
@@ -6269,6 +6269,7 @@
   };
 
   var VideoDialog = function (context) {
+
     var self = this;
     var ui = $.summernote.ui;
 
@@ -6868,6 +6869,11 @@
       // popover
       popover: {
         image: [
+          ['imagesize', ['imageSize100', 'imageSize50', 'imageSize25']],
+          ['float', ['floatLeft', 'floatRight', 'floatNone']],
+          ['remove', ['removeMedia']]
+        ],
+        video: [
           ['imagesize', ['imageSize100', 'imageSize50', 'imageSize25']],
           ['float', ['floatLeft', 'floatRight', 'floatNone']],
           ['remove', ['removeMedia']]
