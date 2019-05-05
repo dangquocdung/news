@@ -5545,23 +5545,15 @@
       // };
 
       // Define LFM summernote button
-      // context.memo('button.lfm', function () {
+      context.memo('button.rvm', function () {
 
-      //   return ui.button({
-      //       contents: '<i class="note-icon-picture"></i> ',
-      //       tooltip: 'Insert image with filemanager',
-      //       click: function() {
+        return ui.button({
+          contents: ui.icon(options.icons.video),
+            tooltip: lang.video.video,
+            click: context.createInvokeHandler('videoDialog.show')
+          }).render();
 
-      //         lfm({type: 'image', prefix: '/admin/lfm'}, function(lfmItems, path) {
-      //           lfmItems.forEach(function (lfmItem) {
-      //             context.invoke('insertImage', lfmItem.url);
-      //           });
-      //         });
-
-      //       }
-      //     }).render();
-
-      // });
+      });
 
       context.memo('button.video', function () {
         return ui.button({
@@ -6870,7 +6862,7 @@
         ['table', ['table']],
         ['insert', ['link', 'picture', 'video']],
         ['view', ['fullscreen', 'codeview', 'help']],
-        // ['view', ['rvm']],
+        ['view', ['rvm']],
       ],
 
       // popover
