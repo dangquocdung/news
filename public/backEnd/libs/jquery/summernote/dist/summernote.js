@@ -6375,7 +6375,7 @@
       } else if (mp4Match || oggMatch || webmMatch) {
         $video = $('<video controls>')
             .attr('src', url)
-            .attr('width', '640').attr('height', '360');
+            .attr('width', '100%');
       } else {
         // this is not a known video link. Now what, Cat? Now what?
         return false;
