@@ -111,9 +111,11 @@
                                                 @else
                                                     <img src="/uploads/topics/{{ $Topic->photo_file}}" alt="{{ $Topic->title_vi }}"></a>
                                                 @endif
+
+                                                <span class="video-btn"><i class="fa fa-play"></i></span>
                                             </a>
 
-                                            <span class="video-btn"><i class="fa fa-play"></i></span>
+                                            
     
                                             <!-- Content -->
                                             <div class="content">
