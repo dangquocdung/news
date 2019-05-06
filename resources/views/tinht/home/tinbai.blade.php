@@ -112,7 +112,6 @@
                                                     <img src="/uploads/topics/{{ $Topic->photo_file}}" alt="{{ $Topic->title_vi }}"></a>
                                                 @endif
 
-                                                <span class="video-btn"><i class="fa fa-play"></i></span>
                                             </a>
 
                                             
