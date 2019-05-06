@@ -31,6 +31,10 @@
                 
                 <div class="clearfix"></div>
 
+                @include('tinht.home.instagram')
+                
+                <div class="clearfix"></div>
+
                 @include('tinht.home.tinbai')
 
                 <div class="clearfix"></div>
