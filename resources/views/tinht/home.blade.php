@@ -31,7 +31,7 @@
                 
                 <div class="clearfix"></div>
 
-                @include('tinht.home.instagram')
+                @include('tinht.includes.instagram')
                 
                 <div class="clearfix"></div>
 
