@@ -29,10 +29,10 @@
         
             <!-- Overlay Post Start -->
             <div class="post post-large post-overlay hero-post col-md-4">
-                <div class="post-wrap">
+                <div class="post-wrap instagram-carousel">
 
                     <!-- Image -->
-                    <a class="image img-fluid" href="{{ $topic_link_url }}">
+                    <a class="image img-fluid instagram-item" href="{{ $topic_link_url }}">
                         @if (empty($Topic->photo_file))
                             <img src="frontend/hashnews/img/post/post-42.jpg" alt="{{ $Topic->title_vi }}">
                         @else
