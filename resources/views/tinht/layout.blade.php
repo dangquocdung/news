@@ -28,9 +28,11 @@
 
         </div>
 
+        <div class="clearfix"></div>
+
         @include('tinht.includes.instagram')
                 
-        <div class="clearfix"></div>
+       
         
         @include('tinht.includes.footer')
         
