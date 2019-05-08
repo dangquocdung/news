@@ -272,10 +272,9 @@
 
 
                         <div class="text-center">
-                            <a href="{{ route('panoLens',[$Topic->id,$Topic->seo_url_slug_vi]) }}">
+                            <a href="{{ route('panoLens',[$Topic->id,$Topic->seo_url_slug_vi]) }}" target="_blank">
                                 <img src="{{ URL::to('uploads/topics/'.$Topic->attach_file) }}"
                                 alt="{{ $title }}" width="100%"/>
-
                             </a>
                             
                         </div>
