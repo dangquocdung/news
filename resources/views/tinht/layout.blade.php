@@ -11,6 +11,7 @@
     <div id="main-wrapper">
 
         @include('tinht.includes.header')
+        @include('tinht.includes.float-button')
         @include('tinht.includes.menu')
 
         <div class="container nen-trang">
