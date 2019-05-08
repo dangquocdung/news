@@ -18,16 +18,19 @@
 <div id="side-menu">
     <ul id="navigation">
         
-        <li class="home">
+        <li>
             {{-- <a href="{{ URL::to("admin") }}" title="{{trans('frontLang.dashboard')}}">
                 <span><i class="fa fa-user-circle-o"></i></span>
             </a> --}}
-            <a href="{{ Helper::SocialShare("facebook", $PageTitle)}}" class="facebook" data-placement="top" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="{{ Helper::SocialShare("facebook", $PageTitle)}}" class="facebook" data-placement="top" title="Facebook" target="_blank">
+                <span><i class="fa fa-facebook"></i></span>
+            </a>
 
         </li>
         <li>
-            <a href="{{ Helper::SocialShare("twitter", $PageTitle)}}" class="twitter" data-placement="top" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
-
+            <a href="{{ Helper::SocialShare("twitter", $PageTitle)}}" class="twitter" data-placement="top" title="Twitter" target="_blank">
+                <span><i class="fa fa-twitter"></i></span>
+            </a>
         </li>
         
     </ul>
