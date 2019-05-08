@@ -29,7 +29,7 @@
 
         
             <!-- Overlay Post Start -->
-            <div class="post post-overlay post-large post-overlay hero-post col-md-4">
+            <div class="post post-large post-overlay hero-post col-md-4">
                 <div class="post-wrap">
 
                     <!-- Image -->
