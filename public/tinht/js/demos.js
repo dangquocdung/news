@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     // Animated thumbnails
-    var $animThumb = $('#aniimated-thumbnials');
+    var $animThumb = $('#tin-anh');
     if ($animThumb.length) {
         $animThumb.justifiedGallery({
             border: 6
