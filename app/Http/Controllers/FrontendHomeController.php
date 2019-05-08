@@ -267,7 +267,7 @@ class FrontendHomeController extends Controller
                     return $this->topics($section, $cat);
                 } else {
                     // $Topic = Topic::where('status', 1)->where("seo_url_slug_vi", $seo_url_slug)->orwhere("seo_url_slug_en", $seo_url_slug)->first();
-                    $Topic = find($id);
+                    $Topic = Topic::find($id);
                     if (count((array)$Topic) > 0) {
                         // SITE Topic
                         $section_id = $Topic->webmaster_id;
