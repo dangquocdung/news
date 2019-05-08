@@ -430,8 +430,8 @@ Route::get('/{section}', 'FrontendHomeController@topics')->name('FrontendTopics'
 Route::get('/{lang?}/{section}', 'FrontendHomeController@topicsByLang')->name('FrontendTopicsByLang');
 
 // ..SEO url  ( ex: www.site.com/title-here )
-Route::get('/{seo_url_slug}', 'FrontendHomeController@SEO')->name('FrontendSEO');
-Route::get('/{lang?}/{seo_url_slug}', 'FrontendHomeController@SEOByLang')->name('FrontendSEOByLang');
+Route::get('/{id}-{seo_url_slug}', 'FrontendHomeController@SEO')->name('FrontendSEO');
+Route::get('/{lang?}/{id}-{seo_url_slug}', 'FrontendHomeController@SEOByLang')->name('FrontendSEOByLang');
 
 // ..if page by name and language( ex: www.site.com/ar/about )
 Route::get('/{lang?}/topic/{id}', 'FrontendHomeController@topicByLang')->name('FrontendPageByLang');

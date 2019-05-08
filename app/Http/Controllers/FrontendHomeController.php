@@ -198,9 +198,9 @@ class FrontendHomeController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function SEO($seo_url_slug = 0)
+    public function SEO($id = 0, $seo_url_slug = 0)
     {
-        return $this->SEOByLang("", $seo_url_slug);
+        return $this->SEOByLang("", $id, $seo_url_slug);
     }
 
     /**
@@ -209,7 +209,7 @@ class FrontendHomeController extends Controller
      * @param  int /string $seo_url_slug
      * @return \Illuminate\Http\Response
      */
-    public function SEOByLang($lang = "", $seo_url_slug = 0)
+    public function SEOByLang($lang = "", $id = 0, $seo_url_slug = 0)
     {
         if ($lang != "") {
             // Set Language
@@ -266,7 +266,8 @@ class FrontendHomeController extends Controller
                     $cat = $Section->id;
                     return $this->topics($section, $cat);
                 } else {
-                    $Topic = Topic::where('status', 1)->where("seo_url_slug_vi", $seo_url_slug)->orwhere("seo_url_slug_en", $seo_url_slug)->first();
+                    // $Topic = Topic::where('status', 1)->where("seo_url_slug_vi", $seo_url_slug)->orwhere("seo_url_slug_en", $seo_url_slug)->first();
+                    $Topic = find($id);
                     if (count((array)$Topic) > 0) {
                         // SITE Topic
                         $section_id = $Topic->webmaster_id;
