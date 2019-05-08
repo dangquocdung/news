@@ -228,9 +228,9 @@
                         @endif
                     @endif
 
-                    <a href="{{ Helper::SocialShare("facebook", $PageTitle)}}" class="facebook" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
-                    <a href="{{ Helper::SocialShare("twitter", $PageTitle)}}" class="twitter" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a>
-                    <a href="{{ Helper::SocialShare("google", $PageTitle)}}" class="google-plus" data-placement="top" title="Google+"><i class="fa fa-google-plus"></i></a>
+                    <a href="{{ Helper::SocialShare("facebook", $PageTitle)}}" class="facebook" data-placement="top" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="{{ Helper::SocialShare("twitter", $PageTitle)}}" class="twitter" data-placement="top" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="{{ Helper::SocialShare("google", $PageTitle)}}" class="google-plus" data-placement="top" title="Google+" target="_blank"><i class="fa fa-google-plus"></i></a>
                 </div>
 
             </div>
@@ -258,7 +258,7 @@
                     $topic_link_url = route('FrontendTopic', ["section" => $Topic->webmasterSection->name, "id" => $Topic->id]);
                 }
             }
-            
+
         @endphp
 
         <a href="{{ $topic_link_url }}" class="prev-post">
