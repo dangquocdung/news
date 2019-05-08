@@ -57,6 +57,8 @@
     <!-- Main JS -->
     <script src="{{ URL::asset('tinht/js/main.js') }}"></script>
 
+    <script src="https://sp.zalo.me/plugins/sdk.js"></script>
+
 
 </body>
 
