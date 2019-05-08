@@ -74,7 +74,6 @@ class FrontendHomeController extends Controller
         $WebmasterSections = WebmasterSection::where('status',1)->orderby('row_no','asc')->get();
 
     
-
         $MenuLinks = Menu::where('status',1)->orderby('row_no','asc')->get();
 
          // Get Latest News
@@ -135,6 +134,20 @@ class FrontendHomeController extends Controller
             ->limit(10)
             ->get();
 
+        // Photo 360
+        $Photo360s = Topic::where([
+            ['status', 1], 
+            ['webmaster_id',35],
+            ['expire_date', '>=', date("Y-m-d")], 
+            ['expire_date', '<>', null]])
+            ->orwhere([
+                ['status', 1], 
+                ['webmaster_id',35],
+                ['expire_date', null]])
+                ->orderby('date', 'desc')
+                ->limit(20)
+                ->get();
+
         // Dich vu
         $Audio = Topic::where([
         ['status', 1], 
@@ -184,6 +197,7 @@ class FrontendHomeController extends Controller
         view()->share('DichVu',$DichVu);
         view()->share('Audio',$Audio);
         view()->share('Photo',$Photo);
+        view()->share('Photo360s',$Photo360s);
         view()->share('Banners',$Banners);
         view()->share('Visitors',$Visitors);
         view()->share('Pages',$Pages);

@@ -6,7 +6,9 @@
             <!-- Full Width Instagram Carousel Start -->
             <div class="fullwidth-instagram-carousel instagram-carousel col pl-0 pr-0">
 
-                @foreach ($Photo->where('hot',1) as $Topic )
+                
+
+                @foreach ($Photo360s as $Topic )
                     @php
                         if ($Topic->$slug_var != "" && Helper::GeneralWebmasterSettings("links_status")) {
                             if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
