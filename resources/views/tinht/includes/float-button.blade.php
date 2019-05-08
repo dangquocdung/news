@@ -22,7 +22,11 @@
             {{-- <a href="{{ URL::to("admin") }}" title="{{trans('frontLang.dashboard')}}">
                 <span><i class="fa fa-user-circle-o"></i></span>
             </a> --}}
-            <div class="zalo-share-button" data-href="" data-oaid="579745863508352884" data-layout="3" data-color="blue" data-customize=false></div>
+            <a href="{{ Helper::SocialShare("facebook", $PageTitle)}}" class="facebook" data-placement="top" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+
+        </li>
+        <li>
+            <a href="{{ Helper::SocialShare("twitter", $PageTitle)}}" class="twitter" data-placement="top" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
 
         </li>
         
