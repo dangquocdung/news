@@ -23,13 +23,13 @@
                 <span><i class="fa fa-user-circle-o"></i></span>
             </a> --}}
             <a href="{{ Helper::SocialShare("facebook", $PageTitle)}}" class="facebook" data-placement="top" title="Facebook" target="_blank">
-                <span><i class="fa fa-facebook"></i></span>
+                <span><i class="fa fa-facebook-square"></i></span>
             </a>
 
         </li>
         <li>
             <a href="{{ Helper::SocialShare("twitter", $PageTitle)}}" class="twitter" data-placement="top" title="Twitter" target="_blank">
-                <span><i class="fa fa-twitter"></i></span>
+                <span><i class="fa fa-twitter-square"></i></span>
             </a>
         </li>
         
