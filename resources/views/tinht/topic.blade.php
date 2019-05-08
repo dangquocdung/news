@@ -72,7 +72,6 @@
         <script src="/tinht/js/lg-autoplay.js"></script>
         <script src="/tinht/js/lg-zoom.js"></script>
         <script src="/tinht/js/jquery.mousewheel.min.js"></script>
-        <script src="/tinht/js/demos.js"></script>
 
     @endif
 
@@ -125,6 +124,22 @@
 
             return false;
         });
+
+        $(document).ready(function() {
+
+            // Animated thumbnails
+            var $animThumb = $('#tin-anh');
+            if ($animThumb.length) {
+                $animThumb.justifiedGallery({
+                    border: 6
+                }).on('jg.complete', function() {
+                    $animThumb.lightGallery({
+                        thumbnail: true
+                    });
+                });
+            };
+        });
+
 
 
     </script>
