@@ -229,9 +229,11 @@
                     @endif
 
                     <a href="{{ Helper::SocialShare("facebook", $PageTitle)}}" class="facebook" data-placement="top" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-                    <div class="zalo-share-button" data-href="" data-oaid="579745863508352884" data-layout="5" data-color="blue" data-customize=false></div>
 
-                    {{-- <a href="{{ Helper::SocialShare("twitter", $PageTitle)}}" class="twitter" data-placement="top" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a> --}}
+                    <a href="{{ Helper::SocialShare("twitter", $PageTitle)}}" class="twitter" data-placement="top" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+
+                    <div class="zalo-share-button" data-href="" data-oaid="579745863508352884" data-layout="3" data-color="blue" data-customize=false></div>
+
                     {{-- <a href="{{ Helper::SocialShare("google", $PageTitle)}}" class="google-plus" data-placement="top" title="Google+" target="_blank"><i class="fa fa-google-plus"></i></a> --}}
                 </div>
 
