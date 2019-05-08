@@ -63,7 +63,7 @@
     
         <script src="/tinht/js/prettify.js"></script>
         <script src="/tinht/js/jquery.justifiedGallery.min.js"></script>
-        <script src="/tinht/jstransition.js"></script>
+        <script src="/tinht/js/transition.js"></script>
         <script src="/tinht/js/collapse.js"></script>
         <script src="/tinht/js/lightgallery.js"></script>
         <script src="/tinht/js/lg-fullscreen.js"></script>
