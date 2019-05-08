@@ -19,9 +19,11 @@
     <ul id="navigation">
         
         <li class="home">
-            <a href="{{ URL::to("admin") }}" title="{{trans('frontLang.dashboard')}}">
+            {{-- <a href="{{ URL::to("admin") }}" title="{{trans('frontLang.dashboard')}}">
                 <span><i class="fa fa-user-circle-o"></i></span>
-            </a>
+            </a> --}}
+            <div class="zalo-share-button" data-href="" data-oaid="579745863508352884" data-layout="3" data-color="blue" data-customize=false></div>
+
         </li>
         
     </ul>
