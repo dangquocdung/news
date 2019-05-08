@@ -3,7 +3,7 @@
 @section('meta')
 
     <meta property="og:url" content="{{ Request::url() }}" />
-    <meta property="og:type" content="article" />
+    <meta property="og:type" content="website" />
     <meta property="og:title" content="{{ $Topic->title_vi }}" />
     <meta property="og:description" content="{{ $Topic->title_vi }}" />
     <meta property="og:image" itemprop="image" content="{{ URL::asset('/uploads/topics/'.$Topic->photo_file) }}" />
