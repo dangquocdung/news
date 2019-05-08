@@ -29,11 +29,11 @@
 
         
             <!-- Overlay Post Start -->
-            <div class="post post-large post-overlay hero-post col-md-4">
-                <div class="post-wrap instagram-carousel">
+            <div class="post post-overlay post-large post-overlay hero-post col-md-4">
+                <div class="post-wrap">
 
                     <!-- Image -->
-                    <a class="image img-fluid instagram-item" href="{{ $topic_link_url }}">
+                    <a class="image img-fluid" href="{{ $topic_link_url }}">
                         @if (empty($Topic->photo_file))
                             <img src="frontend/hashnews/img/post/post-42.jpg" alt="{{ $Topic->title_vi }}">
                         @else
@@ -42,11 +42,25 @@
                     </a>
 
                     <!-- Content -->
-                    <div class="content" style="bottom:10px">
+                    <div class="content">
 
                         <!-- Title -->
-                        <h4 style="text-align:center; font-weght:bold; color:#fff"><a href="{{$topic_link_url}}" onMouseOver="this.style.color='#0F0'" onMouseOut="this.style.color='#fff'" >{{$Topic->title_vi}}</a></h4>
+                        <h2 class="title">
+                            <a href="{{ $topic_link_url }}">
+                                {{-- @if($Topic->icon !="")
+                                    <i class="fa {!! $Topic->icon !!}"></i>&nbsp;
+                                @endif --}}
+                                {{ $Topic->title_vi }}
+                            </a>
+                        </h2>
 
+                        <!-- Meta -->
+                        <div class="meta fix">
+                            <span class="meta-item date">
+                                <i class="fa fa-clock-o"></i>
+                                {{ \Carbon\Carbon::parse($Topic->date)->format('d/m/Y')}}
+                            </span>
+                        </div>
                     </div>
                     
                 </div>
