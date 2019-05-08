@@ -45,14 +45,14 @@
                     <div class="content">
 
                         <!-- Title -->
-                        <h2 class="title">
+                        <h4 class="title">
                             <a href="{{ $topic_link_url }}">
                                 {{-- @if($Topic->icon !="")
                                     <i class="fa {!! $Topic->icon !!}"></i>&nbsp;
                                 @endif --}}
                                 {{ $Topic->title_vi }}
                             </a>
-                        </h2>
+                        </h4>
 
                         <!-- Meta -->
                         <div class="meta fix">
