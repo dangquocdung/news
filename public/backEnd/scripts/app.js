@@ -58667,8 +58667,8 @@ var uiLoad = uiLoad || {};
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/quocdungdang/Project/news/resources/assets/js/app.js */"./resources/assets/js/app.js");
-module.exports = __webpack_require__(/*! /Users/quocdungdang/Project/news/resources/assets/sass/style.scss */"./resources/assets/sass/style.scss");
+__webpack_require__(/*! D:\project\news\resources\assets\js\app.js */"./resources/assets/js/app.js");
+module.exports = __webpack_require__(/*! D:\project\news\resources\assets\sass\style.scss */"./resources/assets/sass/style.scss");
 
 
 /***/ })
