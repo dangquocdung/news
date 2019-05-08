@@ -230,7 +230,7 @@
 
 
 
-                    <div class="zalo-share-button" data-href="" data-oaid="579745863508352884" data-layout="3" data-color="blue" data-customize=false></div>
+                    <div class="zalo-share-button" data-href="" data-oaid="579745863508352884" data-layout="5" data-color="blue" data-customize=false></div>
 
                     {{-- <a href="{{ Helper::SocialShare("google", $PageTitle)}}" class="google-plus" data-placement="top" title="Google+" target="_blank"><i class="fa fa-google-plus"></i></a> --}}
                 </div>
