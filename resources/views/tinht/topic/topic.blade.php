@@ -131,7 +131,7 @@
 
                 <div class="demo-gallery">
 
-                        <div id="lightgallery" class="list-unstyled justified-gallery">
+                        <div id="aniimated-thumbnials" class="list-unstyled justified-gallery">
                             @foreach($Topic->photos as $photo)
                             <a href="{{ URL::to('uploads/topics/'.$photo->file) }}" data-sub-html="{{ $photo->description  }}">
                                 <img class="img-responsive" src="{{ URL::to('uploads/topics/'.$photo->file) }}" />
