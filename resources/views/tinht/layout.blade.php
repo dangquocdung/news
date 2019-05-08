@@ -27,6 +27,8 @@
             @yield('content')
 
         </div>
+
+       
         
         @include('tinht.includes.footer')
         

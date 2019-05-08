@@ -31,15 +31,17 @@
                 
                 <div class="clearfix"></div>
 
-                @include('tinht.includes.instagram')
-                
-                <div class="clearfix"></div>
-
                 @include('tinht.home.tinbai')
 
+                {{-- <div class="clearfix"></div>
+
+                @include('tinht.home.video') --}}
+
                 <div class="clearfix"></div>
 
-                @include('tinht.home.video')
+                @include('tinht.includes.instagram')
+                
+                
                     
             </div>
             
