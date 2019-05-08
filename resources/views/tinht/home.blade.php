@@ -33,9 +33,9 @@
 
                 @include('tinht.home.tinbai')
 
-                {{-- <div class="clearfix"></div>
+                <div class="clearfix"></div>
 
-                @include('tinht.home.video') --}}
+                @include('tinht.home.video')
 
                 <div class="clearfix"></div>
 
