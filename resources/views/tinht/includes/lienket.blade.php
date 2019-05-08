@@ -15,9 +15,9 @@
                 @php
                     if ($Topic->$slug_var != "" && Helper::GeneralWebmasterSettings("links_status")) {
                         if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
-                            $topic_link_url = url(trans('backLang.code') . "/" . $Topic->$slug_var);
+                            $topic_link_url = url(trans('backLang.code') . "/" . $Topic->id . "-" . $Topic->$slug_var);
                         } else {
-                            $topic_link_url = url($Topic->$slug_var);
+                            $topic_link_url = url($Topic->id . "-" . $Topic->$slug_var);
                         }
                     } else {
                         if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {

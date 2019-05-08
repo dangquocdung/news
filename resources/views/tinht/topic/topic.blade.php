@@ -242,21 +242,25 @@
 <div class="post-nav mb-15">
     @if (!empty($preTopic))
         @php
-        $Topic = $preTopic;
-        if ($Topic->$slug_var != "" && Helper::GeneralWebmasterSettings("links_status")) {
-            if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
-                $topic_link_url = url(trans('backLang.code') . "/" . $Topic->$slug_var);
+            
+            $Topic = $preTopic;
+
+            if ($Topic->$slug_var != "" && Helper::GeneralWebmasterSettings("links_status")) {
+                if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
+                    $topic_link_url = url(trans('backLang.code') . "/" . $Topic->id . "-" . $Topic->$slug_var);
+                } else {
+                    $topic_link_url = url($Topic->id . "-" . $Topic->$slug_var);
+                }
             } else {
-                $topic_link_url = url($Topic->$slug_var);
+                if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
+                    $topic_link_url = route('FrontendTopicByLang', ["lang" => trans('backLang.code'), "section" => $Topic->webmasterSection->name, "id" => $Topic->id]);
+                } else {
+                    $topic_link_url = route('FrontendTopic', ["section" => $Topic->webmasterSection->name, "id" => $Topic->id]);
+                }
             }
-        } else {
-            if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
-                $topic_link_url = route('FrontendTopicByLang', ["lang" => trans('backLang.code'), "section" => $Topic->webmasterSection->name, "id" => $Topic->id]);
-            } else {
-                $topic_link_url = route('FrontendTopic', ["section" => $Topic->webmasterSection->name, "id" => $Topic->id]);
-            }
-        }
+            
         @endphp
+
         <a href="{{ $topic_link_url }}" class="prev-post">
                 <span><i class="fa fa-angle-double-left"></i>&nbsp;Tin trước</span>
 
@@ -288,20 +292,21 @@
     @if (!empty($nexTopic))
 
         @php
-        $Topic = $nexTopic;
-        if ($Topic->$slug_var != "" && Helper::GeneralWebmasterSettings("links_status")) {
-            if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
-                $topic_link_url = url(trans('backLang.code') . "/" . $Topic->$slug_var);
+            $Topic = $nexTopic;
+
+            if ($Topic->$slug_var != "" && Helper::GeneralWebmasterSettings("links_status")) {
+                if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
+                    $topic_link_url = url(trans('backLang.code') . "/" . $Topic->id . "-" . $Topic->$slug_var);
+                } else {
+                    $topic_link_url = url($Topic->id . "-" . $Topic->$slug_var);
+                }
             } else {
-                $topic_link_url = url($Topic->$slug_var);
+                if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
+                    $topic_link_url = route('FrontendTopicByLang', ["lang" => trans('backLang.code'), "section" => $Topic->webmasterSection->name, "id" => $Topic->id]);
+                } else {
+                    $topic_link_url = route('FrontendTopic', ["section" => $Topic->webmasterSection->name, "id" => $Topic->id]);
+                }
             }
-        } else {
-            if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
-                $topic_link_url = route('FrontendTopicByLang', ["lang" => trans('backLang.code'), "section" => $Topic->webmasterSection->name, "id" => $Topic->id]);
-            } else {
-                $topic_link_url = route('FrontendTopic', ["section" => $Topic->webmasterSection->name, "id" => $Topic->id]);
-            }
-        }
         @endphp
         <a href="{{ $topic_link_url }}" class="next-post">
             <span>Tin sau&nbsp;<i class="fa fa-angle-double-right"></i></span>
@@ -418,21 +423,21 @@
 
                 @foreach($LatestNews as $Topic)
 
-                    <?php
-                        if ($Topic->$slug_var != "" && Helper::GeneralWebmasterSettings("links_status")) {
-                            if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
-                                $topic_link_url = url(trans('backLang.code') . "/" . $Topic->$slug_var);
-                            } else {
-                                $topic_link_url = url($Topic->$slug_var);
-                            }
+                @php
+                    if ($Topic->$slug_var != "" && Helper::GeneralWebmasterSettings("links_status")) {
+                        if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
+                            $topic_link_url = url(trans('backLang.code') . "/" . $Topic->id . "-" . $Topic->$slug_var);
                         } else {
-                            if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
-                                $topic_link_url = route('FrontendTopicByLang', ["lang" => trans('backLang.code'), "section" => $Topic->webmasterSection->name, "id" => $Topic->id]);
-                            } else {
-                                $topic_link_url = route('FrontendTopic', ["section" => $Topic->webmasterSection->name, "id" => $Topic->id]);
-                            }
+                            $topic_link_url = url($Topic->id . "-" . $Topic->$slug_var);
                         }
-                    ?>
+                    } else {
+                        if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
+                            $topic_link_url = route('FrontendTopicByLang', ["lang" => trans('backLang.code'), "section" => $Topic->webmasterSection->name, "id" => $Topic->id]);
+                        } else {
+                            $topic_link_url = route('FrontendTopic', ["section" => $Topic->webmasterSection->name, "id" => $Topic->id]);
+                        }
+                    }
+                @endphp
                 
                     <div class="col-md-6 col-12">
                         

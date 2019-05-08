@@ -43,21 +43,21 @@
                     
                     @foreach ($Topics->sortbydesc('date') as $key=>$Topic )
 
-                        @php
-                            if ($Topic->$slug_var != "" && Helper::GeneralWebmasterSettings("links_status")) {
-                                if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
-                                    $topic_link_url = url(trans('backLang.code') . "/" . $Topic->$slug_var);
-                                } else {
-                                    $topic_link_url = url($Topic->$slug_var);
-                                }
+                    @php
+                        if ($Topic->$slug_var != "" && Helper::GeneralWebmasterSettings("links_status")) {
+                            if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
+                                $topic_link_url = url(trans('backLang.code') . "/" . $Topic->id . "-" . $Topic->$slug_var);
                             } else {
-                                if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
-                                    $topic_link_url = route('FrontendTopicByLang', ["lang" => trans('backLang.code'), "section" => $Topic->webmasterSection->name, "id" => $Topic->id]);
-                                } else {
-                                    $topic_link_url = route('FrontendTopic', ["section" => $Topic->webmasterSection->name, "id" => $Topic->id]);
-                                }
+                                $topic_link_url = url($Topic->id . "-" . $Topic->$slug_var);
                             }
-                        @endphp
+                        } else {
+                            if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
+                                $topic_link_url = route('FrontendTopicByLang', ["lang" => trans('backLang.code'), "section" => $Topic->webmasterSection->name, "id" => $Topic->id]);
+                            } else {
+                                $topic_link_url = route('FrontendTopic', ["section" => $Topic->webmasterSection->name, "id" => $Topic->id]);
+                            }
+                        }
+                    @endphp
 
                         <!-- Post Small Start -->
                         <div class="post post-small post-list feature-post post-separator-border">
