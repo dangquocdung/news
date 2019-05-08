@@ -6,7 +6,7 @@ $(document).ready(function() {
     var $animThumb = $('#aniimated-thumbnials');
     if ($animThumb.length) {
         $animThumb.justifiedGallery({
-            border: 6
+            border: 2
         }).on('jg.complete', function() {
             $animThumb.lightGallery({
                 thumbnail: true
