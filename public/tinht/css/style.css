@@ -6630,7 +6630,7 @@ nav.foot-menu {
   bottom: 20px;
   left: 0px;
   list-style: none;
-  z-index: 9999;
+  z-index: 999;
 }
 
 #side-menu span img {
@@ -6640,9 +6640,9 @@ nav.foot-menu {
 }
 
 #side-menu span i {
-  font-size: 25px !important;
-  padding-top: 8px !important;
-  padding-right: 8px;
+  font-size: 20px !important;
+  padding-top: 5px !important;
+  padding-right: 5px;
 }
 
 #side-menu ul#navigation li {
@@ -6654,8 +6654,8 @@ nav.foot-menu {
   display: block;
   text-decoration: none;
   margin-left: -7px;
-  width: 45px;
-  height: 40px;
+  width: 35px;
+  height: 30px;
   background-color: #CFCFCF;
   background-repeat: no-repeat;
   background-position: center center;
