@@ -6,6 +6,11 @@
     <title>{{$PageTitle}} {{($PageTitle !="")? "|":""}} {{ Helper::GeneralSiteSettings("site_title_" . trans('backLang.boxCode')) }}</title>
     <meta name="description" content="{{$PageDescription}}"/>
     <meta name="keywords" content="{{$PageKeywords}}"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
     <style>
         html, body {
           margin: 0;
