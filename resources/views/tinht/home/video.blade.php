@@ -41,9 +41,9 @@
                             @endif
 
                             <span class="video-btn"><i class="fa fa-play"></i></span>
-                            {{-- <span class="title-thoi-su">
+                            <span class="title-thoi-su">
                                 <i class="fa fa-clock-o"></i>&nbsp;{{ \Carbon\Carbon::parse($Topic->date)->format('d/m/Y') }}
-                            </span> --}}
+                            </span>
                         </a>
     
                         <!-- Content -->
