@@ -73,7 +73,7 @@
             @if($WebmasterSection->type==2 && $Topic->video_file!="")
                 {{--video--}}
                 
-                    <div class="video-container responsive-video mb-15">
+                    <div class="video-container responsive-video">
                         @if($Topic->video_type ==1)
                             <?php
                             $Youtube_id = Helper::Get_youtube_video_id($Topic->video_file);
@@ -104,77 +104,29 @@
                             @endif
 
                         @else
-                            <video id="video" width="100%" controls playsinline controlslist="nodownload" preload="none" poster="{{ URL::to('uploads/topics/'.$Topic->photo_file) }}">
+                            <video id="videoElement" width="100%" controls playsinline controlslist="nodownload" preload="none" poster="{{ URL::to('uploads/topics/'.$Topic->photo_file) }}">
                                 <source src="{{ URL::to('uploads/topics/'.$Topic->video_file) }}"
                                         type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         @endif
 
-                        <button id="togglePipButton">Toggle Picture-in-Picture</button>
+                        <button id="pipButtonElement"></button>
 
                     </div>
 
-                    <script>
+                    <script type="text/javascript">
 
-                        let pipWindow;
+                        $(document).ready(function ($) {
+                            $("#pipButtonElement").addEventListener('click', async function() {
 
-                        togglePipButton.addEventListener('click', async function(event) {
-                        log('Toggling Picture-in-Picture...');
-                        togglePipButton.disabled = true;
-                        try {
+                                $(this).disabled = true;
 
-                            if (video !== document.pictureInPictureElement)
-                            await video.requestPictureInPicture();
-                            else
-                            await document.exitPictureInPicture();
+                                await $("#videoElement").requestPictureInPicture();
 
-                        } catch(error) {
-                            log(`> Argh! ${error}`);
-                        } finally {
-                            togglePipButton.disabled = false;
-                        }
+                                $(this).disabled = false;
+                            });
                         });
-
-                        // Note that this can happen if user clicked the "Toggle Picture-in-Picture"
-                        // button but also if user clicked some browser context menu or if
-                        // Picture-in-Picture was triggered automatically for instance.
-                        video.addEventListener('enterpictureinpicture', function(event) {
-                        log('> Video entered Picture-in-Picture');
-
-                        pipWindow = event.pictureInPictureWindow;
-                        log(`> Window size is ${pipWindow.width}x${pipWindow.height}`);
-
-                        pipWindow.addEventListener('resize', onPipWindowResize);
-                        });
-
-                        video.addEventListener('leavepictureinpicture', function(event) {
-                        log('> Video left Picture-in-Picture');
-
-                        pipWindow.removeEventListener('resize', onPipWindowResize);
-                        });
-
-                        function onPipWindowResize(event) {
-                        log(`> Window size changed to ${pipWindow.width}x${pipWindow.height}`);
-                        }
-
-                        /* Feature support */
-
-                        if ('pictureInPictureEnabled' in document) {
-                        // Set button ability depending on whether Picture-in-Picture can be used.
-                        setPipButton();
-                        video.addEventListener('loadedmetadata', setPipButton);
-                        video.addEventListener('emptied', setPipButton);
-                        } else {
-                        // Hide button if Picture-in-Picture is not supported.
-                        togglePipButton.hidden = true;
-                        }
-
-                        function setPipButton() {
-                        togglePipButton.disabled = (video.readyState === 0) ||
-                                                    !document.pictureInPictureEnabled ||
-                                                    video.disablePictureInPicture;
-                        }
                     </script>
 
 
