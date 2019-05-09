@@ -73,7 +73,7 @@
             @if($WebmasterSection->type==2 && $Topic->video_file!="")
                 {{--video--}}
                 
-                    <div class="video-container responsive-video">
+                    <div class="video-container responsive-video mb-15">
                         @if($Topic->video_type ==1)
                             <?php
                             $Youtube_id = Helper::Get_youtube_video_id($Topic->video_file);
