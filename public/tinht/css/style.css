@@ -6947,6 +6947,15 @@ img.size-full {
   transform: translate(-50%, -50%);
 }
 
+.title-video {
+  text-align: right;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  color: white;
+  z-index: 5;
+}
+
 @media only screen and (max-width: 479px), only screen and (max-width: 767px) {
   #mainbox-r {
     padding-left: 0;
