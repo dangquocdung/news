@@ -1,9 +1,9 @@
-<div class="col-md-12 mb-15">
+<div class="col-md-12">
     <div class="row">
 
  
 
-        <div class="col-md-6">
+        <div class="col-md-6 mb-15">
             <div class="Head pos-rel clearfix">
                 <h2 class="ParentCate left">
                     <a href="#">Du lịch Hà Tĩnh</a>
@@ -24,7 +24,7 @@
                     
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6 mb-15">
             <div class="Head pos-rel clearfix">
                 <h2 class="ParentCate left">
                     <a href="#">Thể thao</a>
