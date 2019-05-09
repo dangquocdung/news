@@ -47,6 +47,12 @@
                                                 
                                                 @endif
 
+                                                @if ($Topic->video_file!="")
+
+                                                    <span class="video-btn"><i class="fa fa-play"></i></span>
+                          
+                                                @endif
+
                                                 <span class="title-video">
                                                     <i class="fa fa-clock-o"></i>&nbsp;{{ \Carbon\Carbon::parse($Topic->date)->format('d/m/Y') }}
                                                 </span>
@@ -126,6 +132,12 @@
 
                                                     <span class="photo-btn pt-right"><i class="fa fa-photo"></i></span>
                                                 
+                                                @endif
+
+                                                @if ($Topic->video_file!="")
+
+                                                    <span class="video-btn"><i class="fa fa-play"></i></span>
+                          
                                                 @endif
 
                                                 <span class="title-video">
@@ -209,6 +221,12 @@
 
                                                     <span class="photo-btn pt-right"><i class="fa fa-photo"></i></span>
                                                 
+                                                @endif
+
+                                                @if ($Topic->video_file!="")
+
+                                                    <span class="video-btn"><i class="fa fa-play"></i></span>
+                          
                                                 @endif
 
                                                 <span class="title-video">
