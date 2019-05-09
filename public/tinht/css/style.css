@@ -6964,20 +6964,15 @@ img.size-full {
   text-align: center;
   position: absolute;
   background: rgba(255, 255, 255, 0.8);
-  left: 0;
   top: 0;
 }
 
-.photo-btn-right {
-  width: 40px;
-  display: block;
-  height: 35px;
-  line-height: 28px;
-  text-align: center;
-  position: absolute;
-  background: rgba(255, 255, 255, 0.8);
+.photo-btn.pt-left {
+  left: 0;
+}
+
+.photo-btn.pt-right {
   right: 0;
-  top: 0;
 }
 
 @media only screen and (max-width: 479px), only screen and (max-width: 767px) {

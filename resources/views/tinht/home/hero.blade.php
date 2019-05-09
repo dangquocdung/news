@@ -41,7 +41,7 @@
                                                 @endif
                                                 {{-- <img src="frontend/hashnews/img/post/post-3.jpg" alt="{{ $Topic->title_vi }}"> --}}
 
-                                                <span class="photo-btn-right"><i class="fa fa-photo"></i></span>
+                                                <span class="photo-btn pt-right"><i class="fa fa-photo"></i></span>
 
                                                 <span class="title-video">
                                                     <i class="fa fa-clock-o"></i>&nbsp;{{ \Carbon\Carbon::parse($Topic->date)->format('d/m/Y') }}

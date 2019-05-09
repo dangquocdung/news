@@ -40,7 +40,7 @@
                             <img src="/uploads/topics/{{ $Topic->photo_file}}" alt="{{ $Topic->title_vi }}"></a>
                         @endif
 
-                        <span class="photo-btn"><i class="fa fa-photo"></i></span>
+                        <span class="photo-btn pt-left"><i class="fa fa-photo"></i></span>
 
                         <span class="title-video">
                             <i class="fa fa-clock-o"></i>&nbsp;{{ \Carbon\Carbon::parse($Topic->date)->format('d/m/Y') }}
