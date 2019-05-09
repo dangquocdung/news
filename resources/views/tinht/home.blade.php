@@ -28,6 +28,10 @@
                 <div class="clearfix"></div>
 
                 @include('tinht.home.tin-anh')
+
+                <div class="clearfix"></div>
+
+                @include('tinht.home.video')
                 
                 <div class="clearfix"></div>
 

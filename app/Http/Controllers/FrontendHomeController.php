@@ -178,6 +178,8 @@ class FrontendHomeController extends Controller
                 ->limit(10)
                 ->get();
 
+        $Videos = WebmasterSection::where('type',2)->first();
+
         // Get Home page slider banners
         $Banners = Banner::where('status',1)->orderby('row_no', 'asc')->get();
         
@@ -198,6 +200,7 @@ class FrontendHomeController extends Controller
         view()->share('Audio',$Audio);
         view()->share('Photo',$Photo);
         view()->share('Photo360s',$Photo360s);
+        view()->share('Videos',$Videos);
         view()->share('Banners',$Banners);
         view()->share('Visitors',$Visitors);
         view()->share('Pages',$Pages);
