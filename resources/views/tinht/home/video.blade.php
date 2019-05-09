@@ -1,7 +1,7 @@
 <div class="col-md-12 mb-15">
         <div class="Head pos-rel clearfix">
             <h2 class="ParentCate left">
-                <a href="/hinh-anh">Hình ảnh</a>
+                <a href="/hinh-anh">Video Clip</a>
             </h2>
             <span class="line-red">.</span>
         </div>
@@ -10,7 +10,7 @@
     
         <div class="three-column-post-carousel column-post-carousel post-block-carousel dark life-style-post-carousel row">
     
-            @foreach ($Videos->topics as $Topic )
+            @foreach ($Videos->topics->where('status',1)->sortbydesc('date') as $Topic )
                 @php
                     if ($Topic->$slug_var != "" && Helper::GeneralWebmasterSettings("links_status")) {
                         if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {

@@ -9,7 +9,7 @@
         <div class="row">        
             <!-- Feature Post Row Start -->
         
-                @if (!empty($MenuLinks->where('father_id',21)->sortby('row_no')))
+                @if (!empty($MenuLinks->where('father_id',21)))
 
                     @foreach($MenuLinks->where('father_id',21)->sortby('row_no') as $MainMenuLink)
 
@@ -194,7 +194,11 @@
 
                         </div><!-- Post Block Wrapper End -->
                     @endforeach
+
+
                 @endif
+
+               
 
         </div>
 

@@ -31,11 +31,15 @@
 
                 <div class="clearfix"></div>
 
+                @include('tinht.home.tinbai-up')
+
+                <div class="clearfix"></div>
+
                 @include('tinht.home.video')
                 
                 <div class="clearfix"></div>
 
-                @include('tinht.home.tinbai')
+                @include('tinht.home.tinbai-down')
 
                 <div class="clearfix"></div>
 
@@ -45,8 +49,6 @@
 
                 @include('tinht.includes.instagram')
                 
-                
-                    
             </div>
             
     </div>
