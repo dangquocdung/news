@@ -12,144 +12,85 @@
 
                 @if (!empty($MenuLinks->where('father_id',21)->sortby('row_no')))
 
-                @foreach($MenuLinks->where('father_id',21)->sortby('row_no') as $key=>$MainMenuLink)
+                    @foreach($MenuLinks->where('father_id',21)->sortby('row_no') as $key=>$MainMenuLink)
 
-                @if ($key==2)
+                        @if ($key==2)
 
-                @include('tinht.home.tin-anh')
+                            {{-- @include('tinht.home.tin-anh') --}}
 
-                @endif
+                            <h1>sdasdsaasd</h1>
 
-                <!-- Post Block Wrapper Start -->
-                <div class="col-md-6">
-                    
-
-                    <?php
-                        if ($MainMenuLink->webmasterSection[$slug_var] != "" && Helper::GeneralWebmasterSettings("links_status")) {
-                            if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
-                                $mmnnuu_link = url(trans('backLang.code')."/" .$MainMenuLink->webmasterSection[$slug_var]);
-                            }else{
-                                $mmnnuu_link = url($MainMenuLink->webmasterSection[$slug_var]);
-                            }
-                        }else{
-                            if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
-                                $mmnnuu_link =url(trans('backLang.code')."/" .$MainMenuLink->webmasterSection['name']);
-                            }else{
-                                $mmnnuu_link =url($MainMenuLink->webmasterSection['name']);
-                            }
-                        }
-                    ?>
-                    <div class="Head pos-rel clearfix">
-                        <h2 class="ParentCate left">
-                            <a href="{{ $mmnnuu_link }}">{{ $MainMenuLink->title_vi }}</a>
-                        </h2>
-                        <span class="line-red">.</span>
-                        @if(!empty($MainMenuLink->webmasterSection->sections))
-                        <div class="mini-menu c-86">&nbsp;
-                            @foreach($MainMenuLink->webmasterSection->sections as $key=>$Section)
-
-                                <?php
-                                    if ($Section->$slug_var != "" && Helper::GeneralWebmasterSettings("links_status")) {
-                                        if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
-                                            $Category_link_url = url(trans('backLang.code')."/" .$Section->$slug_var);
-                                        }else{
-                                            $Category_link_url = url($Section->$slug_var);
-                                        }
-                                    } else {
-                                        if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
-                                            $Category_link_url = route('FrontendTopicsByCatWithLang', ["lang"=>trans('backLang.code'),"section" => $Section->webmasterSection->name, "cat" => $Section->id]);
-                                        }else{
-                                            $Category_link_url = route('FrontendTopicsByCat', ["section" => $Section->webmasterSection->name, "cat" => $Section->id]);
-                                        }
-                                    }
-                                ?>                                                                
-                                {{-- <h6 class="d-ib" style="margin-right:5px">
-                                    <a href="{{ $Category_link_url }}">{{ $Section->title_vi }}</a>
-                                </h6> --}}
-                            @endforeach
-                        </div>
                         @endif
-                    </div>
 
-                    <div class="clearfix"></div>
-
-                    @if(count($MainMenuLink->webmasterSection->topics->where('status',1))>0)
-
-                        @php
+                        <!-- Post Block Wrapper Start -->
+                        <div class="col-md-6">
                             
-                            $Tins = $MainMenuLink->webmasterSection->topics->where('status',1)->sortbyDesc('date')->sortbyDesc('id')->take(7);
-                            
-                        @endphp
 
-                        <div class="row">
-
-                            <!-- Post Wrapper Start -->
-                            <div class="col-md-7 col-xs-12 mb-15">
-                                @php
-                                
-                                    $Topic =  $Tins->shift();
-        
-                                    if ($Topic->$slug_var != "" && Helper::GeneralWebmasterSettings("links_status")) {
-                                        if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
-                                            $topic_link_url = url(trans('backLang.code') . "/" . $Topic->id . "-" . $Topic->$slug_var);
-                                        } else {
-                                            $topic_link_url = url($Topic->id . "-" . $Topic->$slug_var);
-                                        }
-                                    } else {
-                                        if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
-                                            $topic_link_url = route('FrontendTopicByLang', ["lang" => trans('backLang.code'), "section" => $Topic->webmasterSection->name, "id" => $Topic->id]);
-                                        } else {
-                                            $topic_link_url = route('FrontendTopic', ["section" => $Topic->webmasterSection->name, "id" => $Topic->id]);
-                                        }
+                            <?php
+                                if ($MainMenuLink->webmasterSection[$slug_var] != "" && Helper::GeneralWebmasterSettings("links_status")) {
+                                    if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
+                                        $mmnnuu_link = url(trans('backLang.code')."/" .$MainMenuLink->webmasterSection[$slug_var]);
+                                    }else{
+                                        $mmnnuu_link = url($MainMenuLink->webmasterSection[$slug_var]);
                                     }
+                                }else{
+                                    if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
+                                        $mmnnuu_link =url(trans('backLang.code')."/" .$MainMenuLink->webmasterSection['name']);
+                                    }else{
+                                        $mmnnuu_link =url($MainMenuLink->webmasterSection['name']);
+                                    }
+                                }
+                            ?>
+                            <div class="Head pos-rel clearfix">
+                                <h2 class="ParentCate left">
+                                    <a href="{{ $mmnnuu_link }}">{{ $MainMenuLink->title_vi }}</a>
+                                </h2>
+                                <span class="line-red">.</span>
+                                @if(!empty($MainMenuLink->webmasterSection->sections))
+                                <div class="mini-menu c-86">&nbsp;
+                                    @foreach($MainMenuLink->webmasterSection->sections as $key=>$Section)
+
+                                        <?php
+                                            if ($Section->$slug_var != "" && Helper::GeneralWebmasterSettings("links_status")) {
+                                                if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
+                                                    $Category_link_url = url(trans('backLang.code')."/" .$Section->$slug_var);
+                                                }else{
+                                                    $Category_link_url = url($Section->$slug_var);
+                                                }
+                                            } else {
+                                                if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
+                                                    $Category_link_url = route('FrontendTopicsByCatWithLang', ["lang"=>trans('backLang.code'),"section" => $Section->webmasterSection->name, "cat" => $Section->id]);
+                                                }else{
+                                                    $Category_link_url = route('FrontendTopicsByCat', ["section" => $Section->webmasterSection->name, "cat" => $Section->id]);
+                                                }
+                                            }
+                                        ?>                                                                
+                                        {{-- <h6 class="d-ib" style="margin-right:5px">
+                                            <a href="{{ $Category_link_url }}">{{ $Section->title_vi }}</a>
+                                        </h6> --}}
+                                    @endforeach
+                                </div>
+                                @endif
+                            </div>
+
+                            <div class="clearfix"></div>
+
+                            @if(count($MainMenuLink->webmasterSection->topics->where('status',1))>0)
+
+                                @php
+                                    
+                                    $Tins = $MainMenuLink->webmasterSection->topics->where('status',1)->sortbyDesc('date')->sortbyDesc('id')->take(7);
                                     
                                 @endphp
-    
-    
-                                        <!-- Post Start -->
-                                    <div class="post feature-post post-separator-border">
-                                        <div class="post-wrap">
-    
-                                            <!-- Image -->
-                                            <a class="image img-fluid" href="{{ $topic_link_url }}">
-                                                @if (empty($Topic->photo_file))
-                                                    <img src="frontend/hashnews/img/post/post-11.jpg" alt="{{ $Topic->title_vi }}">
-                                                @else
-                                                    <img src="/uploads/topics/{{ $Topic->photo_file}}" alt="{{ $Topic->title_vi }}"></a>
-                                                @endif
 
-                                            </a>
+                                <div class="row">
 
-                                            
-    
-                                            <!-- Content -->
-                                            <div class="content">
-    
-                                                <!-- Title -->
-                                                <h4 class="title" style="text-align:center">
-                                                    <a href="{{ $topic_link_url }}">
-                                                            @if($Topic->icon !="")
-                                                            <i class="fa {!! $Topic->icon !!}"></i>&nbsp;
-                                                        @endif
-                                                        {{ $Topic->title_vi }}
-                                                    </a>
-                                                </h4>
-                                                <!-- Description -->
-                                                <p class="sapo">{{ $Topic->sapo }}</p>
-    
-                                            </div>
-                                            
-                                        </div>
-                                    </div><!-- Post End -->
-    
-                            </div><!-- Post Wrapper End -->
-    
-                                <!-- Small Post Wrapper Start -->
-                            <div class="col-md-5 col-xs-12 mb-15">
-                                
-                                    @foreach ($Tins as $Topic )
-    
+                                    <!-- Post Wrapper Start -->
+                                    <div class="col-md-7 col-xs-12 mb-15">
                                         @php
+                                        
+                                            $Topic =  $Tins->shift();
+                
                                             if ($Topic->$slug_var != "" && Helper::GeneralWebmasterSettings("links_status")) {
                                                 if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
                                                     $topic_link_url = url(trans('backLang.code') . "/" . $Topic->id . "-" . $Topic->$slug_var);
@@ -163,60 +104,121 @@
                                                     $topic_link_url = route('FrontendTopic', ["section" => $Topic->webmasterSection->name, "id" => $Topic->id]);
                                                 }
                                             }
+                                            
                                         @endphp
-    
-                                        <!-- Post Small Start -->
-                                        <div class="post post-small post-list feature-post post-separator-border">
-                                            <div class="post-wrap">
-    
-                                                <!-- Image -->
-                                                {{-- <a class="image img-fluid" href="{{ $topic_link_url }}">
-                                                    @if (empty($Topic->photo_file))
-                                                        <img src="frontend/hashnews/img/post/post-13.jpg" alt="{{ $Topic->title_vi }}">
-                                                    @else
-                                                        <img src="/uploads/topics/{{ $Topic->photo_file}}" alt="{{ $Topic->title_vi }}">
-                                                    @endif
-                                                </a> --}}
-    
-                                                <!-- Content -->
-                                                <div class="content">
-    
-                                                    <!-- Title -->
-                                                    <h5 class="title">
-                                                        <a href="{{ $topic_link_url }}">
-                                                                @if($Topic->icon !="")
-                                                                <i class="fa {!! $Topic->icon !!}"></i>&nbsp;
-                                                            @endif
-                                                            {{ $Topic->title_vi }}
-                                                        </a>
-                                                    </h5>
-    
+            
+            
+                                                <!-- Post Start -->
+                                            <div class="post feature-post post-separator-border">
+                                                <div class="post-wrap">
+            
+                                                    <!-- Image -->
+                                                    <a class="image img-fluid" href="{{ $topic_link_url }}">
+                                                        @if (empty($Topic->photo_file))
+                                                            <img src="frontend/hashnews/img/post/post-11.jpg" alt="{{ $Topic->title_vi }}">
+                                                        @else
+                                                            <img src="/uploads/topics/{{ $Topic->photo_file}}" alt="{{ $Topic->title_vi }}"></a>
+                                                        @endif
+
+                                                    </a>
+
                                                     
-    
+            
+                                                    <!-- Content -->
+                                                    <div class="content">
+            
+                                                        <!-- Title -->
+                                                        <h4 class="title" style="text-align:center">
+                                                            <a href="{{ $topic_link_url }}">
+                                                                    @if($Topic->icon !="")
+                                                                    <i class="fa {!! $Topic->icon !!}"></i>&nbsp;
+                                                                @endif
+                                                                {{ $Topic->title_vi }}
+                                                            </a>
+                                                        </h4>
+                                                        <!-- Description -->
+                                                        <p class="sapo">{{ $Topic->sapo }}</p>
+            
+                                                    </div>
+                                                    
                                                 </div>
-                                                
-                                            </div>
-                                        </div><!-- Post Small End -->
-                                    @endforeach
+                                            </div><!-- Post End -->
+            
+                                    </div><!-- Post Wrapper End -->
+            
+                                        <!-- Small Post Wrapper Start -->
+                                    <div class="col-md-5 col-xs-12 mb-15">
+                                        
+                                            @foreach ($Tins as $Topic )
+            
+                                                @php
+                                                    if ($Topic->$slug_var != "" && Helper::GeneralWebmasterSettings("links_status")) {
+                                                        if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
+                                                            $topic_link_url = url(trans('backLang.code') . "/" . $Topic->id . "-" . $Topic->$slug_var);
+                                                        } else {
+                                                            $topic_link_url = url($Topic->id . "-" . $Topic->$slug_var);
+                                                        }
+                                                    } else {
+                                                        if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
+                                                            $topic_link_url = route('FrontendTopicByLang', ["lang" => trans('backLang.code'), "section" => $Topic->webmasterSection->name, "id" => $Topic->id]);
+                                                        } else {
+                                                            $topic_link_url = route('FrontendTopic', ["section" => $Topic->webmasterSection->name, "id" => $Topic->id]);
+                                                        }
+                                                    }
+                                                @endphp
+            
+                                                <!-- Post Small Start -->
+                                                <div class="post post-small post-list feature-post post-separator-border">
+                                                    <div class="post-wrap">
+            
+                                                        <!-- Image -->
+                                                        {{-- <a class="image img-fluid" href="{{ $topic_link_url }}">
+                                                            @if (empty($Topic->photo_file))
+                                                                <img src="frontend/hashnews/img/post/post-13.jpg" alt="{{ $Topic->title_vi }}">
+                                                            @else
+                                                                <img src="/uploads/topics/{{ $Topic->photo_file}}" alt="{{ $Topic->title_vi }}">
+                                                            @endif
+                                                        </a> --}}
+            
+                                                        <!-- Content -->
+                                                        <div class="content">
+            
+                                                            <!-- Title -->
+                                                            <h5 class="title">
+                                                                <a href="{{ $topic_link_url }}">
+                                                                        @if($Topic->icon !="")
+                                                                        <i class="fa {!! $Topic->icon !!}"></i>&nbsp;
+                                                                    @endif
+                                                                    {{ $Topic->title_vi }}
+                                                                </a>
+                                                            </h5>
+            
+                                                            
+            
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div><!-- Post Small End -->
+                                            @endforeach
+                                        
+                                    </div><!-- Small Post Wrapper End -->
+
+                                </div>
+
                                 
-                            </div><!-- Small Post Wrapper End -->
-
-                        </div>
-
-                        
-                    
-
-                        
-
                             
 
-                        
+                                
+
+                                    
+
+                                
 
 
-                    @endif
+                            @endif
 
-                </div><!-- Post Block Wrapper End -->
-                @endforeach
+                        </div><!-- Post Block Wrapper End -->
+                    @endforeach
                 @endif
 
             
