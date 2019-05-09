@@ -5,6 +5,7 @@
     <meta name="description" content="{{ $Topic->title_vi }}">
     <meta name="description" content="{{ $Topic->seo_description_vi }}">
     <meta name="description" content="{{ $Topic->sapo }}">
+    <meta name="keywords" content="{{ $Topic->title_vi }}">
     <meta name="keywords" content="{{ $Topic->seo_keywords_vi }}">	
 
     <meta property="og:url" content="{{ Request::url() }}" />
