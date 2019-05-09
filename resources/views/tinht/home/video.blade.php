@@ -8,7 +8,7 @@
 
     <div class="clearfix"></div>
 
-    <div class="four-column-post-carousel column-post-carousel post-block-carousel dark life-style-post-carousel row">
+    <div class="three-column-post-carousel column-post-carousel post-block-carousel dark life-style-post-carousel row">
 
         @foreach ($Videos->topics->where('status',1)->sortbydesc('date') as $Topic )
             @php
