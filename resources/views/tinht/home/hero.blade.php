@@ -121,6 +121,17 @@
                                                 @else
                                                     <img src="/uploads/topics/{{ $Topic->photo_file}}" alt="{{ $Topic->title_vi }}"></a>
                                                 @endif
+
+                                                @if ( count($Topic->photos) > 0 )
+
+                                                    <span class="photo-btn pt-right"><i class="fa fa-photo"></i></span>
+                                                
+                                                @endif
+
+                                                <span class="title-video">
+                                                    <i class="fa fa-clock-o"></i>&nbsp;{{ \Carbon\Carbon::parse($Topic->date)->format('d/m/Y') }}
+                                                </span>
+
                                             </div>
 
                                             <!-- Category -->
@@ -140,12 +151,12 @@
                                                 </h4>
 
                                                 <!-- Meta -->
-                                                <div class="meta fix">
+                                                {{-- <div class="meta fix">
                                                     <span class="meta-item date">
                                                         <i class="fa fa-clock-o"></i>
                                                         {{ \Carbon\Carbon::parse($Topic->date)->format('d/m/Y')}}
                                                     </span>
-                                                </div>
+                                                </div> --}}
 
                                             </div>
 
@@ -193,6 +204,17 @@
                                                 @else
                                                     <img src="/uploads/topics/{{ $Topic->photo_file}}" alt="{{ $Topic->title_vi }}"></a>
                                                 @endif
+
+                                                @if ( count($Topic->photos) > 0 )
+
+                                                    <span class="photo-btn pt-right"><i class="fa fa-photo"></i></span>
+                                                
+                                                @endif
+
+                                                <span class="title-video">
+                                                    <i class="fa fa-clock-o"></i>&nbsp;{{ \Carbon\Carbon::parse($Topic->date)->format('d/m/Y') }}
+                                                </span>
+
                                             </div>
 
                                             <!-- Category -->
@@ -212,12 +234,12 @@
                                                 </h4>
 
                                                 <!-- Meta -->
-                                                <div class="meta fix">
+                                                {{-- <div class="meta fix">
                                                     <span class="meta-item date">
                                                         <i class="fa fa-clock-o"></i>
                                                         {{ \Carbon\Carbon::parse($Topic->date)->format('d/m/Y')}}
                                                     </span>
-                                                </div>
+                                                </div> --}}
 
                                             </div>
 
