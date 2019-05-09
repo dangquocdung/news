@@ -41,7 +41,7 @@
                                                 @endif
                                                 {{-- <img src="frontend/hashnews/img/post/post-3.jpg" alt="{{ $Topic->title_vi }}"> --}}
 
-                                                <span class="photo-btn"><i class="fa fa-photo"></i></span>
+                                                <span class="photo-btn-right"><i class="fa fa-photo"></i></span>
 
                                                 <span class="title-video">
                                                     <i class="fa fa-clock-o"></i>&nbsp;{{ \Carbon\Carbon::parse($Topic->date)->format('d/m/Y') }}
@@ -66,12 +66,12 @@
                                                 </h2>
 
                                                 <!-- Meta -->
-                                                <div class="meta fix">
+                                                {{-- <div class="meta fix">
                                                     <span class="meta-item date">
                                                         <i class="fa fa-clock-o"></i>
                                                         {{ \Carbon\Carbon::parse($Topic->date)->format('d/m/Y')}}
                                                     </span>
-                                                </div>
+                                                </div> --}}
                                             </div>
                                             
                                         </div>

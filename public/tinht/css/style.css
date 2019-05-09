@@ -6968,6 +6968,18 @@ img.size-full {
   top: 0;
 }
 
+.photo-btn-right {
+  width: 40px;
+  display: block;
+  height: 35px;
+  line-height: 28px;
+  text-align: center;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  right: 0;
+  top: 0;
+}
+
 @media only screen and (max-width: 479px), only screen and (max-width: 767px) {
   #mainbox-r {
     padding-left: 0;
