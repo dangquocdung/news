@@ -60,12 +60,12 @@
                             </h4>
     
                             <!-- Meta -->
-                            <div class="meta fix">
+                            {{-- <div class="meta fix">
                                 <span class="meta-item date">
                                     <i class="fa fa-clock-o"></i>
                                     {{ \Carbon\Carbon::parse($Topic->date)->format('d/m/Y')}}
                                 </span>
-                            </div>
+                            </div> --}}
                         </div>
                         
                     </div>

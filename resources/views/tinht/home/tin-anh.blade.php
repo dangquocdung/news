@@ -39,6 +39,12 @@
                         @else
                             <img src="/uploads/topics/{{ $Topic->photo_file}}" alt="{{ $Topic->title_vi }}"></a>
                         @endif
+
+                        <span class="photo-btn"><i class="fa fa-photo"></i></span>
+
+                        <span class="title-video">
+                            <i class="fa fa-clock-o"></i>&nbsp;{{ \Carbon\Carbon::parse($Topic->date)->format('d/m/Y') }}
+                        </span>
                     </a>
 
                     <!-- Content -->
@@ -55,12 +61,12 @@
                         </h4>
 
                         <!-- Meta -->
-                        <div class="meta fix">
+                        {{-- <div class="meta fix">
                             <span class="meta-item date">
                                 <i class="fa fa-clock-o"></i>
                                 {{ \Carbon\Carbon::parse($Topic->date)->format('d/m/Y')}}
                             </span>
-                        </div>
+                        </div> --}}
                     </div>
                     
                 </div>
