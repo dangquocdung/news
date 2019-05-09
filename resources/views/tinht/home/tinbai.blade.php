@@ -16,7 +16,7 @@
 
                 @if ($key==2)
 
-                @include('tinht.home.tinanh')
+                @include('tinht.home.tin-anh')
 
                 @endif
 
