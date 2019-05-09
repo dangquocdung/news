@@ -12,7 +12,13 @@
 
                 @if (!empty($MenuLinks->where('father_id',21)->sortby('row_no')))
 
-                @foreach($MenuLinks->where('father_id',21)->sortby('row_no') as $MainMenuLink)
+                @foreach($MenuLinks->where('father_id',21)->sortby('row_no') as $key=>$MainMenuLink)
+
+                @if ($key==2)
+
+                @include('tinht.home.tinanh')
+
+                @endif
 
                 <!-- Post Block Wrapper Start -->
                 <div class="col-md-6">
