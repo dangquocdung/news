@@ -64,7 +64,6 @@
 
                 {{-- <input onclick="responsiveVoice.speak('{{ $Topic->sapo}}','Vietnamese Male');" type="button" value="🔊 Đọc" /> --}}
 
-
                 {{ $Topic->sapo }}
     
             </div>
@@ -111,26 +110,7 @@
                             </video>
                         @endif
 
-                        
-
                     </div>
-
-                    <button id="pipButtonElement">PiP</button>
-
-                    <script type="text/javascript">
-
-                        $(document).ready(function ($) {
-                            $("#pipButtonElement").addEventListener('click', async function() {
-
-                                $(this).disabled = true;
-
-                                await $("#videoElement").requestPictureInPicture();
-
-                                $(this).disabled = false;
-                            });
-                        });
-                    </script>
-
 
             @elseif($WebmasterSection->type==3 && $Topic->audio_file!="")
                 {{--audio--}}
@@ -146,8 +126,6 @@
                 
             @elseif(count($Topic->photos)>0)
 
-                
-
                 <div class="demo-gallery">
 
                         <div id="tin-anh" class="list-unstyled justified-gallery">
@@ -161,7 +139,6 @@
                             @endforeach
                            
                         </div>
-                        
                         
                 </div>
 
@@ -178,7 +155,6 @@
                 ?>
                 <div class="bottom-article">
                     @if($file_ext ==".jpg"|| $file_ext ==".jpeg"|| $file_ext ==".png"|| $file_ext ==".gif")
-
 
                         <div class="text-center">
                             <a href="{{ route('panoLens',[$Topic->id,$Topic->seo_url_slug_vi]) }}" target="_blank">
@@ -247,14 +223,10 @@
                         @endif
                     @endif
 
-
-
                     <div class="zalo-share-button" data-href="" data-oaid="579745863508352884" data-layout="5" data-color="blue" data-customize=false></div>
 
                     {{-- <a href="{{ Helper::SocialShare("google", $PageTitle)}}" class="google-plus" data-placement="top" title="Google+" target="_blank"><i class="fa fa-google-plus"></i></a> --}}
                 </div>
-
-
 
             </div>
         </div>
