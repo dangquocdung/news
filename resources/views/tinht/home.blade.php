@@ -35,7 +35,7 @@
 
                 <div class="clearfix"></div>
 
-                @include('tinht.home.video')
+                @include('tinht.home.video-yt')
 
                 <div class="clearfix"></div>
 
