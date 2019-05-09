@@ -1,7 +1,7 @@
 <div class="col-md-12 mb-15">
         <div class="Head pos-rel clearfix">
             <h2 class="ParentCate left">
-                <a href="/hinh-anh">Video Clip</a>
+                <a href="/video"><i class="fa fa-video-camera"></i></span> Video Clip</a>
             </h2>
             <span class="line-red">.</span>
         </div>

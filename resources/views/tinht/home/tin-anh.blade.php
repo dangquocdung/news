@@ -1,7 +1,7 @@
 <div class="col-md-12 mb-15">
     <div class="Head pos-rel clearfix">
         <h2 class="ParentCate left">
-            <a href="/hinh-anh"><i class="fa fa-photo"></i></span> &nbsp;Hình ảnh</a>
+            <a href="/hinh-anh"><i class="fa fa-photo"></i></span> Hình ảnh</a>
         </h2>
         <span class="line-red">.</span>
     </div>

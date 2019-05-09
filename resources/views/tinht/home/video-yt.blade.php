@@ -6,7 +6,7 @@
         <div class="col-md-6 mb-15">
             <div class="Head pos-rel clearfix">
                 <h2 class="ParentCate left">
-                    <a href="#">Du lịch Hà Tĩnh</a>
+                    <a href="javascript:void(0)"> <i class="fa fa-youtube-square"></i></span> Du lịch Hà Tĩnh</a>
                 </h2>
                 <span class="line-red">.</span>
             </div>
@@ -27,7 +27,7 @@
         <div class="col-md-6 mb-15">
             <div class="Head pos-rel clearfix">
                 <h2 class="ParentCate left">
-                    <a href="#">Thể thao</a>
+                    <a href="javascript:void(0)"> <i class="fa fa-youtube-square"></i></span> Thể thao</a>
                 </h2>
                 <span class="line-red">.</span>
             </div>
