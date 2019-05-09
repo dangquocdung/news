@@ -103,7 +103,7 @@
                             @endif
 
                         @else
-                            <video id="videoElement" width="100%" autoplay controls playsinline controlslist="nodownload" preload="none" poster="{{ URL::to('uploads/topics/'.$Topic->photo_file) }}">
+                            <video id="videoElement" width="100%" controls autoplay controlslist="nodownload" preload="none" poster="{{ URL::to('uploads/topics/'.$Topic->photo_file) }}">
                                 <source src="{{ URL::to('uploads/topics/'.$Topic->video_file) }}"
                                         type="video/mp4">
                                 Your browser does not support the video tag.
