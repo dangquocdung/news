@@ -268,3 +268,12 @@ img.size-full {
         transform: translate(-50%, -50%);
     }
 }
+
+.title-video {
+    text-align: right;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    color: white;
+    z-index: 5;
+}
