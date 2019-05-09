@@ -2,14 +2,16 @@
 
 @section('meta')
 
+    <meta name="description" content="{{ $Topic->title_vi }}">
     <meta name="description" content="{{ $Topic->seo_description_vi }}">
     <meta name="description" content="{{ $Topic->sapo }}">
     <meta name="keywords" content="{{ $Topic->seo_keywords_vi }}">	
 
     <meta property="og:url" content="{{ Request::url() }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="TinHT"/>
+    <meta property="og:site_name" content="Tin Hà Tĩnh"/>
     <meta property="og:title" content="{{ $Topic->title_vi }}" />
+    <meta property="og:description" content="{{ $Topic->title_vi }}" />
     <meta property="og:description" content="{{ $Topic->sapo }}" />
     <meta property="og:image" itemprop="image" content="{{ URL::asset('/uploads/topics/'.$Topic->photo_file) }}" />
 
