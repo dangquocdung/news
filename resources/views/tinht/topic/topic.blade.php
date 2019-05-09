@@ -112,6 +112,27 @@
 
                     </div>
 
+                    {{-- <video src="https://cdn.arnellebalane.com/videos/original-video.mp4" controls></video> --}}
+                    <button>Enter Picture-in-Picture</button>
+
+                    <script>
+
+                        const video = document.querySelector('video');
+                        const button = document.querySelector('button');
+
+                        if (!document.pictureInPictureEnabled) {
+                            // Let the user know that PiP is not enabled/supported.
+                            button.textContent = 'PiP is not supported in your browser.';
+                            button.disabled = true;
+                        }
+
+                        button.addEventListener('click', () => {
+                            video.requestPictureInPicture();
+                        });
+
+
+                    </script>
+
             @elseif($WebmasterSection->type==3 && $Topic->audio_file!="")
                 {{--audio--}}
                 
