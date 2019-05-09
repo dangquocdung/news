@@ -6956,6 +6956,22 @@ img.size-full {
   z-index: 5;
 }
 
+.photo-btn {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-left: -25px;
+  margin-top: -25px;
+  text-align: center;
+  z-index: 3;
+}
+
 @media only screen and (max-width: 479px), only screen and (max-width: 767px) {
   #mainbox-r {
     padding-left: 0;
