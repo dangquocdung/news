@@ -12,13 +12,13 @@
 
                 @if (!empty($MenuLinks->where('father_id',21)->sortby('row_no')))
 
-                    @foreach($MenuLinks->where('father_id',21)->sortby('row_no') as $key=>$MainMenuLink)
+                    @foreach($MenuLinks->where('father_id',21)->sortby('row_no') as $thutu=>$MainMenuLink)
 
-                        @if ($key==2)
+                        @if ($thutu==2)
 
-                            {{-- @include('tinht.home.tin-anh') --}}
+                            @include('tinht.home.tin-anh')
 
-                            <h1>sdasdsaasd</h1>
+                            {{-- <h1>sdasdsaasd</h1> --}}
 
                         @endif
 
