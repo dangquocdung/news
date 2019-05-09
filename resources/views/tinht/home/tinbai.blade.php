@@ -9,23 +9,13 @@
         <div class="row">        
             <!-- Feature Post Row Start -->
         
-
                 @if (!empty($MenuLinks->where('father_id',21)->sortby('row_no')))
 
-                    @foreach($MenuLinks->where('father_id',21)->sortby('row_no') as $thutu=>$MainMenuLink)
-
-                        @if ($thutu==2)
-
-                            @include('tinht.home.tin-anh')
-
-                            {{-- <h1>sdasdsaasd</h1> --}}
-
-                        @endif
+                    @foreach($MenuLinks->where('father_id',21)->sortby('row_no') as $MainMenuLink)
 
                         <!-- Post Block Wrapper Start -->
                         <div class="col-md-6">
                             
-
                             <?php
                                 if ($MainMenuLink->webmasterSection[$slug_var] != "" && Helper::GeneralWebmasterSettings("links_status")) {
                                     if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
@@ -107,7 +97,6 @@
                                             
                                         @endphp
             
-            
                                                 <!-- Post Start -->
                                             <div class="post feature-post post-separator-border">
                                                 <div class="post-wrap">
@@ -122,8 +111,6 @@
 
                                                     </a>
 
-                                                    
-            
                                                     <!-- Content -->
                                                     <div class="content">
             
@@ -193,8 +180,6 @@
                                                                 </a>
                                                             </h5>
             
-                                                            
-            
                                                         </div>
                                                         
                                                     </div>
@@ -205,27 +190,13 @@
 
                                 </div>
 
-                                
-                            
-
-                                
-
-                                    
-
-                                
-
-
                             @endif
 
                         </div><!-- Post Block Wrapper End -->
                     @endforeach
                 @endif
 
-            
-                        
         </div>
 
-        
-        
 </div>
     
