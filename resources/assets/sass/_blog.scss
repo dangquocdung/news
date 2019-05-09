@@ -1,7 +1,9 @@
 /*----------------------------------------*/
 
+
 /*  6.  Blog & Blog Details
 /*----------------------------------------*/
+
 
 /*-- Single Post --*/
 
@@ -72,7 +74,7 @@
                     &.fashion {
                         background-color: $fashion;
                     }
-                    &.sports {
+                    &.hinh-anh {
                         background-color: $sports;
                     }
                     &.gadgets {
@@ -285,6 +287,7 @@
     }
 }
 
+
 /*-- Preview & Next Post Links --*/
 
 .post-nav {
@@ -327,6 +330,7 @@
         }
     }
 }
+
 
 /*-- Post Author --*/
 
@@ -378,6 +382,7 @@
         }
     }
 }
+
 
 /*-- Post Comment Form --*/
 
