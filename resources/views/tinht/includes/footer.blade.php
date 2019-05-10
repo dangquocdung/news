@@ -63,7 +63,7 @@
                                         {{-- <li>34 Hàm Nghi - Thành phố Hà Tĩnh</li> --}}
                                         <li>Email: dungthinhvn@gmail.com</li>
                                         <li>Điện thoại: 0986242487</li>
-                                        <li><em>(Trang web đang chạy thử nghiệm)</em></li>
+                                        <li style="font-weight: normal"><em>* Trang web đang chạy thử nghiệm chờ cấp phép hoạt động</em></li>
                                     </ul>
                                 </nav>
                                 
