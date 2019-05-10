@@ -88,7 +88,6 @@
                                     </div><!-- Overlay Post End -->
                                 @endforeach
                                 
-                                
                             </div><!-- Hero Post Slider End -->
                             
                         </div>
@@ -114,8 +113,6 @@
                                         }
                                     @endphp
 
-
-
                                     <!-- Overlay Post Start -->
                                     <div class="post post-overlay hero-post col-lg-12 col-md-6 col-12">
                                         <div class="post-wrap">
@@ -136,8 +133,10 @@
 
                                                 @if ($Topic->video_file!="")
 
-                                                    <span class="video-btn"><i class="fa fa-play"></i></span>
-                          
+                                                    <a href="{{ $topic_link_url }}">
+                                                        <span class="video-btn"><i class="fa fa-play"></i></span>
+                                                    </a>
+
                                                 @endif
 
                                                 <span class="title-video">
@@ -176,8 +175,6 @@
                                     </div><!-- Overlay Post End -->
 
                                 @endforeach
-
-                                
 
                             </div>
                         </div>
@@ -266,10 +263,8 @@
 
                                 @endif
                                 
-
                                 @endforeach
                                 
-
                             </div>
                         </div>
 
