@@ -1077,7 +1077,7 @@
 
                                 @if ($Topics->status == 1)
                                 
-                                    <a href="{{ url($Topics->id.'/'.$Topics->seo_url_slug_vi) }}" target="_blank"
+                                    <a href="{{ url($Topics->id.'-'.$Topics->seo_url_slug_vi) }}" target="_blank"
                                             class="btn btn-default m-t"><i class="material-icons">visibility</i> {!! trans('backLang.view') !!}</a>
                                 @endif
 
