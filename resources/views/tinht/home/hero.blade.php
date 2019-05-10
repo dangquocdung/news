@@ -49,10 +49,8 @@
 
                                                 @if ($Topic->video_file!="")
 
-                                                    <a href="{{ $topic_link_url }}">
-                                                        <span class="video-btn"><i class="fa fa-play"></i></span>
-                                                    </a>
-
+                                                    <span class="video-btn"><i class="fa fa-play"></i></span>
+                          
                                                 @endif
 
                                                 <span class="title-video">
@@ -135,10 +133,8 @@
 
                                                 @if ($Topic->video_file!="")
 
-                                                    <a href="{{ $topic_link_url }}">
-                                                        <span class="video-btn"><i class="fa fa-play"></i></span>
-                                                    </a>
-
+                                                    <span class="video-btn"><i class="fa fa-play"></i></span>
+                          
                                                 @endif
 
                                                 <span class="title-video">
