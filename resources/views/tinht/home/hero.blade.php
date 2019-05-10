@@ -49,8 +49,10 @@
 
                                                 @if ($Topic->video_file!="")
 
-                                                    <span class="video-btn"><i class="fa fa-play"></i></span>
-                          
+                                                    <a href="{{ $topic_link_url }}">
+                                                        <span class="video-btn"><i class="fa fa-play"></i></span>
+                                                    </a>
+
                                                 @endif
 
                                                 <span class="title-video">
