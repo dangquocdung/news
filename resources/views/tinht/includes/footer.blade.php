@@ -60,9 +60,10 @@
                                 <nav class="foot-menu">
                                     <ul>
                                         <li>Công ty TNHH Phần mềm Dũng Thịnh</li>
-                                        <li>34 Hàm Nghi - Thành phố Hà Tĩnh</li>
+                                        {{-- <li>34 Hàm Nghi - Thành phố Hà Tĩnh</li> --}}
                                         <li>Email: dungdang@dungthinh.com</li>
                                         <li>Điện thoại: 0986242487</li>
+                                        <li><em>(Trang web đang chạy thử nghiệm)</em></li>
                                     </ul>
                                 </nav>
                                 
