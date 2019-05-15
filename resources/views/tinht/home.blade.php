@@ -22,6 +22,10 @@
     <div class="col-md-12 section mb-10">
             <div class="row">        
                 <!-- Feature Post Row Start -->
+
+                @include('tinht.home.tin-moi')
+
+                <div class="clearfix"></div>
             
                 @include('tinht.home.hero')
                     
