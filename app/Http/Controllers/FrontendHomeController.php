@@ -88,7 +88,7 @@ class FrontendHomeController extends Controller
                 ['webmaster_id', '<>', 34]])
                 ->orderby('date', 'desc')
                 ->orderby('id', 'desc')
-                ->limit(10)
+                ->limit(20)
                 ->get();
 
          // Get Hot topics
