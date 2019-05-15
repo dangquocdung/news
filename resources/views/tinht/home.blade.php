@@ -23,19 +23,19 @@
             <div class="row">        
                 <!-- Feature Post Row Start -->
 
-                @include('tinht.home.tin-moi')
-
-                <div class="clearfix"></div>
-            
                 @include('tinht.home.hero')
                     
                 <div class="clearfix"></div>
 
-                @include('tinht.home.tin-anh')
+                @include('tinht.home.tin-moi')
 
                 <div class="clearfix"></div>
 
                 @include('tinht.home.tinbai-up')
+
+                <div class="clearfix"></div>
+
+                @include('tinht.home.tin-anh')
 
                 <div class="clearfix"></div>
 
