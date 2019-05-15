@@ -10,7 +10,7 @@
                             <!-- Hero Post Slider Start -->
                             <div class="post-carousel-1">
 
-                                @foreach ($HotTopics as $Topic )
+                                @foreach ($LatestNews as $Topic )
     
                                     @php
                                         if ($Topic->$slug_var != "" && Helper::GeneralWebmasterSettings("links_status")) {
@@ -95,7 +95,7 @@
                         <div class="order-lg-1 col-lg-3 col-12">
                             <div class="row row-1">
 
-                                @foreach ($ThongBao->take(2) as $Topic )
+                                @foreach ($HotTopics->take(2) as $Topic )
     
                                     @php
                                         if ($Topic->$slug_var != "" && Helper::GeneralWebmasterSettings("links_status")) {
@@ -180,7 +180,7 @@
                         <div class="order-lg-3 col-lg-3 col-12">
                             <div class="row row-1">
 
-                                @foreach ($ThongBao->take(4) as $key=>$Topic )
+                                @foreach ($HotTopics->take(4) as $key=>$Topic )
 
                                 @if ($key > 1)
     
